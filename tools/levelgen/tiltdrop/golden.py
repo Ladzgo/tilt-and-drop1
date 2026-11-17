@@ -136,7 +136,11 @@ def random_cases(n: int, seed: int = 20261117) -> list[dict[str, Any]]:
     return out
 
 
-def solver_cases() -> list[dict[str, Any]]:
+def solver_cases(frozen: list[dict[str, Any]] | None = None) -> list[dict[str, Any]]:
+    """Solver answers. Levels are frozen once generated (pass the existing file's
+    cases) so retuning the generator never changes the vectors' inputs."""
+    if frozen:
+        return [_solver_case(Level.from_json(c["level"])) for c in frozen]
     levels: list[Level] = []
     for n, d in HANDMADE.items():
         lv = Level.from_json(d)
@@ -151,27 +155,29 @@ def solver_cases() -> list[dict[str, Any]]:
             if c:
                 c.level.id = f"{b.name}_{k}"
                 levels.append(c.level)
-    out = []
-    for lv in levels:
-        r = solve(lv, slack=2)
-        lv.moves = (r.min_moves or 0) + 2
-        out.append({
-            "name": lv.id,
-            "level": lv.to_json(),
-            "minMoves": r.min_moves,
-            "solutionsAtMin": r.solutions_at_min,
-            "limit": r.limit,
-            "deadEndRatio": round(r.dead_end_ratio, 6),
-            "randomWin": round(r.random_win_rate, 6),
-        })
-    return out
+    return [_solver_case(lv) for lv in levels]
 
 
-def build_all(n_random: int = 1000) -> dict[str, dict[str, Any]]:
+def _solver_case(lv: Level) -> dict[str, Any]:
+    r = solve(lv, slack=2)
+    lv.moves = (r.min_moves or 0) + 2
+    lv.meta = {}
+    return {
+        "name": lv.id,
+        "level": lv.to_json(),
+        "minMoves": r.min_moves,
+        "solutionsAtMin": r.solutions_at_min,
+        "limit": r.limit,
+        "deadEndRatio": round(r.dead_end_ratio, 6),
+        "randomWin": round(r.random_win_rate, 6),
+    }
+
+
+def build_all(n_random: int = 1000, frozen_solver: list[dict[str, Any]] | None = None) -> dict[str, dict[str, Any]]:
     return {
         "rules.json": {"schema": SCHEMA, "cases": hand_cases()},
         "random.json": {"schema": SCHEMA, "cases": random_cases(n_random)},
-        "solver.json": {"schema": SCHEMA, "solver": solver_cases()},
+        "solver.json": {"schema": SCHEMA, "solver": solver_cases(frozen_solver)},
     }
 
 

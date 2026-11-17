@@ -167,9 +167,9 @@ DAILY_SPECS = tuple(MIX_SPECS) + (beat_for_level(31).spec, beat_for_level(11).sp
 def curate_daily(count: int, workers: int = 4, deduper: Deduper | None = None, bot_runs: int = 60, final_bot_runs: int = 150) -> list[Level]:
     """Daily puzzles: medium difficulty (quantile 0.4..0.75), slack of tier N."""
     deduper = deduper or Deduper()
-    tasks = [(DAILY_SPECS[seed_for(d, 0, "dspec") % len(DAILY_SPECS)], seed_for(d, k, "daily"), bot_runs) for d in range(1, count + 1) for k in range(3)]
+    tasks = [(DAILY_SPECS[seed_for(d, 0, "dspec") % len(DAILY_SPECS)], seed_for(d, k, "daily"), bot_runs) for d in range(1, count + 1) for k in range(6)]
     cands = generate_candidates(tasks, workers)
-    band = [c for c in cands if 0.15 <= c.analysis.fail_by_slack[2] <= 0.45] or cands
+    band = [c for c in cands if 0.12 <= c.analysis.fail_by_slack[2] <= 0.5] or cands
     band.sort(key=lambda c: c.seed)  # shuffle difficulty order deterministically
     out: list[Level] = []
     for c in band:

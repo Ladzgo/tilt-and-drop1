@@ -1,0 +1,133 @@
+{
+ "schema": 1,
+ "contentVersion": 1,
+ "levelCount": 20000,
+ "packs": [
+  {
+   "file": "main_000.tdp.gz",
+   "first": 1,
+   "count": 1000,
+   "sha1": "8bfd7f1a9a4345b0224ee43f6b1f0e0bd141b2ba"
+  },
+  {
+   "file": "main_001.tdp.gz",
+   "first": 1001,
+   "count": 1000,
+   "sha1": "bca30e060295a19ad299fee22172af3f449a8612"
+  },
+  {
+   "file": "main_002.tdp.gz",
+   "first": 2001,
+   "count": 1000,
+   "sha1": "3adb8b41c588bc7554633578eca0418e6a426dcd"
+  },
+  {
+   "file": "main_003.tdp.gz",
+   "first": 3001,
+   "count": 1000,
+   "sha1": "3bcd646a9e8841a7fee849caca63bdac0dc5202e"
+  },
+  {
+   "file": "main_004.tdp.gz",
+   "first": 4001,
+   "count": 1000,
+   "sha1": "ccd5579fb01b71679f267df957d43f9f1e0f56d9"
+  },
+  {
+   "file": "main_005.tdp.gz",
+   "first": 5001,
+   "count": 1000,
+   "sha1": "ea40fe3c6231bad83db448a63a4d761352259e0c"
+  },
+  {
+   "file": "main_006.tdp.gz",
+   "first": 6001,
+   "count": 1000,
+   "sha1": "630b4c5901450ff8ae16bcf9f706ec87b1ab2f43"
+  },
+  {
+   "file": "main_007.tdp.gz",
+   "first": 7001,
+   "count": 1000,
+   "sha1": "028b0e5e6ee50a047a551bd358eebf725d98b662"
+  },
+  {
+   "file": "main_008.tdp.gz",
+   "first": 8001,
+   "count": 1000,
+   "sha1": "f3bd9765556eb02bc39e1530443f487ee53601ca"
+  },
+  {
+   "file": "main_009.tdp.gz",
+   "first": 9001,
+   "count": 1000,
+   "sha1": "21eaff38d2f8f5946155e4626f37128fb620ba9f"
+  },
+  {
+   "file": "main_010.tdp.gz",
+   "first": 10001,
+   "count": 1000,
+   "sha1": "37960ce7219b987a6183d368a313ef3a2c17a3ac"
+  },
+  {
+   "file": "main_011.tdp.gz",
+   "first": 11001,
+   "count": 1000,
+   "sha1": "a02de6e2c414cee62f11cd66446425b303537882"
+  },
+  {
+   "file": "main_012.tdp.gz",
+   "first": 12001,
+   "count": 1000,
+   "sha1": "71e222e52aaa46cd2e3446e988ac6f8943a7901b"
+  },
+  {
+   "file": "main_013.tdp.gz",
+   "first": 13001,
+   "count": 1000,
+   "sha1": "baa9ac8af43d44c37f8fa8dec0f933e4c7dad30f"
+  },
+  {
+   "file": "main_014.tdp.gz",
+   "first": 14001,
+   "count": 1000,
+   "sha1": "d036279dad8ceec13035634813f845d5e5b6827c"
+  },
+  {
+   "file": "main_015.tdp.gz",
+   "first": 15001,
+   "count": 1000,
+   "sha1": "a2959709240dd949f6b796a18526a100857e890d"
+  },
+  {
+   "file": "main_016.tdp.gz",
+   "first": 16001,
+   "count": 1000,
+   "sha1": "087364cd23b7ec733894d866f5804507e4d145cf"
+  },
+  {
+   "file": "main_017.tdp.gz",
+   "first": 17001,
+   "count": 1000,
+   "sha1": "69c74dbd496655db4c34ce47a09309abf86b2370"
+  },
+  {
+   "file": "main_018.tdp.gz",
+   "first": 18001,
+   "count": 1000,
+   "sha1": "d997019a214856f20f666e6b5b9905207bbb2485"
+  },
+  {
+   "file": "main_019.tdp.gz",
+   "first": 19001,
+   "count": 1000,
+   "sha1": "8b25afb02c7e84b3fc7b98691923ce4608c8e63f"
+  }
+ ],
+ "daily": {
+  "file": "daily.tdp.gz",
+  "count": 400,
+  "sha1": "19d1e6496fcf06a5489168a2aa47152ff2f3e450",
+  "epoch": "2027-01-01"
+ }
+}

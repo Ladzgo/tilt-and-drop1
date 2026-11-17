@@ -41,7 +41,12 @@ def _save_json_levels(path: str, levels: list[Level], **extra) -> None:
 def cmd_golden(a) -> int:
     out = os.path.join(SHARED, "golden")
     os.makedirs(out, exist_ok=True)
-    files = build_all(a.random)
+    frozen = None
+    sp = os.path.join(out, "solver.json")
+    if os.path.exists(sp) and not a.refresh_solver_levels:
+        with open(sp) as f:
+            frozen = json.load(f)["solver"]
+    files = build_all(a.random, frozen)
     bad = 0
     for name, obj in files.items():
         path = os.path.join(out, name)
@@ -173,6 +178,7 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("golden", help="write /shared/golden vectors (or --check for drift)")
     p.add_argument("--random", type=int, default=1000)
     p.add_argument("--check", action="store_true")
+    p.add_argument("--refresh-solver-levels", action="store_true", help="re-pick solver vector levels from the generator")
     p.set_defaults(fn=cmd_golden)
     p = sub.add_parser("levels", help="generate + curate level segments (resumable)")
     p.add_argument("--first", type=int, default=1)
