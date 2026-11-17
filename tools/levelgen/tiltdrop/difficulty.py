@@ -24,6 +24,7 @@ WEIGHTS = {
 
 TIER_SLACK = {"E": 4, "N": 2, "H": 1, "SH": 0}
 NOMINAL_SLACK = 2
+SLACKS = (0, 1, 2, 4)  # bot fail rate is estimated at each of these move limits
 
 
 @dataclass
@@ -42,6 +43,7 @@ class Analysis:
     stones: int
     solution: str
     limit: int
+    fail_by_slack: dict[int, float]
 
     def features(self) -> dict[str, float]:
         rarity = 1.0 - min(1.0, math.log2(max(1, self.solutions)) / max(1, self.par))
@@ -82,7 +84,7 @@ def analyze(
     params: BotParams = DEFAULT,
 ) -> Analysis | None:
     """Returns None if unsolvable within max_depth (or truncated before a win)."""
-    gr = explore(level, max_depth=max_depth, extra_after_win=slack, node_cap=node_cap)
+    gr = explore(level, max_depth=max_depth, extra_after_win=max(slack, max(SLACKS)), node_cap=node_cap)
     par = gr.min_win_depth()
     if par is None:
         return None
@@ -90,12 +92,13 @@ def analyze(
     dist = win_distance(gr)
     sol = first_solution(gr)
     n_par = sum(1 for d in gr.depth if d <= par)
+    fails = {s: run_bot(gr, par + s, runs=bot_runs, seed=seed, params=params) for s in sorted(set(SLACKS) | {slack})}
     return Analysis(
         par=par,
         solutions=count_solutions(gr, par),
         dead_end=dead_end_ratio(gr, limit, dist),
         random_win=random_win_rate(gr, limit),
-        bot_fail=run_bot(gr, limit, runs=bot_runs, seed=seed, params=params),
+        bot_fail=fails[slack],
         branching=effective_branching(n_par, par),
         states=len(gr),
         truncated=gr.truncated,
@@ -105,4 +108,5 @@ def analyze(
         stones=sum(1 for c in level.cells if c == STONE),
         solution="".join("R" if r == "CW" else "L" for r in sol),
         limit=limit,
+        fail_by_slack=fails,
     )

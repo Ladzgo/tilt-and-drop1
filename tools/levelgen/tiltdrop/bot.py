@@ -20,12 +20,14 @@ from .solver import Graph
 
 @dataclass(frozen=True)
 class BotParams:
-    tau: float = 0.8
-    eps: float = 0.08
-    lookahead_prob: float = 0.5
+    tau: float = 0.6
+    eps: float = 0.05
+    lookahead_prob: float = 0.6
+    lookahead_w: float = 0.7
     exit_w: float = 3.0
     remain_w: float = 4.0
     access_w: float = 1.0
+    revisit_penalty: float = 3.0  # humans notice "I have been here before"
 
 
 DEFAULT = BotParams()
@@ -85,12 +87,13 @@ def run_bot(gr: Graph, limit: int, runs: int = 200, seed: int = 0, params: BotPa
     def best_follow(j: int) -> float:
         if gr.win[j] or gr.children[j] is None:
             return 0.0
-        return max(q(j, 0), q(j, 1)) * 0.5
+        return max(q(j, 0), q(j, 1)) * params.lookahead_w
 
     fails = 0
     for _ in range(runs):
         i, left = 0, limit
         look = rng.random() < params.lookahead_prob
+        visited = {0}
         while not gr.win[i] and left > 0:
             ch = gr.children[i]
             if ch is None:
@@ -98,11 +101,17 @@ def run_bot(gr: Graph, limit: int, runs: int = 200, seed: int = 0, params: BotPa
             if rng.random() < params.eps:
                 a = rng.randrange(2)
             else:
-                s = [q(i, k) + (best_follow(ch[k]) if look and left > 1 else 0.0) for k in (0, 1)]
+                s = [
+                    q(i, k)
+                    + (best_follow(ch[k]) if look and left > 1 else 0.0)
+                    - (params.revisit_penalty if ch[k] in visited else 0.0)
+                    for k in (0, 1)
+                ]
                 m = max(s)
                 e0, e1 = math.exp((s[0] - m) / params.tau), math.exp((s[1] - m) / params.tau)
                 a = 0 if rng.random() * (e0 + e1) < e0 else 1
             i = ch[a]
+            visited.add(i)
             left -= 1
         if not gr.win[i]:
             fails += 1

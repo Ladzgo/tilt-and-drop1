@@ -2,11 +2,10 @@
 
 For each segment (one beat, at most one world):
   1. generate K candidates per slot in parallel (seeded -> reproducible)
-  2. rank candidates by difficulty -> quantile q in [0, 1]
-  3. cluster them (k-means on features)
-  4. walk the slots in order; each takes the unused, non-duplicate candidate
-     closest to the tier's target quantile, avoiding the clusters of the
-     previous two levels
+  2. cluster them (k-means on features)
+  3. walk the slots in order; each takes the unused, non-duplicate candidate
+     whose bot fail rate at the tier's move limit is closest to the tier's
+     target, avoiding the clusters of the previous two levels
   5. finalize: moves = par + slack(tier); re-analyze at the real limit
 Manual picks: `overrides` {level: level-json} replace a slot (validated).
 """
@@ -25,8 +24,10 @@ from .model import Level
 from .pacing import MIX_SPECS, TIER_SLACK, beat_for_level, is_intro, spec_for_level, tier_for_level, world_of
 from .sim import is_stable
 
-TARGET = {"E": 0.12, "N": 0.45, "H": 0.80, "SH": 0.96}
-RAMP = 0.12  # target drift across a beat (later levels of a beat are a bit harder)
+# target first-attempt fail rate per tier (GDD §7.2), estimated by the bot at the
+# tier's real move limit (par + slack)
+TARGET_FAIL = {"E": 0.05, "N": 0.22, "H": 0.50, "SH": 0.70}
+RAMP = 0.06  # target drift across a beat (later levels of a beat are a bit harder)
 
 
 def seed_for(n: int, k: int, salt: str = "lvl") -> int:
@@ -111,7 +112,6 @@ def curate_range(
             cands += generate_candidates(more, workers)
         cands.sort(key=lambda c: (c.difficulty, c.seed))
         m = len(cands)
-        q = {id(c): (i / (m - 1) if m > 1 else 0.5) for i, c in enumerate(cands)}
         labels_list = kmeans([feature_vector(c.level, c.analysis.par, c.analysis.solutions) for c in cands], k=max(1, min(8, m // 4)), seed=seg[0])
         label = {id(c): l for c, l in zip(cands, labels_list)}
         used: set[int] = set()
@@ -129,12 +129,18 @@ def curate_range(
                 seg_out.append(fin)
                 recent = (recent + [-1])[-2:]
                 continue
-            target = 0.0 if is_intro(n) else min(1.0, TARGET[tier] + RAMP * pos / max(1, len(seg) - 1))
+            slack = TIER_SLACK[tier]
+            intro = is_intro(n)
+            target = TARGET_FAIL[tier] + (0.0 if tier in ("E", "SH") else RAMP * pos / max(1, len(seg) - 1))
             best, best_cost = None, 9e9
             for c in cands:
                 if id(c) in used:
                     continue
-                cost = abs(q[id(c)] - target) + (0.2 if label[id(c)] in recent else 0.0)
+                fail = c.analysis.fail_by_slack[slack]
+                if intro:  # tutorial: easiest and shortest
+                    cost = fail + 0.05 * c.analysis.par
+                else:
+                    cost = abs(fail - target) + (0.1 if label[id(c)] in recent else 0.0) + 0.005 * c.analysis.par
                 if cost < best_cost:
                     if deduper.is_duplicate(c.level):
                         used.add(id(c))
@@ -163,9 +169,7 @@ def curate_daily(count: int, workers: int = 4, deduper: Deduper | None = None, b
     deduper = deduper or Deduper()
     tasks = [(DAILY_SPECS[seed_for(d, 0, "dspec") % len(DAILY_SPECS)], seed_for(d, k, "daily"), bot_runs) for d in range(1, count + 1) for k in range(3)]
     cands = generate_candidates(tasks, workers)
-    cands.sort(key=lambda c: (c.difficulty, c.seed))
-    m = len(cands)
-    band = cands[int(m * 0.4) : int(m * 0.75)] or cands
+    band = [c for c in cands if 0.15 <= c.analysis.fail_by_slack[2] <= 0.45] or cands
     band.sort(key=lambda c: c.seed)  # shuffle difficulty order deterministically
     out: list[Level] = []
     for c in band:

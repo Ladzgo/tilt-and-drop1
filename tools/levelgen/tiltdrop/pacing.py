@@ -36,16 +36,16 @@ class Beat:
 # ---- generator specs per beat ----------------------------------------------------
 S = GenSpec
 BEATS: tuple[Beat, ...] = (
-    Beat(1, "basics", "colors", S("basics", sizes=((4, 4), (4, 5), (5, 5)), colors=(1, 1), blocks_per_color=(1, 3), walls=(0.0, 0.1), par=(1, 4))),
-    Beat(11, "two_colors", "two_colors", S("two_colors", sizes=((5, 5), (5, 6)), colors=(2, 2), blocks_per_color=(1, 3), par=(2, 6))),
-    Beat(31, "stone", "stone", S("stone", sizes=((5, 6), (6, 6)), colors=(1, 2), stones=(1, 3), par=(3, 8), require=("stone",))),
-    Beat(61, "multi_gate", "multi_gate", S("multi_gate", sizes=((6, 6),), colors=(2, 3), gates_per_color=(1, 2), stones=(0, 2), par=(3, 9))),
-    Beat(91, "anchor", "anchor", S("anchor", sizes=((6, 6), (6, 7)), colors=(2, 3), anchors=(1, 2), stones=(0, 2), par=(3, 9), require=("anchor",))),
-    Beat(121, "ice", "ice", S("ice", sizes=((6, 6), (6, 7)), colors=(2, 3), ice=(1, 2), anchors=(0, 1), stones=(0, 2), par=(3, 10), require=("ice",))),
-    Beat(151, "four_colors", "four_colors", S("four_colors", sizes=((6, 7), (7, 7)), colors=(3, 4), blocks_per_color=(1, 2), gates_per_color=(1, 2), stones=(0, 2), anchors=(0, 1), ice=(0, 1), par=(4, 11))),
-    Beat(181, "stone_maze", None, S("stone_maze", sizes=((6, 7), (7, 7)), colors=(2, 3), blocks_per_color=(1, 2), stones=(3, 6), walls=(0.04, 0.14), par=(4, 11))),
-    Beat(211, "big_boards", "big_boards", S("big_boards", sizes=((7, 8), (8, 8)), colors=(2, 3), blocks_per_color=(1, 2), stones=(1, 3), walls=(0.0, 0.08), anchors=(0, 1), ice=(0, 1), par=(5, 12))),
-    Beat(241, "five_colors", "five_colors", S("five_colors", sizes=((7, 7),), colors=(4, 5), blocks_per_color=(1, 1), gates_per_color=(1, 1), stones=(0, 2), walls=(0.0, 0.08), par=(5, 12))),
+    Beat(1, "basics", "colors", S("basics", sizes=((4, 4), (4, 5), (5, 5)), colors=(1, 1), blocks_per_color=(1, 3), walls=(0.0, 0.1), par=(1, 3))),
+    Beat(11, "two_colors", "two_colors", S("two_colors", sizes=((5, 5), (5, 6)), colors=(2, 2), blocks_per_color=(1, 3), par=(2, 5))),
+    Beat(31, "stone", "stone", S("stone", sizes=((5, 6), (6, 6)), colors=(1, 2), stones=(1, 3), par=(2, 7), require=("stone",))),
+    Beat(61, "multi_gate", "multi_gate", S("multi_gate", sizes=((6, 6),), colors=(2, 3), gates_per_color=(1, 2), stones=(0, 2), par=(3, 8))),
+    Beat(91, "anchor", "anchor", S("anchor", sizes=((6, 6), (6, 7)), colors=(2, 3), anchors=(1, 2), stones=(0, 2), par=(2, 8), require=("anchor",))),
+    Beat(121, "ice", "ice", S("ice", sizes=((6, 6), (6, 7)), colors=(2, 3), ice=(1, 2), anchors=(0, 1), stones=(0, 2), par=(2, 8), require=("ice",))),
+    Beat(151, "four_colors", "four_colors", S("four_colors", sizes=((6, 7), (7, 7)), colors=(3, 4), blocks_per_color=(1, 2), gates_per_color=(1, 2), stones=(0, 2), anchors=(0, 1), ice=(0, 1), par=(3, 9))),
+    Beat(181, "stone_maze", None, S("stone_maze", sizes=((6, 7), (7, 7)), colors=(2, 3), blocks_per_color=(1, 2), stones=(3, 6), walls=(0.04, 0.14), par=(3, 10))),
+    Beat(211, "big_boards", "big_boards", S("big_boards", sizes=((7, 8), (8, 8)), colors=(2, 3), blocks_per_color=(1, 2), stones=(1, 3), walls=(0.0, 0.08), anchors=(0, 1), ice=(0, 1), par=(4, 10))),
+    Beat(241, "five_colors", "five_colors", S("five_colors", sizes=((7, 7),), colors=(4, 5), blocks_per_color=(1, 1), gates_per_color=(1, 1), stones=(0, 2), walls=(0.0, 0.08), par=(4, 10))),
     Beat(271, "review", None, S("review")),  # mixes all earlier specs
     # post-launch mechanics (sticky, one-way, bombs, ...) are not simulated yet:
     # levels 301+ come from the mixed pool and are marked provisional until
