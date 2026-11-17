@@ -19,7 +19,7 @@ The app is a **collection of 5–10 short-session logic puzzles** under one roof
 | 5 | **Gear Works** | place gears on a hex pegboard so the motor drives every dial the right way; triangles jam | parity puzzles, spinning machinery | rules (Py/JS/C#), 200 levels, web playable; Unity view next (docs/games/05-gears.md) |
 | 6 | **Domino Run** | rotate turner dominoes, then one push: every bell must ring (3 pushes) | one big chain reaction | rules (Py/JS/C#), 200 levels, web playable; Unity view next (docs/games/06-domino.md) |
 | 7 | **Fold** | fold two-sided paper along creases until the top layer matches the target | mental folding | rules (Py/JS/C#), 200 levels, web playable; Unity view next (docs/games/07-fold.md) |
-| 8 | Flow Fill | pour colour from sources; it spreads through open pipes in steps | spreading fills | concept |
+| 8 | **Flow Fill** | turn pipes so each colour of water reaches its cups; open ends leak, colours that meet turn muddy | visible floods, leaks | rules (Py/JS/C#), 200 levels, web playable; Unity view next (docs/games/08-flow.md) |
 
 Each game must pass a gate before it ships: a playable web prototype, then a 50-level playtest. It ships only if the median session is longer than 4 minutes and the first-try win rate on its first 20 levels is above 70%.
 

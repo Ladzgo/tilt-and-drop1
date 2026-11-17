@@ -28,8 +28,8 @@ The MVP is 6 weeks of engineering, plus a 14-day Google Play closed test that ov
 | CI (python, dotnet, GameCI Android/iOS, fastlane) | workflows ready; **needs secrets** |
 | Art, music, icon, store listing, localization | not started (placeholders) |
 | Difficulty ramp v2 (playtest: "too easy") | done: gradual ramp across levels 1–300, extra-hard spikes every 20 levels |
-| **Collection** (docs/COLLECTION.md): 5–10 games in one app | planned; hub in the web build |
-| Game 2 **Prism Paths** (docs/games/02-prism.md) | rules, exact solver, generator, 200 levels, golden vectors, JS port + playable web version done; **next: C# core port + Unity view** |
+| **Collection** (docs/COLLECTION.md): 8 games in one app | all 8 games playable in the web build with a hub |
+| Games 2–8 (Prism Paths, Roll & Print, Slide Out, Gear Works, Domino Run, Fold, Flow Fill; docs/games/) | each: rules, exact solver, generator, bot, 200 curated levels on the shared ramp, golden vectors with Python/JS/C# parity, playable web version; **next: Unity views (`IPuzzleGame`) + 50-level playtest gate per game** |
 
 Next for you: SETUP.md §2 (open + play), §3 (Android build), then the week 3 feel review on a device.
 
