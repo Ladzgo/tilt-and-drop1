@@ -1,0 +1,5463 @@
+{
+ "schema": 1,
+ "levels": [
+  {
+   "id": "R0001",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "....",
+    "..4.",
+    "#..."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "000400"
+   },
+   "moves": 4,
+   "par": 1,
+   "tier": "E",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.0,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "S"
+   }
+  },
+  {
+   "id": "R0002",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "....",
+    "5...",
+    "...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "050000"
+   },
+   "moves": 7,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.075,
+    "solutions": 2,
+    "dead_end": 0.0,
+    "solution": "SSWW"
+   }
+  },
+  {
+   "id": "R0003",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "...#",
+    "..2.",
+    "....",
+    "...."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "000020"
+   },
+   "moves": 5,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.075,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "SE"
+   }
+  },
+  {
+   "id": "R0004",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "1...",
+    "....",
+    "....",
+    "...."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "000010"
+   },
+   "moves": 7,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.075,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "NWNN"
+   }
+  },
+  {
+   "id": "R0005",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "....",
+    "..#5",
+    "...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "500000"
+   },
+   "moves": 6,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.075,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "SES"
+   }
+  },
+  {
+   "id": "R0006",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "....",
+    "....",
+    "...1"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "000001"
+   },
+   "moves": 6,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.225,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "ESES"
+   }
+  },
+  {
+   "id": "R0007",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "....",
+    "#6..",
+    "...."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "006000"
+   },
+   "moves": 6,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.225,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "SWNW"
+   }
+  },
+  {
+   "id": "R0008",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "5...",
+    "....",
+    "...."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 2,
+    "faces": "050000"
+   },
+   "moves": 5,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.2,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "ENW"
+   }
+  },
+  {
+   "id": "R0009",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "...6",
+    "....",
+    "...#",
+    "...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "006000"
+   },
+   "moves": 5,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.075,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "EN"
+   }
+  },
+  {
+   "id": "R0010",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    ".#..",
+    "....",
+    "...4",
+    "...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "400000"
+   },
+   "moves": 6,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "first_prints",
+    "bot_fail": 0.075,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "SES"
+   }
+  },
+  {
+   "id": "R0011",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    ".5.5",
+    ".#..",
+    "....",
+    "...."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 1,
+    "faces": "005500"
+   },
+   "moves": 6,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.0,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "NWW"
+   }
+  },
+  {
+   "id": "R0012",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".#...",
+    "...4.",
+    ".....",
+    "....6",
+    "....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "406000"
+   },
+   "moves": 7,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.25,
+    "solutions": 1,
+    "dead_end": 0.016,
+    "solution": "ENWNN"
+   }
+  },
+  {
+   "id": "R0013",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..1..",
+    ".....",
+    "#.5..",
+    "..#.1",
+    "....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "010015"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.25,
+    "solutions": 1,
+    "dead_end": 0.238,
+    "solution": "SEWNWNN"
+   }
+  },
+  {
+   "id": "R0014",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "....",
+    "...5",
+    "..5."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "050510"
+   },
+   "moves": 6,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.25,
+    "solutions": 1,
+    "dead_end": 0.111,
+    "solution": "ESSW"
+   }
+  },
+  {
+   "id": "R0015",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "..1.",
+    ".22#",
+    "....",
+    "...."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "000201"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.075,
+    "solutions": 1,
+    "dead_end": 0.236,
+    "solution": "SSENN"
+   }
+  },
+  {
+   "id": "R0016",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "...3.",
+    "...#.",
+    ".....",
+    "....."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "060300"
+   },
+   "moves": 6,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.075,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "EES"
+   }
+  },
+  {
+   "id": "R0017",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "..66",
+    "....",
+    "...4"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "006400"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 3,
+    "dead_end": 0.288,
+    "solution": "SNNSWN"
+   }
+  },
+  {
+   "id": "R0018",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "..2.",
+    "4...",
+    "#..."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 0,
+    "faces": "040002"
+   },
+   "moves": 7,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.024,
+    "solution": "SWSWW"
+   }
+  },
+  {
+   "id": "R0019",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "3.3.",
+    ".2..",
+    "....",
+    "..#."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 2,
+    "faces": "302100"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 2,
+    "dead_end": 0.163,
+    "solution": "NENSWWN"
+   }
+  },
+  {
+   "id": "R0020",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".#...",
+    ".3...",
+    ".3...",
+    ".....",
+    "..3.."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "000033"
+   },
+   "moves": 9,
+   "par": 8,
+   "tier": "H",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.55,
+    "solutions": 2,
+    "dead_end": 0.042,
+    "solution": "SWESWSES"
+   }
+  },
+  {
+   "id": "R0021",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "2....",
+    ".....",
+    "..3#.",
+    "..#..",
+    "....."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 2,
+    "faces": "230300"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 3,
+    "dead_end": 0.254,
+    "solution": "NNESSE"
+   }
+  },
+  {
+   "id": "R0022",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "6...",
+    ".6#.",
+    "...."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "066600"
+   },
+   "moves": 6,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "SWN"
+   }
+  },
+  {
+   "id": "R0023",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "..#.",
+    ".2..",
+    "....",
+    "...."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "200120"
+   },
+   "moves": 6,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "WNW"
+   }
+  },
+  {
+   "id": "R0024",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "5...",
+    "..5.",
+    "...#",
+    "...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "554000"
+   },
+   "moves": 7,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.267,
+    "solution": "WWESE"
+   }
+  },
+  {
+   "id": "R0025",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..15.",
+    ".....",
+    "....5",
+    ".....",
+    "....."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "551000"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.105,
+    "solution": "ENESES"
+   }
+  },
+  {
+   "id": "R0026",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#....",
+    "...1.",
+    ".....",
+    "..1.1",
+    "....."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "001100"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.072,
+    "solution": "ENEENWN"
+   }
+  },
+  {
+   "id": "R0027",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    ".6..6"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 3,
+    "faces": "004060"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.132,
+    "solution": "SENWWWS"
+   }
+  },
+  {
+   "id": "R0028",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    ".#..",
+    "..2.",
+    "1...",
+    "...."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 3,
+    "faces": "001002"
+   },
+   "moves": 7,
+   "par": 6,
+   "tier": "H",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.575,
+    "solutions": 1,
+    "dead_end": 0.067,
+    "solution": "NSENEN"
+   }
+  },
+  {
+   "id": "R0029",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".....",
+    ".#...",
+    "..5.#",
+    "..5.."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "055000"
+   },
+   "moves": 7,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "SSSS"
+   }
+  },
+  {
+   "id": "R0030",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...#.",
+    ".....",
+    ".....",
+    ".5.#.",
+    "5...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 3,
+    "faces": "055050"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 3,
+    "dead_end": 0.0,
+    "solution": "SWWEN"
+   }
+  },
+  {
+   "id": "R0031",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...3.",
+    ".....",
+    ".....",
+    ".....",
+    "....."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 2,
+    "faces": "300300"
+   },
+   "moves": 6,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "NEN"
+   }
+  },
+  {
+   "id": "R0032",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    ".4..",
+    "....",
+    "#...",
+    "..5."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 3,
+    "faces": "400005"
+   },
+   "moves": 7,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "WNNNW"
+   }
+  },
+  {
+   "id": "R0033",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "#.11",
+    "3...",
+    "..#."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 2,
+    "faces": "000013"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 2,
+    "dead_end": 0.206,
+    "solution": "NESWNWSW"
+   }
+  },
+  {
+   "id": "R0034",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "..#6.",
+    ".....",
+    "...66",
+    "....."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 4,
+    "faces": "606300"
+   },
+   "moves": 7,
+   "par": 6,
+   "tier": "H",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.575,
+    "solutions": 1,
+    "dead_end": 0.188,
+    "solution": "ENENNW"
+   }
+  },
+  {
+   "id": "R0035",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..43.",
+    "...3.",
+    ".....",
+    ".....",
+    "....."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 2,
+    "faces": "300004"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.157,
+    "solution": "ENEWNE"
+   }
+  },
+  {
+   "id": "R0036",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "..3.",
+    "...#",
+    "33..",
+    "...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "103000"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.1,
+    "solutions": 4,
+    "dead_end": 0.36,
+    "solution": "NSSWWSEN"
+   }
+  },
+  {
+   "id": "R0037",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "....",
+    ".2.#",
+    "..2."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 0,
+    "faces": "002020"
+   },
+   "moves": 7,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "SSEES"
+   }
+  },
+  {
+   "id": "R0038",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "..4.",
+    ".#..",
+    "...2",
+    "...."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 0,
+    "faces": "240000"
+   },
+   "moves": 7,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.156,
+    "solution": "SSNWN"
+   }
+  },
+  {
+   "id": "R0039",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    ".2.5",
+    "...2",
+    "...."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 0,
+    "faces": "500205"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.266,
+    "solution": "ESENESS"
+   }
+  },
+  {
+   "id": "R0040",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....",
+    "11..",
+    "..2.",
+    "...."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 2,
+    "faces": "001200"
+   },
+   "moves": 8,
+   "par": 8,
+   "tier": "SH",
+   "meta": {
+    "beat": "colours",
+    "bot_fail": 0.775,
+    "solutions": 2,
+    "dead_end": 0.261,
+    "solution": "ENSWNESE"
+   }
+  },
+  {
+   "id": "R0041",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "...e.",
+    "....5",
+    "e....",
+    "....."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 4,
+    "faces": "050000"
+   },
+   "moves": 7,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.0,
+    "solutions": 2,
+    "dead_end": 0.115,
+    "solution": "EENN"
+   }
+  },
+  {
+   "id": "R0042",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".b...",
+    ".#...",
+    "..b2.",
+    "....5",
+    "....."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 0,
+    "faces": "005500"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.375,
+    "solution": "EEESSES"
+   }
+  },
+  {
+   "id": "R0043",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..f..",
+    "..#4d",
+    "e#...",
+    ".....",
+    "....."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 3,
+    "faces": "000000"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 10,
+    "dead_end": 0.385,
+    "solution": "EENNSWN"
+   }
+  },
+  {
+   "id": "R0044",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....4",
+    "....4",
+    "....c",
+    ".....",
+    "..b.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "000004"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.275,
+    "solutions": 1,
+    "dead_end": 0.329,
+    "solution": "ENNWSE"
+   }
+  },
+  {
+   "id": "R0045",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".....",
+    "d.#..",
+    ".#e55",
+    "....."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 3,
+    "faces": "000000"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.275,
+    "solutions": 2,
+    "dead_end": 0.39,
+    "solution": "SEENSENSEN"
+   }
+  },
+  {
+   "id": "R0046",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "..b..",
+    "..1..",
+    ".....",
+    "..#.1"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 3,
+    "faces": "001010"
+   },
+   "moves": 8,
+   "par": 7,
+   "tier": "H",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.575,
+    "solutions": 2,
+    "dead_end": 0.38,
+    "solution": "WWNEESS"
+   }
+  },
+  {
+   "id": "R0047",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...e.",
+    ".....",
+    "c.5..",
+    "..e3.",
+    "....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "030000"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.284,
+    "solution": "WNENW"
+   }
+  },
+  {
+   "id": "R0048",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..c#.",
+    ".....",
+    "..6.c",
+    ".....",
+    ".#.3."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "000006"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.153,
+    "solution": "ESSSES"
+   }
+  },
+  {
+   "id": "R0049",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".#...",
+    "..c..",
+    "....c",
+    "....3",
+    "...5."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "050000"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 3,
+    "dead_end": 0.404,
+    "solution": "ESWWSENE"
+   }
+  },
+  {
+   "id": "R0050",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "e....",
+    "..4..",
+    ".....",
+    "....d",
+    "...#."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "000000"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "dead_end": 0.025,
+    "solution": "ESWWNN"
+   }
+  },
+  {
+   "id": "R0051",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..b..",
+    ".b...",
+    "2.d..",
+    ".4...",
+    ".#.#."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 0,
+    "faces": "004000"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 3,
+    "dead_end": 0.38,
+    "solution": "WSSWSNW"
+   }
+  },
+  {
+   "id": "R0052",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "c....",
+    "...#.",
+    "3.3..",
+    ".....",
+    "..#.."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "303000"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "dead_end": 0.125,
+    "solution": "ENSWWN"
+   }
+  },
+  {
+   "id": "R0053",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "6.66.",
+    ".....",
+    ".be..",
+    "....."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "000026"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "dead_end": 0.694,
+    "solution": "WSEENSEN"
+   }
+  },
+  {
+   "id": "R0054",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....#",
+    ".....",
+    "#..b.",
+    "...2.",
+    "...b."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 4,
+    "faces": "000000"
+   },
+   "moves": 7,
+   "par": 6,
+   "tier": "H",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.575,
+    "solutions": 2,
+    "dead_end": 0.083,
+    "solution": "EEEENW"
+   }
+  },
+  {
+   "id": "R0055",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".....",
+    "e....",
+    ".4...",
+    "....d"
+   ],
+   "cube": {
+    "x": 0,
+    "y": 0,
+    "faces": "000004"
+   },
+   "moves": 7,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.25,
+    "solution": "SESS"
+   }
+  },
+  {
+   "id": "R0056",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".c...",
+    ".....",
+    ".c3.#",
+    "3...."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "000003"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 6,
+    "dead_end": 0.215,
+    "solution": "WENSEN"
+   }
+  },
+  {
+   "id": "R0057",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....c",
+    "...b.",
+    "....5",
+    "....e",
+    "..5.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "000500"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 13,
+    "dead_end": 0.463,
+    "solution": "ENWSWEENN"
+   }
+  },
+  {
+   "id": "R0058",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "6...c",
+    ".f...",
+    ".66..",
+    "...#.",
+    "....."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 2,
+    "faces": "600020"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 2,
+    "dead_end": 0.737,
+    "solution": "NEWNSSEE"
+   }
+  },
+  {
+   "id": "R0059",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "b....",
+    "#2...",
+    "....b",
+    "...b."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 2,
+    "faces": "000000"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 6,
+    "dead_end": 0.173,
+    "solution": "ESSWWNN"
+   }
+  },
+  {
+   "id": "R0060",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "f.f#.",
+    ".....",
+    "..c..",
+    "#..6.",
+    "...3."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "060060"
+   },
+   "moves": 9,
+   "par": 9,
+   "tier": "SH",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.775,
+    "solutions": 1,
+    "dead_end": 0.505,
+    "solution": "WNNWEESWS"
+   }
+  },
+  {
+   "id": "R0061",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".....",
+    "b.#..",
+    "..4d4",
+    ".#.a."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 4,
+    "faces": "004000"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 3,
+    "dead_end": 0.13,
+    "solution": "NESEN"
+   }
+  },
+  {
+   "id": "R0062",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..b..",
+    "#.f6.",
+    ".b.2.",
+    "#....",
+    "....."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "000260"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.449,
+    "solution": "NESSEN"
+   }
+  },
+  {
+   "id": "R0063",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...c.",
+    "...32",
+    "b.#..",
+    ".....",
+    "...#."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "020000"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.375,
+    "solution": "NEESW"
+   }
+  },
+  {
+   "id": "R0064",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".4...",
+    "b....",
+    ".....",
+    "..5.."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 3,
+    "faces": "005040"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 1,
+    "dead_end": 0.113,
+    "solution": "SWWNNNW"
+   }
+  },
+  {
+   "id": "R0065",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "c.#..",
+    "...c.",
+    "....#",
+    ".6..f",
+    "..6.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "600003"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 1,
+    "dead_end": 0.479,
+    "solution": "NESWWWN"
+   }
+  },
+  {
+   "id": "R0066",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..b..",
+    "#...b",
+    "....2",
+    ".2...",
+    "c2..."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "220000"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 1,
+    "dead_end": 0.417,
+    "solution": "NNNWSWSWS"
+   }
+  },
+  {
+   "id": "R0067",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "....3",
+    "##...",
+    "...cf",
+    "3c..."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 1,
+    "faces": "000030"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "dead_end": 0.364,
+    "solution": "ESWWSWSW"
+   }
+  },
+  {
+   "id": "R0068",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..4.d",
+    ".#...",
+    "d....",
+    "#....",
+    "....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 1,
+    "faces": "000000"
+   },
+   "moves": 7,
+   "par": 6,
+   "tier": "H",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.6,
+    "solutions": 2,
+    "dead_end": 0.077,
+    "solution": "ENSWWN"
+   }
+  },
+  {
+   "id": "R0069",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "....2",
+    ".....",
+    "#.2..",
+    "..c.."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "040020"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 2,
+    "dead_end": 0.341,
+    "solution": "EEENN"
+   }
+  },
+  {
+   "id": "R0070",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "..#.a",
+    ".#...",
+    ".....",
+    "1..4."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "400100"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.1,
+    "solutions": 1,
+    "dead_end": 0.157,
+    "solution": "WSEEE"
+   }
+  },
+  {
+   "id": "R0071",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".....",
+    "...e.",
+    "....3",
+    "#...3"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "030000"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 2,
+    "dead_end": 0.337,
+    "solution": "ESESSWSE"
+   }
+  },
+  {
+   "id": "R0072",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "f6.6.",
+    ".....",
+    "..f..",
+    ".....",
+    "f...."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "600000"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "dead_end": 0.699,
+    "solution": "ESWNENWW"
+   }
+  },
+  {
+   "id": "R0073",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....d",
+    ".....",
+    "...#.",
+    "..d..",
+    ".26.6"
+   ],
+   "cube": {
+    "x": 0,
+    "y": 4,
+    "faces": "600020"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.3,
+    "solutions": 1,
+    "dead_end": 0.306,
+    "solution": "EENEES"
+   }
+  },
+  {
+   "id": "R0074",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...#.",
+    ".1...",
+    ".b#..",
+    "..b..",
+    "..b2."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 2,
+    "faces": "001000"
+   },
+   "moves": 8,
+   "par": 7,
+   "tier": "H",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.6,
+    "solutions": 1,
+    "dead_end": 0.582,
+    "solution": "ENSSSEE"
+   }
+  },
+  {
+   "id": "R0075",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".5...",
+    "5....",
+    ".....",
+    "a...."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 1,
+    "faces": "000052"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.125,
+    "solutions": 7,
+    "dead_end": 0.198,
+    "solution": "EESWSWN"
+   }
+  },
+  {
+   "id": "R0076",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...2.",
+    ".f.b6",
+    "#....",
+    ".f...",
+    "....."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 4,
+    "faces": "600600"
+   },
+   "moves": 12,
+   "par": 9,
+   "tier": "E",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.125,
+    "solutions": 6,
+    "dead_end": 0.419,
+    "solution": "EENENNENW"
+   }
+  },
+  {
+   "id": "R0077",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...4.",
+    ".....",
+    ".....",
+    "..b.2",
+    ".dd.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "000420"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.471,
+    "solution": "SENNNW"
+   }
+  },
+  {
+   "id": "R0078",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..c..",
+    "2...2",
+    "....3",
+    ".....",
+    "f...."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "000002"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.495,
+    "solution": "WNEEEESS"
+   }
+  },
+  {
+   "id": "R0079",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".#...",
+    "...f.",
+    ".b.6.",
+    "#6...",
+    "..f.."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "650000"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.325,
+    "solutions": 5,
+    "dead_end": 0.601,
+    "solution": "NWNSSWNW"
+   }
+  },
+  {
+   "id": "R0080",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".c...",
+    "..e..",
+    "a....",
+    "..#.3",
+    "...1."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "010000"
+   },
+   "moves": 9,
+   "par": 9,
+   "tier": "SH",
+   "meta": {
+    "beat": "pools",
+    "bot_fail": 0.8,
+    "solutions": 1,
+    "dead_end": 0.51,
+    "solution": "WESESSSEN"
+   }
+  },
+  {
+   "id": "R0081",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "#5..#.",
+    "..#...",
+    "...##.",
+    "....##",
+    ".....e",
+    "......"
+   ],
+   "cube": {
+    "x": 5,
+    "y": 1,
+    "faces": "050500"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.0,
+    "solutions": 1,
+    "dead_end": 0.0,
+    "solution": "WWNWW"
+   }
+  },
+  {
+   "id": "R0082",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....3",
+    ".#5.#5",
+    "....#.",
+    "..#...",
+    "#..#c.",
+    "...#.."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 0,
+    "faces": "000530"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.36,
+    "solution": "ESNWWWS"
+   }
+  },
+  {
+   "id": "R0083",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#.111",
+    ".a...",
+    "a..#.",
+    "..##.",
+    ".#..."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "102010"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.704,
+    "solution": "EESEN"
+   }
+  },
+  {
+   "id": "R0084",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....22",
+    "d..4..",
+    "....#.",
+    "...d.#",
+    "#...#.",
+    "##..#."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 1,
+    "faces": "004022"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.744,
+    "solution": "NESWNWS"
+   }
+  },
+  {
+   "id": "R0085",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".#..#",
+    "..e.#",
+    ".....",
+    ".#e55",
+    "##1.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "010105"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 2,
+    "dead_end": 0.728,
+    "solution": "NWSENSEN"
+   }
+  },
+  {
+   "id": "R0086",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..##..",
+    "..6...",
+    "..6.#.",
+    "##....",
+    "......",
+    "..#..."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 5,
+    "faces": "000600"
+   },
+   "moves": 9,
+   "par": 8,
+   "tier": "H",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.6,
+    "solutions": 6,
+    "dead_end": 0.026,
+    "solution": "WNNWNENW"
+   }
+  },
+  {
+   "id": "R0087",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    ".....",
+    "#....",
+    ".##.4",
+    "#...4"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 2,
+    "faces": "040000"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.035,
+    "solution": "EESSWNE"
+   }
+  },
+  {
+   "id": "R0088",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#...#",
+    "......",
+    "##..f.",
+    "....6.",
+    "..#.6.",
+    "#.#.b2"
+   ],
+   "cube": {
+    "x": 5,
+    "y": 4,
+    "faces": "062060"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 2,
+    "dead_end": 0.771,
+    "solution": "SWNNESS"
+   }
+  },
+  {
+   "id": "R0089",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......",
+    "......",
+    "..##.#",
+    "......",
+    ".33#..",
+    "4....."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 5,
+    "faces": "304030"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.105,
+    "solution": "NESWNWS"
+   }
+  },
+  {
+   "id": "R0090",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "#..#.",
+    ".#2.#",
+    "b.2d4",
+    "..#.."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "203000"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.431,
+    "solution": "SSESWESEN"
+   }
+  },
+  {
+   "id": "R0091",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".3.#.#",
+    "#.....",
+    "......",
+    "#c#...",
+    ".3....",
+    ".....#"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 5,
+    "faces": "030000"
+   },
+   "moves": 13,
+   "par": 10,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 4,
+    "dead_end": 0.545,
+    "solution": "ENWSWNNNNN"
+   }
+  },
+  {
+   "id": "R0092",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..1...",
+    "..1...",
+    ".....#",
+    "#..#.#",
+    "#.#...",
+    "..#..."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 2,
+    "faces": "000016"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 2,
+    "dead_end": 0.133,
+    "solution": "WNENESW"
+   }
+  },
+  {
+   "id": "R0093",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....#",
+    "#.2.3",
+    "#..3.",
+    ".b.c.",
+    "....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "030200"
+   },
+   "moves": 11,
+   "par": 10,
+   "tier": "H",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.6,
+    "solutions": 11,
+    "dead_end": 0.598,
+    "solution": "ENNWSNWNEE"
+   }
+  },
+  {
+   "id": "R0094",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....c",
+    ".....#",
+    "...33.",
+    "....c.",
+    ".#..#.",
+    "##...."
+   ],
+   "cube": {
+    "x": 5,
+    "y": 3,
+    "faces": "060023"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 2,
+    "dead_end": 0.024,
+    "solution": "NWSWN"
+   }
+  },
+  {
+   "id": "R0095",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "e.#...",
+    "5#....",
+    "..#...",
+    "..5...",
+    "..#.e.",
+    "......"
+   ],
+   "cube": {
+    "x": 0,
+    "y": 3,
+    "faces": "500045"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 3,
+    "dead_end": 0.105,
+    "solution": "EEWWNN"
+   }
+  },
+  {
+   "id": "R0096",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#....",
+    ".....",
+    "c..6c",
+    "#.36.",
+    "#.6.."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 2,
+    "faces": "306600"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 2,
+    "dead_end": 0.757,
+    "solution": "EESWNESWS"
+   }
+  },
+  {
+   "id": "R0097",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "1....",
+    "5....",
+    "..51#",
+    "....#",
+    ".#.c."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "000150"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.48,
+    "solution": "EESWWSWNNN"
+   }
+  },
+  {
+   "id": "R0098",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..a1.",
+    "4#4..",
+    ".....",
+    "..#.#",
+    ".d##."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 2,
+    "faces": "004000"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.614,
+    "solution": "WWWWNNEESEN"
+   }
+  },
+  {
+   "id": "R0099",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "#b###",
+    "....4",
+    "..44#",
+    "....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "040400"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 3,
+    "dead_end": 0.281,
+    "solution": "SWNWSENEE"
+   }
+  },
+  {
+   "id": "R0100",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "33..##",
+    "......",
+    "#c....",
+    "3.....",
+    "....##",
+    "....#."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "000300"
+   },
+   "moves": 11,
+   "par": 11,
+   "tier": "SH",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.8,
+    "solutions": 1,
+    "dead_end": 0.687,
+    "solution": "NNNSWNESSSW"
+   }
+  },
+  {
+   "id": "R0101",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "1.....",
+    "..#...",
+    ".1....",
+    "#.#...",
+    "a.#...",
+    "....d."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "100410"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.147,
+    "solution": "WWESS"
+   }
+  },
+  {
+   "id": "R0102",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......",
+    ".#...#",
+    "...#..",
+    "...31.",
+    ".#..1.",
+    "....##"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "000311"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.214,
+    "solution": "EENWW"
+   }
+  },
+  {
+   "id": "R0103",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".53..",
+    "55#..",
+    ".#.#.",
+    "....#",
+    "..c.."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 0,
+    "faces": "304050"
+   },
+   "moves": 12,
+   "par": 9,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.344,
+    "solution": "WWWWSENWS"
+   }
+  },
+  {
+   "id": "R0104",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..#.d",
+    ".##.#",
+    "...4.",
+    "..44.",
+    ".e..."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 3,
+    "faces": "000004"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 4,
+    "dead_end": 0.434,
+    "solution": "NWESWSWN"
+   }
+  },
+  {
+   "id": "R0105",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#....",
+    ".b...#",
+    "..##.#",
+    "....22",
+    "...2..",
+    "....b."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 5,
+    "faces": "100020"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.325,
+    "solutions": 1,
+    "dead_end": 0.49,
+    "solution": "NEESENNW"
+   }
+  },
+  {
+   "id": "R0106",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....#",
+    "....a.",
+    "....#5",
+    "......",
+    "..5..#",
+    ".#..#."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "050005"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.083,
+    "solution": "NESEENEN"
+   }
+  },
+  {
+   "id": "R0107",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "#c..3",
+    ".#..1",
+    ".c..#",
+    ".#..."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "101100"
+   },
+   "moves": 9,
+   "par": 8,
+   "tier": "H",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.6,
+    "solutions": 1,
+    "dead_end": 0.652,
+    "solution": "WNEESSEN"
+   }
+  },
+  {
+   "id": "R0108",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##.#..",
+    ".##..2",
+    "......",
+    "#.3.#.",
+    "......",
+    "#.cc.."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "030230"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.239,
+    "solution": "EENENE"
+   }
+  },
+  {
+   "id": "R0109",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...33",
+    "b..#.",
+    "##.#.",
+    "..3..",
+    "...3#"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 0,
+    "faces": "300030"
+   },
+   "moves": 12,
+   "par": 9,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.668,
+    "solution": "EESSSWSWN"
+   }
+  },
+  {
+   "id": "R0110",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#...#",
+    ".#...",
+    "#5...",
+    "55...",
+    "e.6#."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 3,
+    "faces": "650005"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.513,
+    "solution": "NWSSWNESE"
+   }
+  },
+  {
+   "id": "R0111",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#.3..",
+    ".....",
+    "..##3",
+    "...d.",
+    "c...."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 0,
+    "faces": "000003"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.185,
+    "solution": "WSWNEESS"
+   }
+  },
+  {
+   "id": "R0112",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..#...",
+    "..#...",
+    "#.....",
+    "#..#6.",
+    "...66.",
+    "......"
+   ],
+   "cube": {
+    "x": 5,
+    "y": 4,
+    "faces": "600000"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.019,
+    "solution": "WWSENENW"
+   }
+  },
+  {
+   "id": "R0113",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".##...",
+    "....#.",
+    ".##...",
+    "..#...",
+    "....55",
+    "..##55"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 3,
+    "faces": "050000"
+   },
+   "moves": 13,
+   "par": 12,
+   "tier": "H",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.625,
+    "solutions": 6,
+    "dead_end": 0.106,
+    "solution": "ESWESWNESWNE"
+   }
+  },
+  {
+   "id": "R0114",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#63..",
+    ".#..3",
+    ".....",
+    "#....",
+    ".#..f"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "603003"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.258,
+    "solution": "ENWWNW"
+   }
+  },
+  {
+   "id": "R0115",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..55#.",
+    "..#4..",
+    "5.e#..",
+    "...#..",
+    "....#.",
+    "....e#"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 2,
+    "faces": "500504"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.125,
+    "solutions": 2,
+    "dead_end": 0.18,
+    "solution": "NWNWWSWS"
+   }
+  },
+  {
+   "id": "R0116",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....#",
+    "...d#.",
+    "..#6..",
+    "#.....",
+    "a.4...",
+    "..4.6#"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 2,
+    "faces": "006046"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 3,
+    "dead_end": 0.614,
+    "solution": "WSWSESEWW"
+   }
+  },
+  {
+   "id": "R0117",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....#",
+    "......",
+    "......",
+    "66#...",
+    ".#c.##",
+    ".f66.."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "006006"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.172,
+    "solution": "SSSWSSEENES"
+   }
+  },
+  {
+   "id": "R0118",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "...#6.",
+    "..##..",
+    "#....1",
+    "....4.",
+    "#.#..6",
+    "#.d.#."
+   ],
+   "cube": {
+    "x": 5,
+    "y": 3,
+    "faces": "100604"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.378,
+    "solution": "SNWNNNESS"
+   }
+  },
+  {
+   "id": "R0119",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".....",
+    "5..##",
+    "..5..",
+    "2....",
+    ".#..."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 2,
+    "faces": "250000"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.571,
+    "solution": "ENWSSENE"
+   }
+  },
+  {
+   "id": "R0120",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#...4",
+    "#....",
+    ".4...",
+    "..#.#",
+    "#...."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "000400"
+   },
+   "moves": 9,
+   "par": 9,
+   "tier": "SH",
+   "meta": {
+    "beat": "corridors",
+    "bot_fail": 0.825,
+    "solutions": 2,
+    "dead_end": 0.091,
+    "solution": "NWSWEENEN"
+   }
+  },
+  {
+   "id": "R0121",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "4....",
+    "4~...",
+    "..4a~",
+    "..#..",
+    ".#..~"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 2,
+    "faces": "004044"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.0,
+    "solutions": 3,
+    "dead_end": 0.261,
+    "solution": "EWWNN"
+   }
+  },
+  {
+   "id": "R0122",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "...4.",
+    "#.#~4",
+    "..e.~",
+    "~.#4.",
+    "~.4~."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "400400"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.594,
+    "solution": "EEESSWSW"
+   }
+  },
+  {
+   "id": "R0123",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "#..1.a",
+    "..#66.",
+    "....#.",
+    "..~~..",
+    "..d..~",
+    ".....~"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "060100"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.125,
+    "solutions": 1,
+    "dead_end": 0.541,
+    "solution": "WNNENWS"
+   }
+  },
+  {
+   "id": "R0124",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".~.6..",
+    ".~e~..",
+    "..6...",
+    "......",
+    ".#....",
+    "..#e#."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "056600"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.489,
+    "solution": "NWNWSENN"
+   }
+  },
+  {
+   "id": "R0125",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..~...",
+    "......",
+    "a..2.~",
+    "...#.#",
+    ".2....",
+    ".....#"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 1,
+    "faces": "000002"
+   },
+   "moves": 8,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.35,
+    "solutions": 1,
+    "dead_end": 0.031,
+    "solution": "SWWWSS"
+   }
+  },
+  {
+   "id": "R0126",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".~..#",
+    ".3#..",
+    ".#.~.",
+    ".~..~",
+    "~..3."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 2,
+    "faces": "330000"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.35,
+    "solutions": 2,
+    "dead_end": 0.067,
+    "solution": "WSESWNWNNE"
+   }
+  },
+  {
+   "id": "R0127",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "...#.~",
+    "..#.#.",
+    "~#....",
+    "...~..",
+    ".5.5~~",
+    "5.5..."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 1,
+    "faces": "500550"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.35,
+    "solutions": 2,
+    "dead_end": 0.155,
+    "solution": "SSESEENWWWS"
+   }
+  },
+  {
+   "id": "R0128",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..5.6",
+    "....5",
+    "#~...",
+    "..~~#",
+    "..#.~"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "005060"
+   },
+   "moves": 9,
+   "par": 8,
+   "tier": "H",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.625,
+    "solutions": 1,
+    "dead_end": 0.297,
+    "solution": "NWSENEES"
+   }
+  },
+  {
+   "id": "R0129",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "...#~#",
+    "#.....",
+    "~.##~.",
+    "d.....",
+    "..4...",
+    "...~.."
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "040020"
+   },
+   "moves": 8,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.074,
+    "solution": "WSSSE"
+   }
+  },
+  {
+   "id": "R0130",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".~5..5",
+    "....~.",
+    "....#.",
+    "~.....",
+    "~...##",
+    "...#.~"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "505000"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 3,
+    "dead_end": 0.035,
+    "solution": "NENSWWN"
+   }
+  },
+  {
+   "id": "R0131",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "...~.#",
+    ".#..#.",
+    "33.~6#",
+    "f~#...",
+    "......",
+    ".....~"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 5,
+    "faces": "000333"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.35,
+    "solutions": 2,
+    "dead_end": 0.248,
+    "solution": "WWNWNWSENEE"
+   }
+  },
+  {
+   "id": "R0132",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....#.",
+    "~..#..",
+    "....#b",
+    ".2.2#.",
+    "..#~..",
+    "...~~."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "240000"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.35,
+    "solutions": 4,
+    "dead_end": 0.354,
+    "solution": "ESSSENWWS"
+   }
+  },
+  {
+   "id": "R0133",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#2.~2",
+    ".....",
+    ".....",
+    ".~##.",
+    "...~."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 1,
+    "faces": "220000"
+   },
+   "moves": 8,
+   "par": 7,
+   "tier": "H",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.625,
+    "solutions": 1,
+    "dead_end": 0.015,
+    "solution": "WNEWSWN"
+   }
+  },
+  {
+   "id": "R0134",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".~~~.#",
+    "...5..",
+    "...~55",
+    "...~#.",
+    "#.#...",
+    "......"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 2,
+    "faces": "550050"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.098,
+    "solution": "ENWEES"
+   }
+  },
+  {
+   "id": "R0135",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....e",
+    "..#...",
+    "#52.~.",
+    "~.e~..",
+    "~.....",
+    "#....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "050202"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 2,
+    "dead_end": 0.207,
+    "solution": "SENWNW"
+   }
+  },
+  {
+   "id": "R0136",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....#.",
+    ".~....",
+    "..c.#.",
+    "......",
+    "44~...",
+    "3.c.3#"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 3,
+    "faces": "000400"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 2,
+    "dead_end": 0.7,
+    "solution": "SWNNWSSEEEE"
+   }
+  },
+  {
+   "id": "R0137",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "#.....",
+    "..#...",
+    ".~.~5.",
+    ".e5...",
+    "~.5...",
+    ".#...~"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 5,
+    "faces": "000050"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 2,
+    "dead_end": 0.121,
+    "solution": "WNNESWNNE"
+   }
+  },
+  {
+   "id": "R0138",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "...#..",
+    "44....",
+    "~.....",
+    "...~..",
+    "#~4...",
+    "...~.."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 5,
+    "faces": "004000"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 1,
+    "dead_end": 0.037,
+    "solution": "ENWNWNNES"
+   }
+  },
+  {
+   "id": "R0139",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "~##..",
+    ".#..#",
+    ".....",
+    "..~..",
+    "4.~4."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "004000"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 3,
+    "dead_end": 0.0,
+    "solution": "WNESWNWWS"
+   }
+  },
+  {
+   "id": "R0140",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..~~#",
+    "4..4.",
+    "...#.",
+    ".b.#.",
+    ".~..~"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "000240"
+   },
+   "moves": 9,
+   "par": 9,
+   "tier": "SH",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.8,
+    "solutions": 1,
+    "dead_end": 0.67,
+    "solution": "SENESNWWS"
+   }
+  },
+  {
+   "id": "R0141",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "e#~~5~",
+    "...#4.",
+    "......",
+    "##....",
+    ".#....",
+    "......"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 5,
+    "faces": "044500"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 2,
+    "dead_end": 0.07,
+    "solution": "NENNWNN"
+   }
+  },
+  {
+   "id": "R0142",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "#.~~..",
+    "c.d#..",
+    "#.....",
+    "......",
+    "..4.4#",
+    "..4..."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "404004"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.225,
+    "solution": "SSWSEEN"
+   }
+  },
+  {
+   "id": "R0143",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..##..",
+    "#.....",
+    "...~..",
+    ".#c...",
+    "....~.",
+    "2b2..."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 2,
+    "faces": "002000"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 4,
+    "dead_end": 0.217,
+    "solution": "ESSSWNWS"
+   }
+  },
+  {
+   "id": "R0144",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "~.f.~",
+    "..6.#",
+    "..~.c",
+    "..~..",
+    "66.#."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 1,
+    "faces": "060000"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 5,
+    "dead_end": 0.507,
+    "solution": "EENESWSWNWS"
+   }
+  },
+  {
+   "id": "R0145",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..#..",
+    ".5...",
+    ".5~.~",
+    ".~.e.",
+    ".#.5#"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 3,
+    "faces": "000050"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 5,
+    "dead_end": 0.259,
+    "solution": "WWSENNWWNE"
+   }
+  },
+  {
+   "id": "R0146",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#.#..",
+    "2~6..",
+    "~2.b#",
+    "f~6..",
+    "~..~."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "202002"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 1,
+    "dead_end": 0.575,
+    "solution": "NESWNEESSW"
+   }
+  },
+  {
+   "id": "R0147",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "1.#...",
+    "......",
+    ".~....",
+    "......",
+    "~.1.a.",
+    ".~#~#."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "000010"
+   },
+   "moves": 9,
+   "par": 8,
+   "tier": "H",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.625,
+    "solutions": 1,
+    "dead_end": 0.39,
+    "solution": "WSSNWNWN"
+   }
+  },
+  {
+   "id": "R0148",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".#...",
+    "~.#..",
+    "...5~",
+    ".55e5",
+    ".~.#."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 0,
+    "faces": "005500"
+   },
+   "moves": 12,
+   "par": 9,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 2,
+    "dead_end": 0.232,
+    "solution": "SSWWNESWW"
+   }
+  },
+  {
+   "id": "R0149",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....b",
+    "..#...",
+    "d22~..",
+    "#.....",
+    "...~#.",
+    ".2..#."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "020020"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.404,
+    "solution": "WSEENNNW"
+   }
+  },
+  {
+   "id": "R0150",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#....",
+    ".#.#..",
+    "......",
+    ".#~.4d",
+    "......",
+    "~#~4.."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 5,
+    "faces": "400000"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 4,
+    "dead_end": 0.047,
+    "solution": "NNESSWW"
+   }
+  },
+  {
+   "id": "R0151",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#....",
+    "....~",
+    ".~~.#",
+    ".##..",
+    "~4~.."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 1,
+    "faces": "040020"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.085,
+    "solution": "SESESWW"
+   }
+  },
+  {
+   "id": "R0152",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".2....",
+    "....~.",
+    ".~#...",
+    "...#2.",
+    "#~....",
+    "...~.."
+   ],
+   "cube": {
+    "x": 5,
+    "y": 4,
+    "faces": "000002"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 1,
+    "dead_end": 0.004,
+    "solution": "NWNWNWNW"
+   }
+  },
+  {
+   "id": "R0153",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    ".~~..",
+    "...~~",
+    ".....",
+    "#.~2.",
+    "....c"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 1,
+    "faces": "000200"
+   },
+   "moves": 8,
+   "par": 7,
+   "tier": "H",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.625,
+    "solutions": 1,
+    "dead_end": 0.151,
+    "solution": "WNEESSW"
+   }
+  },
+  {
+   "id": "R0154",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#.~..",
+    "...~.",
+    "..5.5",
+    ".~~#6",
+    "....~"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "006050"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 3,
+    "dead_end": 0.088,
+    "solution": "ENNWWNES"
+   }
+  },
+  {
+   "id": "R0155",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#...#",
+    "......",
+    ".....4",
+    "~4....",
+    ".~.~..",
+    "..#..."
+   ],
+   "cube": {
+    "x": 5,
+    "y": 4,
+    "faces": "400000"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.15,
+    "solutions": 2,
+    "dead_end": 0.005,
+    "solution": "NNWSWWW"
+   }
+  },
+  {
+   "id": "R0156",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#....",
+    "..c#5.",
+    "~...#.",
+    "e..55.",
+    "......",
+    "..3.~."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 0,
+    "faces": "003500"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 1,
+    "dead_end": 0.537,
+    "solution": "SESSWSWNSWS"
+   }
+  },
+  {
+   "id": "R0157",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "5.~~2",
+    "2..#~",
+    "#...b",
+    "#..~.",
+    "..~.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "502050"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 2,
+    "dead_end": 0.721,
+    "solution": "NWNWWNSENE"
+   }
+  },
+  {
+   "id": "R0158",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..6..",
+    "...#.",
+    ".5..~",
+    "fe...",
+    "#.~~~"
+   ],
+   "cube": {
+    "x": 3,
+    "y": 0,
+    "faces": "660005"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 2,
+    "dead_end": 0.671,
+    "solution": "WWSENWSESW"
+   }
+  },
+  {
+   "id": "R0159",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "#c.2.",
+    "~.2~2",
+    "..~..",
+    "..~.~",
+    "#...#"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "222000"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.375,
+    "solutions": 1,
+    "dead_end": 0.229,
+    "solution": "ENENWWS"
+   }
+  },
+  {
+   "id": "R0160",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..~...",
+    "1.....",
+    "..1.~.",
+    "..1#~.",
+    "1.~...",
+    "#..#~."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 0,
+    "faces": "100101"
+   },
+   "moves": 12,
+   "par": 12,
+   "tier": "SH",
+   "meta": {
+    "beat": "ice",
+    "bot_fail": 0.8,
+    "solutions": 2,
+    "dead_end": 0.153,
+    "solution": "SWWSSWNWNSSS"
+   }
+  },
+  {
+   "id": "R0161",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......",
+    "...f.c",
+    ".3c3.3",
+    "~#..#.",
+    "......",
+    "#.#..."
+   ],
+   "cube": {
+    "x": 5,
+    "y": 4,
+    "faces": "330000"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.025,
+    "solutions": 1,
+    "dead_end": 0.29,
+    "solution": "NNWWWW"
+   }
+  },
+  {
+   "id": "R0162",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".~.6d.",
+    "..~~#.",
+    ".#.5.#",
+    "..#.~.",
+    "..#..5",
+    "#....."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 4,
+    "faces": "650000"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.533,
+    "solution": "NESWWNNN"
+   }
+  },
+  {
+   "id": "R0163",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#....",
+    ".~....",
+    ".....#",
+    "#.c43.",
+    ".....3",
+    ".#...3"
+   ],
+   "cube": {
+    "x": 2,
+    "y": 4,
+    "faces": "003343"
+   },
+   "moves": 9,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.297,
+    "solution": "NEESES"
+   }
+  },
+  {
+   "id": "R0164",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "11..#.",
+    ".~1...",
+    "#..a..",
+    ".##~..",
+    "..#...",
+    "....~~"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 2,
+    "faces": "000101"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.375,
+    "solutions": 1,
+    "dead_end": 0.468,
+    "solution": "EEWWNWSE"
+   }
+  },
+  {
+   "id": "R0165",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".5a...",
+    "..#33#",
+    "...#..",
+    "..3...",
+    "......",
+    "#...#."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 4,
+    "faces": "503330"
+   },
+   "moves": 15,
+   "par": 13,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.375,
+    "solutions": 3,
+    "dead_end": 0.43,
+    "solution": "EENWWNNENEESE"
+   }
+  },
+  {
+   "id": "R0166",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "~3~3f.",
+    "..22#.",
+    "..#.~.",
+    ".....#",
+    "..c..#",
+    "...c.#"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "020323"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.511,
+    "solution": "NNNSEEN"
+   }
+  },
+  {
+   "id": "R0167",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#..#.",
+    ".c6f..",
+    ".13...",
+    "..#.c.",
+    ".#....",
+    ".....#"
+   ],
+   "cube": {
+    "x": 0,
+    "y": 2,
+    "faces": "010303"
+   },
+   "moves": 10,
+   "par": 9,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.65,
+    "solutions": 6,
+    "dead_end": 0.589,
+    "solution": "SENENESWN"
+   }
+  },
+  {
+   "id": "R0168",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "d....#",
+    "...a..",
+    "###.##",
+    ".a....",
+    "4.4.#.",
+    "......"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 5,
+    "faces": "400400"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.15,
+    "solutions": 4,
+    "dead_end": 0.602,
+    "solution": "ENWWSEEN"
+   }
+  },
+  {
+   "id": "R0169",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "...#..",
+    "#....#",
+    "......",
+    "..26f.",
+    "##.6..",
+    "d.2~.."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "000226"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.525,
+    "solution": "NWWSEESW"
+   }
+  },
+  {
+   "id": "R0170",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..#..#",
+    "5.33.~",
+    ".f3~..",
+    ".....~",
+    "......",
+    "....~#"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 2,
+    "faces": "060653"
+   },
+   "moves": 14,
+   "par": 12,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 2,
+    "dead_end": 0.84,
+    "solution": "NWWWSWNEEWSE"
+   }
+  },
+  {
+   "id": "R0171",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#e5.#",
+    "#.....",
+    "6..#..",
+    "5...a.",
+    ".#....",
+    "......"
+   ],
+   "cube": {
+    "x": 0,
+    "y": 5,
+    "faces": "500600"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.241,
+    "solution": "NNNENENE"
+   }
+  },
+  {
+   "id": "R0172",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "~..#.#",
+    "......",
+    ".~c...",
+    "..5#..",
+    "535..e",
+    "..~b.."
+   ],
+   "cube": {
+    "x": 5,
+    "y": 5,
+    "faces": "250350"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.853,
+    "solution": "WWNWNWWSE"
+   }
+  },
+  {
+   "id": "R0173",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..b...",
+    ".2b.#.",
+    "#~..1.",
+    "#2~...",
+    "..2...",
+    "~~...."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 0,
+    "faces": "000212"
+   },
+   "moves": 14,
+   "par": 12,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 5,
+    "dead_end": 0.553,
+    "solution": "SSEWSWESWWNN"
+   }
+  },
+  {
+   "id": "R0174",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "1.....",
+    "..#..d",
+    ".1....",
+    "....#.",
+    "1.....",
+    "1.#..."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 3,
+    "faces": "042101"
+   },
+   "moves": 12,
+   "par": 11,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.65,
+    "solutions": 2,
+    "dead_end": 0.326,
+    "solution": "SESWENNNNNW"
+   }
+  },
+  {
+   "id": "R0175",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".1.#.#",
+    "11#...",
+    "1.....",
+    "##....",
+    "a.....",
+    "..#.~."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 0,
+    "faces": "011100"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.15,
+    "solutions": 3,
+    "dead_end": 0.216,
+    "solution": "ESWNESWS"
+   }
+  },
+  {
+   "id": "R0176",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#.6~.",
+    ".#.5.~",
+    "##a...",
+    "....a~",
+    ".##...",
+    ".....5"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 2,
+    "faces": "005560"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.15,
+    "solutions": 1,
+    "dead_end": 0.759,
+    "solution": "WNNESSS"
+   }
+  },
+  {
+   "id": "R0177",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "#6.4#.",
+    ".33#.~",
+    "......",
+    "......",
+    "......",
+    ".....c"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "460034"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.19,
+    "solution": "NNESWNNEE"
+   }
+  },
+  {
+   "id": "R0178",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".....4",
+    "~..c..",
+    "b#4..#",
+    "#~.6..",
+    "......",
+    "...~~."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 2,
+    "faces": "200646"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 2,
+    "dead_end": 0.77,
+    "solution": "SSWNNEENEN"
+   }
+  },
+  {
+   "id": "R0179",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#..e#",
+    "#.....",
+    ".~.#..",
+    ".4..#e",
+    "11....",
+    "~....."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 2,
+    "faces": "401640"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.819,
+    "solution": "NWWWSSWNES"
+   }
+  },
+  {
+   "id": "R0180",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".c....",
+    "#.~1#.",
+    "......",
+    ".....#",
+    "#...3#",
+    "#.3..."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 2,
+    "faces": "061036"
+   },
+   "moves": 12,
+   "par": 12,
+   "tier": "SH",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.85,
+    "solutions": 1,
+    "dead_end": 0.705,
+    "solution": "EENSESSWNWSS"
+   }
+  },
+  {
+   "id": "R0181",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#1.1.",
+    "3.6.~.",
+    ".##.#.",
+    "......",
+    ".....c",
+    "....#."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "001136"
+   },
+   "moves": 12,
+   "par": 9,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.175,
+    "solutions": 1,
+    "dead_end": 0.596,
+    "solution": "ENEESWWWW"
+   }
+  },
+  {
+   "id": "R0182",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....d4",
+    "..#..~",
+    ".~....",
+    "..#e..",
+    "..##.~",
+    "44.e~."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 0,
+    "faces": "403500"
+   },
+   "moves": 15,
+   "par": 12,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.175,
+    "solutions": 1,
+    "dead_end": 0.55,
+    "solution": "EESSSWWWWNES"
+   }
+  },
+  {
+   "id": "R0183",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "c.1...",
+    "......",
+    ".~..6.",
+    "......",
+    ".#...#",
+    "...~.."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 3,
+    "faces": "006100"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.175,
+    "solutions": 4,
+    "dead_end": 0.33,
+    "solution": "ENENESSE"
+   }
+  },
+  {
+   "id": "R0184",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......",
+    "...b.4",
+    "...#~.",
+    ".....#",
+    "..22.e",
+    ".~d.4."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 0,
+    "faces": "024560"
+   },
+   "moves": 15,
+   "par": 13,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.9,
+    "solution": "WSEENWSSSSWNW"
+   }
+  },
+  {
+   "id": "R0185",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".461..",
+    "...6..",
+    "...#..",
+    "..##d.",
+    "a.....",
+    "#.~..."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 1,
+    "faces": "416006"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.341,
+    "solution": "WNWSWNEE"
+   }
+  },
+  {
+   "id": "R0186",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....#.",
+    "~.~..b",
+    ".41#.#",
+    ".4....",
+    "#~1...",
+    "...d.."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 5,
+    "faces": "040100"
+   },
+   "moves": 11,
+   "par": 10,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.65,
+    "solutions": 1,
+    "dead_end": 0.475,
+    "solution": "ENNNWWSEES"
+   }
+  },
+  {
+   "id": "R0187",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......",
+    "5.3.3.",
+    ".a....",
+    "..#.#.",
+    ".#.##.",
+    "#.~#.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 1,
+    "faces": "000035"
+   },
+   "moves": 10,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.175,
+    "solutions": 2,
+    "dead_end": 0.422,
+    "solution": "ESWWNWW"
+   }
+  },
+  {
+   "id": "R0188",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".242..",
+    ".~...b",
+    "d...#.",
+    "5#....",
+    "..#.#.",
+    ".#c.~."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "235500"
+   },
+   "moves": 13,
+   "par": 10,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.175,
+    "solutions": 1,
+    "dead_end": 0.444,
+    "solution": "WNNENSENNE"
+   }
+  },
+  {
+   "id": "R0189",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......",
+    "......",
+    "#..55.",
+    "....6.",
+    "...#e.",
+    "..6..#"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 4,
+    "faces": "500060"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 1,
+    "dead_end": 0.476,
+    "solution": "SENNENSEN"
+   }
+  },
+  {
+   "id": "R0190",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "#.~#..",
+    "~.....",
+    "~.e1.5",
+    "a.2.#.",
+    "#.a...",
+    ".#...~"
+   ],
+   "cube": {
+    "x": 5,
+    "y": 1,
+    "faces": "511200"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.425,
+    "solutions": 1,
+    "dead_end": 0.555,
+    "solution": "WNESSWWSW"
+   }
+  },
+  {
+   "id": "R0191",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##....",
+    ".3b...",
+    ".....b",
+    "..2...",
+    "#..##d",
+    "..#.#."
+   ],
+   "cube": {
+    "x": 1,
+    "y": 3,
+    "faces": "230000"
+   },
+   "moves": 9,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.425,
+    "solutions": 3,
+    "dead_end": 0.49,
+    "solution": "ENNWSES"
+   }
+  },
+  {
+   "id": "R0192",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#....",
+    "b.~...",
+    "....~.",
+    ".....b",
+    ".....~",
+    ".#..33"
+   ],
+   "cube": {
+    "x": 4,
+    "y": 4,
+    "faces": "200032"
+   },
+   "moves": 10,
+   "par": 8,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.425,
+    "solutions": 1,
+    "dead_end": 0.581,
+    "solution": "NWSESNES"
+   }
+  },
+  {
+   "id": "R0193",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "~6.d..",
+    ".6....",
+    "....~.",
+    "4...~.",
+    ".##...",
+    "6....."
+   ],
+   "cube": {
+    "x": 0,
+    "y": 1,
+    "faces": "640060"
+   },
+   "moves": 12,
+   "par": 10,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.425,
+    "solutions": 4,
+    "dead_end": 0.59,
+    "solution": "EENWSSWSSS"
+   }
+  },
+  {
+   "id": "R0194",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##....",
+    "e.4...",
+    ".2..4.",
+    ".....#",
+    "......",
+    "##...."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 3,
+    "faces": "400240"
+   },
+   "moves": 8,
+   "par": 7,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.65,
+    "solutions": 2,
+    "dead_end": 0.362,
+    "solution": "NEWWWEN"
+   }
+  },
+  {
+   "id": "R0195",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..f.##",
+    "..f#..",
+    "..#.#.",
+    ".#35.5",
+    "..~#..",
+    "~~..3."
+   ],
+   "cube": {
+    "x": 4,
+    "y": 1,
+    "faces": "030005"
+   },
+   "moves": 13,
+   "par": 10,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.175,
+    "solutions": 2,
+    "dead_end": 0.127,
+    "solution": "ESSSSWWWNE"
+   }
+  },
+  {
+   "id": "R0196",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......",
+    ".#4...",
+    "..6..6",
+    "......",
+    ".a...#",
+    "......"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 0,
+    "faces": "606406"
+   },
+   "moves": 11,
+   "par": 8,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.175,
+    "solutions": 5,
+    "dead_end": 0.194,
+    "solution": "ESSESEEN"
+   }
+  },
+  {
+   "id": "R0197",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".b....",
+    ".d..4.",
+    "#..~..",
+    "~6.~..",
+    "...3..",
+    ".f.#.~"
+   ],
+   "cube": {
+    "x": 5,
+    "y": 2,
+    "faces": "004030"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.425,
+    "solutions": 4,
+    "dead_end": 0.611,
+    "solution": "WNWSWSWENNW"
+   }
+  },
+  {
+   "id": "R0198",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".#..f.",
+    "..1..~",
+    "1.....",
+    "~1....",
+    "......",
+    "....##"
+   ],
+   "cube": {
+    "x": 1,
+    "y": 1,
+    "faces": "001001"
+   },
+   "moves": 11,
+   "par": 9,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.425,
+    "solutions": 2,
+    "dead_end": 0.335,
+    "solution": "ESWSNWNEE"
+   }
+  },
+  {
+   "id": "R0199",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "#...1.",
+    "..2...",
+    ".1.#..",
+    "..#..~",
+    "#.a.a.",
+    "a..#.."
+   ],
+   "cube": {
+    "x": 3,
+    "y": 1,
+    "faces": "302010"
+   },
+   "moves": 13,
+   "par": 11,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.425,
+    "solutions": 7,
+    "dead_end": 0.447,
+    "solution": "EENWWWSWSEN"
+   }
+  },
+  {
+   "id": "R0200",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    ".e...#",
+    "....#.",
+    "5.....",
+    "..2...",
+    "2..2#.",
+    "......"
+   ],
+   "cube": {
+    "x": 0,
+    "y": 5,
+    "faces": "625200"
+   },
+   "moves": 12,
+   "par": 12,
+   "tier": "SH",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.85,
+    "solutions": 1,
+    "dead_end": 0.475,
+    "solution": "NENNWSSNEEES"
+   }
+  }
+ ]
+}

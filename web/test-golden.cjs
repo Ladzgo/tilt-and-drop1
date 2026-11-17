@@ -55,5 +55,26 @@ for (const c of pg.solver) {
   if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("prism solver", r.par, c.par, r.solutions, c.solutions); }
 }
 console.log(`prism: ${pc} cases, ${ps} steps, ${pg.solver.length} solver levels`);
+// ---- Roll & Print
+const RO = require("./roll.js");
+const rg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "shared", "roll", "golden.json")));
+let rc = 0, rs = 0;
+for (const c of rg.cases) {
+  const lv = RO.parseLevel(c.level), g = new RO.Game(lv);
+  if (g.status !== c.initialStatus) { fail++; console.error("roll initial status"); }
+  for (const s of c.steps) {
+    const trail = [], ok = g.roll(s.dir, trail);
+    const got = JSON.stringify([ok, g.pos, g.faces.join(""), lv.targets.map(i => g.prints.get(i) || 0), trail.map(t => t[0]), g.movesLeft, g.status]);
+    const exp = JSON.stringify([s.ok, s.pos, s.faces, s.prints, s.trail, s.movesLeft, s.status]);
+    if (got !== exp) { fail++; if (fail < 10) console.error("roll step mismatch", got, exp); }
+    rs++;
+  }
+  rc++;
+}
+for (const c of rg.solver) {
+  const r = RO.solve(RO.parseLevel(c.level), null, null, null, 14);
+  if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("roll solver", r.par, c.par, r.solutions, c.solutions); }
+}
+console.log(`roll: ${rc} cases, ${rs} steps, ${rg.solver.length} solver levels`);
 console.log(`${fail} mismatches`);
 process.exit(fail ? 1 : 0);
