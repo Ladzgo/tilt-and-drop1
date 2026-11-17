@@ -15,6 +15,21 @@ The MVP is 6 weeks of engineering, plus a 14-day Google Play closed test that ov
 | Register `tiltdrop.app` (or similar) and a privacy policy page | store listings require it | 1 day |
 | DSA trader declaration on both stores (public address, phone, email) | required for EU distribution | with the accounts |
 
+## Status (end of the build session, 2026-11-17)
+
+| Area | State |
+|---|---|
+| Docs: GDD, TECH, ROADMAP, COMPLIANCE, SETUP, LEVELS | done |
+| Python pipeline (sim, solver, canon, bot, difficulty, generator, pacing, curation, packs, golden) | done, 56 tests, 95% coverage |
+| Content: 300 curated + 19,700 pool + 400 daily levels | done (levels 301+ provisional) |
+| C# core + meta systems, golden parity | done, 25 tests passing under `dotnet test` |
+| Unity layer: board + cascade feel, UI, flows, boosters, daily/streak/calendar/album/share, store | code complete, compile-checked against Unity reference assemblies; **needs the first Editor run + device feel review** |
+| SDK adapters (MAX, AdMob <16, Firebase, IAP) | written behind defines; **needs SDK import + compile** |
+| CI (python, dotnet, GameCI Android/iOS, fastlane) | workflows ready; **needs secrets** |
+| Art, music, icon, store listing, localization | not started (placeholders) |
+
+Next for you: SETUP.md §2 (open + play), §3 (Android build), then the week 3 feel review on a device.
+
 ## Week 1 — Rules engine and parity
 
 - Docs approved (this phase).

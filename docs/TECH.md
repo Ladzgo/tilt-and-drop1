@@ -4,7 +4,7 @@
 
 1. **One ruleset, two implementations, provably identical.** The Python simulator (tools) and the C# core (game) are kept in sync by shared golden vectors. CI runs both.
 2. **Pure core.** All game rules, the solver, and meta logic (economy, streaks, calendar, ad pacing, stars) live in plain C# with **no `UnityEngine` references**. They're tested with `dotnet test` outside Unity.
-3. **Thin Unity layer.** Views, animation, input, audio, and SDK adapters. Scenes stay minimal: one bootstrap scene, with everything else built from code plus UI Toolkit (UXML/USS are text files that can be edited without the Editor).
+3. **Thin Unity layer.** Views, animation, input, audio, and SDK adapters. Scenes stay minimal: one empty scene, and `GameRoot` builds the world and the **uGUI** interface from code at runtime (decided over UI Toolkit: runtime-built uGUI with the built-in font is the most predictable without an Editor at hand). Sprites and SFX are procedural placeholders, so the project runs with zero art assets.
 4. **Every SDK behind an interface** with a stub. The project compiles and runs with zero third-party SDKs installed. Real adapters are switched on by scripting define symbols.
 5. **Deterministic and integer-only** simulation. No floats, no `Random` without an explicit seed.
 
@@ -37,16 +37,18 @@
   Assets/_Project/
     Core/                 TiltDrop.Core.asmdef (noEngineReferences: true)
       Model/ Sim/ Solver/ Levels/ Meta/
+      Services/             SDK interfaces, ServiceRegistry, AdsRouter, IReplayRecorder (pure C#)
     Game/                 TiltDrop.Game.asmdef (Unity)
-      Bootstrap/ Board/ Feel/ Input/ UI/ Save/ Services/{Interfaces,Stubs,Adapters}
+      Bootstrap/ Board/ Feel/ UI/ Save/ Levels/ Services/(stubs)
+    Adapters/{Max,AdMob,Firebase,Iap}/   one asmdef each, compiled only with TD_MAX / TD_ADMOB / TD_FIREBASE / TD_IAP
     Editor/               TiltDrop.Editor.asmdef: ProjectSetup (applies PlayerSettings), BuildScript (CI)
     Tests/EditMode/       TiltDrop.Core.Tests.asmdef (NUnit, runs golden vectors)
-    UI/                   *.uxml, *.uss, PanelSettings
-    Art/ Audio/           placeholders
-  Assets/StreamingAssets/levels/   packs copied from /shared/levels
+    Scenes/Main.unity     empty; everything is created by GameRoot
+  Assets/_Project/Resources/Levels/   packs synced from /shared/levels (git-ignored, auto-synced)
+  Assets/Plugins/iOS/TiltDropNative.mm  haptics + share sheet
   Packages/manifest.json
   ProjectSettings/
-/core-tests               TiltDrop.Core.Tests.csproj (net8.0, NUnit) compiling Core + Tests sources by glob, for CI without Unity
+/core-tests               TiltDrop.Core.Tests.csproj (net8.0, NUnit, C# 9) compiling Core + Tests sources by glob, for CI without Unity
 /.github/workflows        python.yml, core-dotnet.yml, unity-tests.yml, build-android.yml, build-ios.yml
 ```
 
@@ -179,23 +181,25 @@ Performance target: generating and validating 20,000 levels in < 1 h on a laptop
 
 ## 7. Unity architecture
 
-- **Bootstrap:** `[RuntimeInitializeOnLoadMethod]` creates a `GameRoot` that builds the service container (plain constructor injection, no DI framework), loads the save, runs the consent flow, and shows the first screen. The single scene `Main.unity` is empty apart from the camera.
-- **Screens:** UI Toolkit (`MapScreen`, `LevelHud`, `WinScreen`, `FailScreen`, `StoreScreen`, `DailyScreen`, `SettingsScreen`, `AgeGate`). Simple state machine `ScreenRouter`.
-- **Board:** `BoardView` turns the level into `BlockView` sprites (procedurally generated rounded-rect textures, with a color symbol overlay). A rotation spins the board root. Settle traces are played back by `CascadePlayer` with a small custom tween library (`Tween.cs`, no external dependency). Pooled particle systems.
+- **Bootstrap:** `[RuntimeInitializeOnLoadMethod(AfterSceneLoad)]` creates `GameRoot`. It resolves services (`ServiceRegistry` → real adapter if registered, otherwise a stub), loads the save, and runs age screen → consent → home. Map and level screens are plain C# classes (`MapScreen`, `Hud`, `Popups`).
+- **Board:** `BoardView` renders the `GameState` with procedural SDF sprites (rounded blocks, color symbols, gates, anchor ring, ice overlay). `AnimateRotation` spins the board root (ease-out-back) while the symbols counter-rotate to stay upright. `PlayEvents` turns the settle trace into a timeline: accelerated slides (staggered nearest-first), squash and stretch on landing, an exit slide through the gate with a gate flash, a particle burst and a pentatonic combo note, ice crack, anchor pop, and a camera shake on cascades of 4+ exits. Built on a small custom tween runner (`Feel/Tween.cs`).
+- **LevelController:** session ↔ view ↔ HUD. Buffers one input during animation; handles boosters (free win-streak charges → inventory → buy with coins), continues, win/fail flows, analytics, and the daily puzzle's single scored attempt.
 - **Feel hooks:** `IAudio` (SFX by event + combo pitch), `IHaptics` (iOS `UIImpactFeedbackGenerator`, Android `VibrationEffect`, via a small native plugin or Nice Vibrations if licensed), `IReplayRecorder` (stores inputs + seed. The "save replay" hook is a no-op for now).
 - **Services (interfaces → stub → real adapter, gated by a define):**
 
 | Interface | Stub | Real | Define |
 |---|---|---|---|
-| `IConsentService` | always "not required" | Google UMP via AppLovin MAX Terms & Privacy flow | `TD_MAX` |
-| `IAdsService` | instant fake reward | AppLovin MAX (AdMob, Unity Ads, Meta, etc. as networks) | `TD_MAX` |
+| `IAdsService` (16+, includes consent) | instant fake reward | AppLovin MAX: UMP consent form + ATT via the Terms & Privacy flow; AdMob, Unity Ads, Meta etc. as networks | `TD_MAX` |
+| `IChildSafeAds` (under 16) | none → no ads | Google Mobile Ads with TFUA, G rating, npa | `TD_ADMOB` |
 | `IIapService` | fake store | Unity IAP (`com.unity.purchasing`) | `TD_IAP` |
 | `IAnalytics` | logs to console | Firebase Analytics | `TD_FIREBASE` |
 | `IRemoteConfig` | defaults dictionary | Firebase Remote Config | `TD_FIREBASE` |
 | `ICrashReporter` | no-op | Firebase Crashlytics | `TD_FIREBASE` |
 | `IClock` | system | system + server-time sanity check (post-launch) | — |
 
-- **Ad pacing** is pure core (`AdPacingPolicy`), fed by Remote Config values and save state, and unit-tested against the GDD §6.2 rules.
+- **Ad pacing** is pure core (`AdPacingPolicy`), fed by Remote Config values and save state, and unit-tested against the GDD §6.2 rules. `AdsRouter` (Core) picks MAX or the child-safe implementation from the `PrivacyDecision`, and never initializes MAX for under-16 users.
+- **Purchases** are granted in exactly one place (`IIapService.PurchaseGranted` → `GameRoot.GrantPurchase`), which also covers deferred and pending transactions delivered at startup.
+- **Adapters register themselves** with `[RuntimeInitializeOnLoadMethod(BeforeSceneLoad)]` inside their define-gated assemblies, so the game assembly never references an SDK.
 
 ### 7.1 Analytics events
 
@@ -207,7 +211,11 @@ Performance target: generating and validating 20,000 levels in < 1 h on a laptop
 
 ## 8. Build and project settings (applied by `Editor/ProjectSetup.cs` so nothing has to be clicked)
 
-Bundle ID `com.laszlo.tiltdrop` (placeholder) · portrait only · IL2CPP · ARM64 (Android, plus ARMv7 optional) · Android: AAB, minSdk 24, targetSdk = the level Google Play currently requires (verify at submission), 16 KB page-size compatible (Unity 6 default) · iOS: min iOS 15, automatic signing off in CI · Linear color space · URP 2D renderer (or Built-in, decided in week 2 by a perf test) · managed stripping Medium · Unity 6 LTS (latest 6000.x LTS patch, pinned in `ProjectVersion.txt`).
+Bundle ID `com.laszlo.tiltdrop` (placeholder) · portrait only · IL2CPP · ARM64 + ARMv7 · Android: AAB, minSdk 24, targetSdk "auto" = highest installed (must meet Google Play's current requirement), 16 KB page-size compatible (Unity 6 default) · iOS: min iOS 15, iPhone only · **Built-in render pipeline with SpriteRenderers** (decided: 2D sprites only, so URP adds setup without benefit) · legacy Input API (Active Input Handling: Old or Both) · managed stripping Medium + `link.xml` for adapters · Unity 6 LTS (pinned in `ProjectVersion.txt`).
+
+### 8.1 Verifying Unity code without the Editor
+
+The Unity runtime code is compile-checked against Unity's `UnityEngine.dll`/`UnityEditor.dll` reference assemblies (2021.1, from NuGet). A stub mirrors only the uGUI members the game uses, and the build is repeated with the `UNITY_ANDROID`, `UNITY_IOS` and `UNITY_EDITOR` defines. Unity 6–only APIs (`NamedBuildTarget`) and the SDK adapters can't be checked this way. The first Editor open is the final check, and the Test Runner reruns the core suite.
 
 ## 9. CI (GitHub Actions + GameCI)
 
