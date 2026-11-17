@@ -29,7 +29,7 @@ function startFold(n, replay = []) {
   active = "fold";
   fnum = n; flevel = FD.parseLevel(FLEVELS[n - 1]); fgame = new FD.Game(flevel);
   fended = false; fcont = 0; fmoves = []; fanim = null; fhint = null;
-  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "gapp", "dmap", "dapp", "fmap"].forEach(id => { $(id).hidden = true; });
+  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "gapp", "dmap", "dapp", "fmap", "wapp", "wmap"].forEach(id => { $(id).hidden = true; });
   $("fapp").hidden = false; closeOverlay(); flayout();
   for (const m of replay) { if (m === "U") { if (fgame.history.length) { fgame.sheet = fgame.history.pop(); fgame.movesLeft++; fgame.movesUsed--; } } else fgame.fold(...m); fmoves.push(m); }
   $("f-title").textContent = `Level ${n}`;

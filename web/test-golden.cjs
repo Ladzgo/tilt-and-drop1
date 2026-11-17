@@ -154,5 +154,27 @@ for (const c of fg.solver) {
   if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("fold solver", r.par, c.par, r.solutions, c.solutions); }
 }
 console.log(`fold: ${fc} cases, ${fs_} steps, ${fg.solver.length} solver levels`);
+// ---- Flow
+const FW = require("./flow.js");
+const wg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "shared", "flow", "golden.json")));
+let wc = 0, ws = 0;
+for (const c of wg.cases) {
+  const lv = FW.parseLevel(c.level), g = new FW.Game(lv);
+  if (g.status !== c.initialStatus) { fail++; console.error("flow initial status"); }
+  for (const s of c.steps) {
+    if (g.status !== "playing") break;
+    const ok = g.tap(s.cell), st = g.state;
+    const got = JSON.stringify([ok, st.colour, st.leaks, st.dist, st.cups.map(Number), g.movesLeft, g.status]);
+    const exp = JSON.stringify([s.ok, s.colour, s.leaks, s.dist, s.cups, s.movesLeft, s.status]);
+    if (got !== exp) { fail++; if (fail < 10) console.error("flow step mismatch", got.slice(0, 200), exp.slice(0, 200)); }
+    ws++;
+  }
+  wc++;
+}
+for (const c of wg.solver) {
+  const r = FW.solve(FW.parseLevel(c.level));
+  if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("flow solver", r.par, c.par, r.solutions, c.solutions); }
+}
+console.log(`flow: ${wc} cases, ${ws} steps, ${wg.solver.length} solver levels`);
 console.log(`${fail} mismatches`);
 process.exit(fail ? 1 : 0);

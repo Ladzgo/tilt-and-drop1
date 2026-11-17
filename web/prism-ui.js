@@ -56,7 +56,7 @@ function startPrism(n, replay = []) {
   phist = []; pended = false; pcont = 0; ptaps = []; hintIdx = -1; pflash = 0; ppulse = new Map();
   mirrorAngle = new Map(plevel.rotatables.map(i => [i, angleFor(plevel.cells[i][1])]));
   prevKeys = new Set();
-  ["hub", "pmap", "rapp", "rmap", "sapp", "smap", "gapp", "gmap", "dapp", "dmap", "fapp", "fmap"].forEach(id => { $(id).hidden = true; }); $("papp").hidden = false; closeOverlay();
+  ["hub", "pmap", "rapp", "rmap", "sapp", "smap", "gapp", "gmap", "dapp", "dmap", "fapp", "fmap", "wapp", "wmap"].forEach(id => { $(id).hidden = true; }); $("papp").hidden = false; closeOverlay();
   playout();
   for (const t of replay) { phist.push(pgame.clone()); pgame.tap(t); ptaps.push(t); mirrorAngle.set(t, angleFor(pgame.states.get(t))); }
   computeBeams(!replay.length);
@@ -281,7 +281,7 @@ function showPrismMap() {
 }
 function showHub() {
   closeOverlay();
-  ["map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "gapp", "dmap", "dapp", "fapp", "fmap"].forEach(id => { $(id).hidden = true; }); $("hub").hidden = false;
+  ["map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "gapp", "dmap", "dapp", "fapp", "fmap", "wapp", "wmap"].forEach(id => { $(id).hidden = true; }); $("hub").hidden = false;
   const ts = Object.values(S.stars).reduce((a, b) => a + b, 0), ps = Object.values(PS.stars).reduce((a, b) => a + b, 0);
   $("hub-tilt").textContent = `${ts} / 900 stars · level ${Math.min(S.highest + 1, LEVELS.length)}`;
   const rsum = Object.values(RS.stars).reduce((a, b) => a + b, 0);
@@ -294,6 +294,8 @@ function showHub() {
   $("hub-domino").textContent = `${dsum} / ${DLEVELS.length * 3} stars · level ${Math.min(DS.highest + 1, DLEVELS.length)}`;
   const fsum = Object.values(FS_.stars).reduce((a, b) => a + b, 0);
   $("hub-fold").textContent = `${fsum} / ${FLEVELS.length * 3} stars · level ${Math.min(FS_.highest + 1, FLEVELS.length)}`;
+  const wsum = Object.values(WS_.stars).reduce((a, b) => a + b, 0);
+  $("hub-flow").textContent = `${wsum} / ${WLEVELS.length * 3} stars · level ${Math.min(WS_.highest + 1, WLEVELS.length)}`;
   $("hub-prism").textContent = `${ps} / ${PLEVELS.length * 3} stars · level ${Math.min(PS.highest + 1, PLEVELS.length)}`;
 }
 

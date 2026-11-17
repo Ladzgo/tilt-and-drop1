@@ -22,7 +22,7 @@ function startDomino(n, replay = []) {
   active = "domino";
   dnum = n; dlevel = DM.parseLevel(DLEVELS[n - 1]); dgame = new DM.Game(dlevel);
   dended = false; drunning = false; dacts = []; dfallen = new Map(); drung = new Map(); dspin = new Map(); dhintCell = -1;
-  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "gapp", "dmap", "fapp", "fmap"].forEach(id => { $(id).hidden = true; });
+  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "gapp", "dmap", "fapp", "fmap", "wapp", "wmap"].forEach(id => { $(id).hidden = true; });
   $("dapp").hidden = false; closeOverlay(); dlayout();
   for (const a of replay) { if (a === "P") { if (dgame.status === "playing") dgame.push(); } else dgame.rotate(a); dacts.push(a); }
   $("d-title").textContent = `Level ${n}`;
