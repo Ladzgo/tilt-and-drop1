@@ -27,8 +27,8 @@ namespace TiltDrop.Game
                 SymbolSr.color = new Color(1f, 1f, 1f, 0.9f);
             }
             OverlaySr.enabled = kind == Cells.Anchor || kind == Cells.Ice2 || kind == Cells.Ice1;
-            if (kind == Cells.Anchor) { OverlaySr.sprite = Sprites.Ring; OverlaySr.color = new Color(0.92f, 0.92f, 0.96f, 0.95f); OverlaySr.transform.localScale = Vector3.one * 1.05f; }
-            else if (OverlaySr.enabled) { OverlaySr.sprite = Sprites.RoundedSquare; OverlaySr.color = Palette.Ice; OverlaySr.transform.localScale = Vector3.one * 1.06f; }
+            if (kind == Cells.Anchor) { OverlaySr.sprite = Sprites.Ring; OverlaySr.color = new Color(0.92f, 0.92f, 0.96f, 0.95f); OverlaySr.transform.localScale = Vector3.one * 1.25f; }
+            else if (OverlaySr.enabled) { OverlaySr.sprite = Sprites.RoundedSquare; OverlaySr.color = Palette.Ice; OverlaySr.transform.localScale = Vector3.one * 1.04f; }
             CrackSr.enabled = kind == Cells.Ice1;
         }
     }
@@ -36,7 +36,9 @@ namespace TiltDrop.Game
     /// <summary>Renders a GameState and plays back settle traces with juicy animation.</summary>
     public sealed class BoardView : MonoBehaviour
     {
-        public const float BlockScale = 0.9f;
+        public const float BlockScale = 0.9f;            // fraction of a cell a block covers
+        const float Rsq = 0.86f;                         // RoundedSquare sprite covers 86% of its unit quad
+        static readonly Vector3 BodyScale = Vector3.one * (BlockScale / Rsq);
         const float GateThickness = 0.16f;
 
         public Transform Root { get; private set; }   // rotates with the board
@@ -92,8 +94,7 @@ namespace TiltDrop.Game
             H = s.Level.H;
 
             var bg = MakeSprite("bg", Root, Sprites.RoundedSquare, Palette.BoardBg, -10);
-            bg.transform.localScale = new Vector3(W + 0.5f, H + 0.5f, 1f) / 0.86f * 0.5f * 1.0f * 2f / 2f;
-            bg.transform.localScale = new Vector3((W + 0.55f) / 1.72f * 2f / 2f, (H + 0.55f) / 1.72f * 2f / 2f, 1f) * 2f;
+            bg.transform.localScale = new Vector3((W + 0.6f) / Rsq, (H + 0.6f) / Rsq, 1f);
             statics.Add(bg.gameObject);
             for (int i = 0; i < W * H; i++)
             {
@@ -102,14 +103,14 @@ namespace TiltDrop.Game
                 {
                     var w = MakeSprite("wall", Root, Sprites.Square, Palette.Wall, -5);
                     w.transform.localPosition = Local(i);
-                    w.transform.localScale = Vector3.one * 0.5f * 1.0f;
+                    w.transform.localScale = Vector3.one;
                     statics.Add(w.gameObject);
                 }
                 else
                 {
                     var cell = MakeSprite("cell", Root, Sprites.RoundedSquare, Palette.BoardCell, -8);
                     cell.transform.localPosition = Local(i);
-                    cell.transform.localScale = Vector3.one * 0.5f * 0.96f;
+                    cell.transform.localScale = Vector3.one * (0.94f / Rsq);
                     statics.Add(cell.gameObject);
                 }
             }
@@ -149,11 +150,11 @@ namespace TiltDrop.Game
                     }
                     var g = MakeSprite("gate", Root, Sprites.Square, Palette.Block[col], -4);
                     g.transform.localPosition = p;
-                    g.transform.localScale = scale * 0.5f;
+                    g.transform.localScale = scale;
                     var sym = MakeSprite("gsym", Root, Sprites.Symbol(col), Palette.Block[col], -4);
                     Vector3 outward = (p - Local(e == Edges.T ? k : e == Edges.B ? (H - 1) * W + k : e == Edges.L ? k * W : k * W + W - 1)).normalized;
                     sym.transform.localPosition = p + outward * 0.28f;
-                    sym.transform.localScale = Vector3.one * 0.13f;
+                    sym.transform.localScale = Vector3.one * 0.55f;
                     statics.Add(g.gameObject);
                     statics.Add(sym.gameObject);
                     gates[e * 16 + k] = g;
@@ -167,7 +168,7 @@ namespace TiltDrop.Game
             root.SetParent(Root, false);
             var body = new GameObject("body").transform;
             body.SetParent(root, false);
-            body.localScale = Vector3.one * BlockScale * 0.5f / 0.86f * 0.86f;
+            body.localScale = BodyScale;
             var b = new BlockView
             {
                 Id = id,
@@ -179,8 +180,8 @@ namespace TiltDrop.Game
                 CrackSr = MakeSprite("crack", body, Sprites.Symbol(6), new Color(1, 1, 1, 0.8f), 5),
             };
             b.BodySr.sortingOrder = 2;
-            b.SymbolSr.transform.localScale = Vector3.one * 0.55f;
-            b.CrackSr.transform.localScale = Vector3.one * 0.9f;
+            b.SymbolSr.transform.localScale = Vector3.one;
+            b.CrackSr.transform.localScale = Vector3.one * 1.5f;
             b.CrackSr.transform.localRotation = Quaternion.Euler(0, 0, 20f);
             b.SetCell(c);
             return b;
@@ -219,7 +220,6 @@ namespace TiltDrop.Game
                 Root.localRotation = Quaternion.Euler(0, 0, a);
                 var q = Quaternion.Euler(0, 0, -a);
                 foreach (var b in blocks.Values) b.SymbolSr.transform.localRotation = q;
-                if (!ReducedMotion) transform.localScale = transform.localScale; // keep scale
             }, ReducedMotion ? (System.Func<float, float>)Ease.OutCubic : Ease.OutBack, 0f, null, this);
             if (!ReducedMotion)
             {
@@ -239,16 +239,17 @@ namespace TiltDrop.Game
             float passStart = delay, passEnd = delay, stagger = 0f, lastPieceTime = delay, lastExitTime = delay;
             int curPass = -1, combo = 0, exits = 0;
             var arrival = new Dictionary<int, float>();
+            var lastPos = new Dictionary<int, Vector3>();
 
             for (int k = 0; k < ev.Count; k++)
             {
                 var e = ev[k];
-                if (e.Type == EventType.Hammer) { Shatter(e.PieceId, delay); passStart = passEnd = delay + D(0.15f); continue; }
+                if (e.Type == SettleEventType.Hammer) { Shatter(e.PieceId, delay); passStart = passEnd = delay + D(0.15f); continue; }
                 if (e.Pass != curPass) { curPass = e.Pass; passStart = passEnd; stagger = 0f; arrival.Clear(); }
                 if (!blocks.TryGetValue(e.PieceId, out var b)) continue;
                 switch (e.Type)
                 {
-                    case EventType.Move:
+                    case SettleEventType.Move:
                     {
                         int dist = Mathf.Abs(e.From % W - e.To % W) + Mathf.Abs(e.From / W - e.To / W);
                         float start = passStart + stagger, dur = MoveTime(dist);
@@ -257,26 +258,28 @@ namespace TiltDrop.Game
                         Tweener.Run(dur, p => b.Root.localPosition = Vector3.LerpUnclamped(a, z, p), Ease.InQuad, start, null, this);
                         float arr = start + dur;
                         arrival[e.PieceId] = arr;
+                        lastPos[e.PieceId] = z;
                         lastPieceTime = arr;
-                        bool exitsNext = k + 1 < ev.Count && ev[k + 1].Type == EventType.Exit && ev[k + 1].PieceId == e.PieceId;
+                        bool exitsNext = k + 1 < ev.Count && ev[k + 1].Type == SettleEventType.Exit && ev[k + 1].PieceId == e.PieceId;
                         if (!exitsNext) Land(b, arr, vertical, dist);
                         passEnd = Mathf.Max(passEnd, arr + D(0.04f));
                         break;
                     }
-                    case EventType.Exit:
+                    case SettleEventType.Exit:
                     {
                         float t = arrival.TryGetValue(e.PieceId, out float at) ? at : passStart + (stagger += D(0.018f));
-                        ExitAnim(b, e.Edge, e.Lane, gv, t, combo++);
+                        var p0 = lastPos.TryGetValue(e.PieceId, out var lp) ? lp : b.Root.localPosition;
+                        ExitAnim(b, e.Edge, e.Lane, gv, t, combo++, p0);
                         exits++;
                         blocks.Remove(e.PieceId);
                         lastExitTime = t;
                         passEnd = Mathf.Max(passEnd, t + D(0.16f));
                         break;
                     }
-                    case EventType.Hit:
+                    case SettleEventType.Hit:
                         HitAnim(b, e.Hp, lastPieceTime);
                         break;
-                    case EventType.Release:
+                    case SettleEventType.Release:
                         ReleaseAnim(b, lastExitTime);
                         break;
                 }
@@ -288,7 +291,7 @@ namespace TiltDrop.Game
         void Land(BlockView b, float at, bool vertical, int dist)
         {
             float amt = Mathf.Clamp01(0.06f + 0.025f * dist) * (ReducedMotion ? 0.3f : 1f);
-            var s0 = Vector3.one * BlockScale * 0.5f;
+            var s0 = BodyScale;
             Tweener.Run(D(0.2f), p =>
             {
                 float k = Mathf.Sin(p * Mathf.PI) * (1f - p);
@@ -296,7 +299,6 @@ namespace TiltDrop.Game
                 float sy = vertical ? 1f - amt * k * 2f : 1f + amt * k * 2f;
                 b.Body.localScale = new Vector3(s0.x * sx, s0.y * sy, 1f);
             }, Ease.Linear, at, () => b.Body.localScale = s0, this);
-            Tweener.Delay(at - Tweener.Now + Tweener.Now - Tweener.Now, () => { }, this);
             Tweener.Run(0.0001f, _ => { }, Ease.Linear, at, () =>
             {
                 Sfx?.Play(Sound.Land, Mathf.Clamp01(0.35f + 0.1f * dist), Random.Range(0.92f, 1.08f));
@@ -305,13 +307,11 @@ namespace TiltDrop.Game
             }, this);
         }
 
-        void ExitAnim(BlockView b, int edge, int lane, Vector3 gv, float at, int combo)
+        void ExitAnim(BlockView b, int edge, int lane, Vector3 gv, float at, int combo, Vector3 p0)
         {
-            Vector3 p0 = Vector3.zero;
             gates.TryGetValue(edge * 16 + lane, out var gate);
             Tweener.Run(0.0001f, _ => { }, Ease.Linear, at, () =>
             {
-                p0 = b.Root.localPosition;
                 Sfx?.Exit(combo);
                 Haptics.Play(combo >= 3 ? Haptic.Heavy : Haptic.Medium);
                 var col = Palette.Block[b.Cell & 0x0F];
@@ -362,7 +362,7 @@ namespace TiltDrop.Game
 
         void Punch(BlockView b, float amount)
         {
-            var s0 = Vector3.one * BlockScale * 0.5f;
+            var s0 = BodyScale;
             Tweener.Run(D(0.25f), p => b.Body.localScale = s0 * (1f + amount * Mathf.Sin(p * Mathf.PI) * (1f - p)), Ease.Linear, 0f, () => b.Body.localScale = s0, this);
         }
 

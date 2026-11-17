@@ -92,19 +92,26 @@ namespace TiltDrop.Game
         {
             clock += Time.unscaledDeltaTime * TimeScale;
             if (adding.Count > 0) { active.AddRange(adding); adding.Clear(); }
-            for (int i = active.Count - 1; i >= 0; i--)
+            // insertion order: tweens scheduled for the same instant run in the order they were created
+            int write = 0;
+            for (int i = 0; i < active.Count; i++)
             {
                 var t = active[i];
-                if (clock < t.Start) continue;
-                float p = Mathf.Clamp01((clock - t.Start) / t.Duration);
-                try { t.Apply(t.Ease(p)); }
-                catch (Exception e) { Debug.LogException(e); active.RemoveAt(i); continue; }
-                if (p >= 1f)
+                bool finished = false;
+                if (clock >= t.Start)
                 {
-                    active.RemoveAt(i);
-                    try { t.Done?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+                    float p = Mathf.Clamp01((clock - t.Start) / t.Duration);
+                    try { t.Apply(t.Ease(p)); }
+                    catch (Exception e) { Debug.LogException(e); finished = true; p = -1f; }
+                    if (p >= 1f)
+                    {
+                        finished = true;
+                        try { t.Done?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+                    }
                 }
+                if (!finished) active[write++] = t;
             }
+            active.RemoveRange(write, active.Count - write);
         }
     }
 }

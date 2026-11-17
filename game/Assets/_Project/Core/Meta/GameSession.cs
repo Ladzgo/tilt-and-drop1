@@ -36,7 +36,7 @@ namespace TiltDrop.Core
             if (history.Count > MaxUndoDepth) history.RemoveAt(0);
             var ev = State.Rotate(r);
             int exits = 0;
-            foreach (var e in ev) if (e.Type == EventType.Exit) exits++;
+            foreach (var e in ev) if (e.Type == SettleEventType.Exit) exits++;
             ExitsPerMove.Add(exits);
             return ev;
         }

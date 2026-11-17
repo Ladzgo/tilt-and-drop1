@@ -71,7 +71,7 @@ namespace TiltDrop.Core
             int removed = Ids[i];
             Cells[i] = TiltDrop.Core.Cells.Empty;
             Ids[i] = 0;
-            var ev = new List<SettleEvent> { new SettleEvent { Type = EventType.Hammer, PieceId = removed, From = i } };
+            var ev = new List<SettleEvent> { new SettleEvent { Type = SettleEventType.Hammer, PieceId = removed, From = i } };
             ev.AddRange(SettleNow());
             UpdateStatus();
             return ev;

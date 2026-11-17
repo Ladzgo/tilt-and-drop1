@@ -16,6 +16,32 @@ namespace TiltDrop.Game
         public static Sprite Ring => Get("ring", (x, y) => Mathf.Abs(Mathf.Sqrt(x * x + y * y) - 0.62f) - 0.12f);
         public static Sprite Soft => Get("soft", (x, y) => Mathf.Sqrt(x * x + y * y) - 0.2f, 0.8f);
         public static Sprite Star => Symbol(5);
+        public static Sprite ArcArrow => Get("arc", SdArcArrow);
+
+        /// <summary>9-sliced rounded rectangle for UI panels and buttons.</summary>
+        public static Sprite Panel
+        {
+            get
+            {
+                if (Cache.TryGetValue("panel", out var s) && s != null) return s;
+                const int n = 64, r = 24;
+                var tex = new Texture2D(n, n, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear, name = "panel" };
+                var px = new Color32[n * n];
+                for (int j = 0; j < n; j++)
+                for (int i = 0; i < n; i++)
+                {
+                    float cx = Mathf.Clamp(i + 0.5f, r, n - r), cy = Mathf.Clamp(j + 0.5f, r, n - r);
+                    float d = Mathf.Sqrt((i + 0.5f - cx) * (i + 0.5f - cx) + (j + 0.5f - cy) * (j + 0.5f - cy)) - (r - 1);
+                    px[j * n + i] = new Color32(255, 255, 255, (byte)(Mathf.Clamp01(0.5f - d) * 255f));
+                }
+                tex.SetPixels32(px);
+                tex.Apply(false, true);
+                s = Sprite.Create(tex, new Rect(0, 0, n, n), new Vector2(0.5f, 0.5f), 100f, 0, SpriteMeshType.FullRect, new Vector4(r + 2, r + 2, r + 2, r + 2));
+                s.name = "panel";
+                Cache["panel"] = s;
+                return s;
+            }
+        }
 
         /// <summary>Color symbols 1..6: circle, triangle, square, diamond, star, cross.</summary>
         public static Sprite Symbol(int color)
@@ -23,11 +49,11 @@ namespace TiltDrop.Game
             switch (color)
             {
                 case 1: return Get("s1", (x, y) => Mathf.Sqrt(x * x + y * y) - 0.42f);
-                case 2: return Get("s2", (x, y) => SdTriangle(x, y + 0.08f, 0.5f));
-                case 3: return Get("s3", (x, y) => SdRoundBox(x, y, 0.72f, 0.08f));
+                case 2: return Get("s2", (x, y) => SdTriangle(x, -y - 0.06f, 0.5f));
+                case 3: return Get("s3", (x, y) => SdRoundBox(x, y, 0.4f, 0.06f));
                 case 4: return Get("s4", (x, y) => (Mathf.Abs(x) + Mathf.Abs(y)) * 0.7071f - 0.38f);
-                case 5: return Get("s5", (x, y) => SdStar(x, y + 0.04f, 0.52f, 0.42f));
-                default: return Get("s6", (x, y) => Mathf.Min(SdRoundBox(x, y, 0.28f, 0.04f, 0.9f), SdRoundBox(x, y, 0.9f, 0.04f, 0.28f)));
+                case 5: return Get("s5", (x, y) => SdStar(x, -y + 0.03f, 0.56f, 0.45f));
+                default: return Get("s6", (x, y) => Mathf.Min(SdRoundBox(x, y, 0.15f, 0.03f, 0.5f), SdRoundBox(x, y, 0.5f, 0.03f, 0.15f)));
             }
         }
 
@@ -54,6 +80,22 @@ namespace TiltDrop.Game
             return s;
         }
 
+        static float SdArcArrow(float x, float y)
+        {
+            // clockwise circular arrow: ring with a gap between 62° and 108°, head at 108° pointing clockwise
+            const float r = 0.58f, th = 0.13f;
+            float a = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+            float d = Mathf.Abs(Mathf.Sqrt(x * x + y * y) - r) - th;
+            if (a > 62f && a < 108f) d = Mathf.Max(d, 0.05f);
+            float ha = 108f * Mathf.Deg2Rad;
+            float hx = Mathf.Cos(ha) * r, hy = Mathf.Sin(ha) * r;
+            float tx = Mathf.Sin(ha), ty = -Mathf.Cos(ha);
+            float lx = x - hx, ly = y - hy;
+            float u = lx * tx + ly * ty, v = -lx * ty + ly * tx;
+            float head = Mathf.Max(Mathf.Abs(v) * 0.9f + u * 1.1f - 0.34f, -u - 0.04f);
+            return Mathf.Min(d, head);
+        }
+
         static float SdRoundBox(float x, float y, float size, float r, float sizeY = -1f)
         {
             float hx = size - r, hy = (sizeY < 0 ? size : sizeY) - r;
@@ -77,7 +119,6 @@ namespace TiltDrop.Game
             // 5-point star (Inigo Quilez), y up
             float k1x = 0.809016994f, k1y = -0.587785252f, k2x = -k1x, k2y = k1y;
             x = Mathf.Abs(x);
-            y = -y;
             float d1 = 2f * Mathf.Max(k1x * x + k1y * y, 0f);
             x -= d1 * k1x; y -= d1 * k1y;
             float d2 = 2f * Mathf.Max(k2x * x + k2y * y, 0f);

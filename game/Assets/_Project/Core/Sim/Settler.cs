@@ -37,7 +37,7 @@ namespace TiltDrop.Core
                         cells[p] = Cells.Empty;
                         changed = true;
                         if (ids != null) { ids[pos] = ids[p]; ids[p] = 0; }
-                        events?.Add(new SettleEvent { Type = EventType.Move, Pass = pass, PieceId = ids != null ? ids[pos] : 0, From = p, To = pos });
+                        events?.Add(new SettleEvent { Type = SettleEventType.Move, Pass = pass, PieceId = ids != null ? ids[pos] : 0, From = p, To = pos });
                     }
                     int nn = next[pos];
                     if (nn < 0)
@@ -50,13 +50,13 @@ namespace TiltDrop.Core
                             exits++;
                             int pid = 0;
                             if (ids != null) { pid = ids[pos]; ids[pos] = 0; }
-                            events?.Add(new SettleEvent { Type = EventType.Exit, Pass = pass, PieceId = pid, Edge = edge, Lane = lane[pos] });
+                            events?.Add(new SettleEvent { Type = SettleEventType.Exit, Pass = pass, PieceId = pid, Edge = edge, Lane = lane[pos] });
                             byte anchor = (byte)(Cells.Anchor | col);
                             for (int i = 0; i < n; i++)
                             {
                                 if (cells[i] != anchor) continue;
                                 cells[i] = (byte)(Cells.Block | col);
-                                events?.Add(new SettleEvent { Type = EventType.Release, Pass = pass, PieceId = ids != null ? ids[i] : 0 });
+                                events?.Add(new SettleEvent { Type = SettleEventType.Release, Pass = pass, PieceId = ids != null ? ids[i] : 0 });
                             }
                         }
                     }
@@ -69,7 +69,7 @@ namespace TiltDrop.Core
                             int hp;
                             if (tk == Cells.Ice2) { cells[nn] = (byte)(Cells.Ice1 | (t & 0x0F)); hp = 1; }
                             else { cells[nn] = (byte)(Cells.Block | (t & 0x0F)); hp = 0; }
-                            events?.Add(new SettleEvent { Type = EventType.Hit, Pass = pass, PieceId = ids != null ? ids[nn] : 0, Hp = hp });
+                            events?.Add(new SettleEvent { Type = SettleEventType.Hit, Pass = pass, PieceId = ids != null ? ids[nn] : 0, Hp = hp });
                         }
                     }
                 }

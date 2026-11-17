@@ -1,11 +1,11 @@
 namespace TiltDrop.Core
 {
-    public enum EventType : byte { Move, Exit, Hit, Release, Hammer }
+    public enum SettleEventType : byte { Move, Exit, Hit, Release, Hammer }
 
     /// <summary>One step of a settle trace. The view plays these back in order.</summary>
     public struct SettleEvent
     {
-        public EventType Type;
+        public SettleEventType Type;
         public int Pass;
         public int PieceId;
         public int From;   // cell index (Move, Hammer)
@@ -19,10 +19,10 @@ namespace TiltDrop.Core
         {
             switch (Type)
             {
-                case EventType.Move: return $"M{Pass}:{PieceId}:{From % w},{From / w}>{To % w},{To / w}";
-                case EventType.Exit: return $"X{Pass}:{PieceId}:{Edges.Names[Edge]}{Lane}";
-                case EventType.Hit: return $"H{Pass}:{PieceId}:{Hp}";
-                case EventType.Release: return $"R{Pass}:{PieceId}";
+                case SettleEventType.Move: return $"M{Pass}:{PieceId}:{From % w},{From / w}>{To % w},{To / w}";
+                case SettleEventType.Exit: return $"X{Pass}:{PieceId}:{Edges.Names[Edge]}{Lane}";
+                case SettleEventType.Hit: return $"H{Pass}:{PieceId}:{Hp}";
+                case SettleEventType.Release: return $"R{Pass}:{PieceId}";
                 default: return $"K:{PieceId}:{From % w},{From / w}";
             }
         }
