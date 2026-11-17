@@ -119,6 +119,14 @@ details.test summary { cursor: pointer; font-weight: 700; }
 .pcontrols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding-top: 8px; }
 .lvl.prism { background: #6d4bd8; }
 .lvl.prism.done { background: var(--btn); } .lvl.prism.next { background: var(--go); } .lvl.prism.locked { background: var(--bg-2); }
+.lvl.roll { background: #c2552d; }
+.lvl.roll.done { background: var(--btn); } .lvl.roll.next { background: var(--go); } .lvl.roll.locked { background: var(--bg-2); }
+.rbottom { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding-top: 6px; }
+#roll-net { width: 100%; height: 86px; display: block; }
+.dpad { display: grid; grid-template-columns: repeat(3, 48px); grid-template-rows: repeat(2, 44px); gap: 4px; }
+.dpad button { border-radius: 12px; background: var(--btn); font-weight: 700; font-size: 18px; }
+.dpad button:active { background: var(--btn-hi); }
+#r-up { grid-column: 2; grid-row: 1; } #r-left { grid-column: 1; grid-row: 2; } #r-down { grid-column: 2; grid-row: 2; } #r-right { grid-column: 3; grid-row: 2; }
 .lit-count { color: var(--dim); font-size: 13px; text-align: center; font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .card, .stars svg { animation: none; transition: none; } }
 </style>
@@ -183,8 +191,12 @@ details.test summary { cursor: pointer; font-weight: 700; }
       <svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#14122a"/><g stroke-linecap="round" style="mix-blend-mode:screen"><path d="M8 30 H62 V86" stroke="#ff3b5c" stroke-width="6" fill="none"/><path d="M8 62 H62" stroke="#3b8bff" stroke-width="6" fill="none"/></g><circle cx="62" cy="62" r="11" fill="#ff52ff"/><circle cx="62" cy="62" r="15" fill="none" stroke="#ff52ff" stroke-width="4"/><path d="M55 23 L69 37" stroke="#e9ecff" stroke-width="5" stroke-linecap="round"/></svg>
       <div><h2>Prism Paths</h2><p>Flip mirrors to bend coloured light. Red and blue meet as magenta.</p><div class="prog" id="hub-prism"></div></div>
     </button>
-    <div class="game-card soon"><svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#211f3a"/><text x="48" y="60" font-size="34" text-anchor="middle" fill="#45406f" font-family="sans-serif">+6</text></svg>
-      <div><h2>More games</h2><p>In development for the collection:</p><ul><li>Roll &amp; Print</li><li>Slide Out</li><li>Gear Works</li></ul></div></div>
+    <button class="game-card" id="card-roll">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#1a1830"/><rect x="10" y="56" width="24" height="24" rx="5" fill="#e5484d"/><rect x="62" y="56" width="24" height="24" rx="5" fill="none" stroke="#3e8ef7" stroke-width="4" stroke-dasharray="6 4"/><rect x="34" y="40" width="28" height="30" rx="7" fill="#9a4a2a"/><rect x="34" y="34" width="28" height="28" rx="7" fill="#ece9f7"/><rect x="38" y="38" width="20" height="6" rx="3" fill="#fff" opacity=".5"/></svg>
+      <div><h2>Roll &amp; Print</h2><p>Tip a paint cube across the board. The face underneath prints on every tile it lands on.</p><div class="prog" id="hub-roll"></div></div>
+    </button>
+    <div class="game-card soon"><svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#211f3a"/><text x="48" y="60" font-size="34" text-anchor="middle" fill="#45406f" font-family="sans-serif">+5</text></svg>
+      <div><h2>More games</h2><p>In development for the collection:</p><ul><li>Slide Out</li><li>Gear Works</li><li>Domino Run</li></ul></div></div>
   </div>
 </div>
 
@@ -216,10 +228,43 @@ details.test summary { cursor: pointer; font-weight: 700; }
   </div>
 </div>
 
+<div class="papp" id="rapp" hidden>
+  <div class="app">
+    <header class="hud">
+      <button class="icon-btn" id="r-menu" aria-label="Roll levels">&#9776;</button>
+      <div class="title"><h1 id="r-title">Level 1</h1><div class="sub" id="r-sub">Roll &amp; Print</div></div>
+      <div class="moves" id="r-moves"><b id="r-moves-n">0</b><span>moves</span></div>
+    </header>
+    <div class="banner" id="r-banner"></div>
+    <div class="stage"><canvas id="roll-canvas" aria-label="Roll board. Swipe or use the arrows to roll the cube."></canvas></div>
+    <div class="lit-count" id="r-done"></div>
+    <div class="rbottom">
+      <canvas id="roll-net" aria-label="Cube faces: top in the middle, bottom face prints"></canvas>
+      <div class="dpad"><button id="r-up" aria-label="Roll up">&uarr;</button><button id="r-left" aria-label="Roll left">&larr;</button><button id="r-down" aria-label="Roll down">&darr;</button><button id="r-right" aria-label="Roll right">&rarr;</button></div>
+    </div>
+    <div class="pcontrols">
+      <button class="big" id="r-undo">Undo</button>
+      <button class="big gold" id="r-hint">Hint</button>
+      <button class="big" id="r-restart">Restart</button>
+    </div>
+  </div>
+</div>
+
+<div class="pmap" id="rmap" hidden>
+  <div class="map-inner">
+    <div class="brand"><button class="icon-btn" id="r-back" aria-label="All games">&lsaquo;</button><h1>Roll <i>&amp;</i> Print</h1><span class="total" id="r-total"></span></div>
+    <button class="big go" id="r-play">Play</button>
+    <div class="tabs" id="r-tabs" role="tablist"></div>
+    <div class="grid" id="r-grid"></div>
+    <p class="note">Playtest tools are in the Tilt &amp; Drop level map and apply to every game.</p>
+  </div>
+</div>
+
 <div class="overlay" id="overlay" hidden><div class="card" id="card"></div></div>
 
 <script>/*SIM*/</script>
 <script>/*PRISM*/</script>
+<script>/*ROLL*/</script>
 <script>
 "use strict";
 const LEVELS = /*LEVELS*/[];
@@ -452,7 +497,7 @@ function frame(ts) {
   stepTweens();
   for (const p of particles) { p.t += dt / p.life; p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 900 * dt * (p.puff ? 0 : 1); p.rot += p.spin * dt; }
   particles = particles.filter(p => p.t < 1);
-  if (active === "prism") prismDraw(); else draw();
+  if (active === "prism") prismDraw(); else if (active === "roll") rollDraw(); else draw();
   requestAnimationFrame(frame);
 }
 
@@ -542,7 +587,7 @@ const INTROS = { 31: ["Stone", "Stones fall like blocks but never leave the boar
   151: ["Four colors", "More colors, more gates. Plan your rotations!"], 211: ["Big boards", "Larger boards, longer cascades."], 241: ["Five colors", "Five colors at once. Good luck!"] };
 
 function startLevel(n, daily = false, replay = [], quiet = false) {
-  active = "tilt"; $("hub").hidden = true; $("papp").hidden = true; $("pmap").hidden = true;
+  active = "tilt"; ["hub", "papp", "pmap", "rapp", "rmap"].forEach(id => { $(id).hidden = true; });
   isDaily = daily; number = n;
   const src = daily ? DAILY[(n - 1) % DAILY.length] : LEVELS[n - 1];
   level = TD.parseLevel(src); level.solution = src.solution || "";
@@ -783,15 +828,17 @@ function boot(data) {
   L = layout();
   startLevel(Math.min(S.highest + 1, LEVELS.length), false, [], true);   // board ready underneath
   if (data && data.game === "prism" && data.pnum) startPrism(data.pnum, data.ptaps || []);
+  else if (data && data.game === "roll" && data.rnum) startRoll(data.rnum, data.rdirs || []);
   else if (data && data.game === "tilt" && data.number) { startLevel(data.number, data.isDaily, data.inputs || []); if (data.map) showMap(); }
   else showHub();
   requestAnimationFrame(frame);
 }
 window.claude?.hot?.snapshot?.(() => (!$("hub").hidden ? {} : active === "prism"
-  ? { game: "prism", pnum, ptaps: ptaps.slice() }
+  ? { game: "prism", pnum, ptaps: ptaps.slice() } : active === "roll" ? { game: "roll", rnum, rdirs: rdirs.slice() }
   : { game: "tilt", number, isDaily, inputs: inputs.slice(), map: !$("map").hidden }));
 </script>
 <script>/*PRISMUI*/</script>
+<script>/*ROLLUI*/</script>
 <script>
 window.claude?.hot?.ready ? window.claude.hot.ready(boot) : boot(window.claude?.hot?.data ?? {});
 </script>
