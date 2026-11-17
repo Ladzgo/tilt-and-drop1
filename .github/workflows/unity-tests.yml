@@ -1,0 +1,26 @@
+name: unity edit-mode tests
+# Needs UNITY_LICENSE, UNITY_EMAIL, UNITY_PASSWORD secrets (docs/SETUP.md §6).
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+jobs:
+  editmode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { lfs: true }
+      - uses: actions/cache@v4
+        with:
+          path: game/Library
+          key: Library-tests-${{ hashFiles('game/Assets/**', 'game/Packages/**', 'game/ProjectSettings/**') }}
+          restore-keys: Library-tests-
+      - uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: game
+          testMode: editmode
+          githubToken: ${{ secrets.GITHUB_TOKEN }}

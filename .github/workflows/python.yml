@@ -1,0 +1,21 @@
+name: levelgen (python)
+on:
+  push:
+    paths: ["tools/levelgen/**", "shared/**", ".github/workflows/python.yml"]
+  pull_request:
+    paths: ["tools/levelgen/**", "shared/**"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: tools/levelgen } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pytest pytest-cov
+      - name: Unit tests + coverage (>= 90%)
+        run: python -m pytest --cov --cov-fail-under=90
+      - name: Golden vectors match the simulator (no drift)
+        run: python -m tiltdrop golden --check
+      - name: Shipped level packs are valid (sampled re-solve)
+        run: python -m tiltdrop validate --sample 50

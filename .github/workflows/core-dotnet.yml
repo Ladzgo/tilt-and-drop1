@@ -1,0 +1,15 @@
+name: core (C#, no Unity)
+on:
+  push:
+    paths: ["game/Assets/_Project/Core/**", "game/Assets/_Project/Tests/**", "core-tests/**", "shared/**", ".github/workflows/core-dotnet.yml"]
+  pull_request:
+    paths: ["game/Assets/_Project/Core/**", "game/Assets/_Project/Tests/**", "core-tests/**", "shared/**"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: "8.0.x" }
+      - name: Golden-vector parity + meta logic tests
+        run: dotnet test core-tests --logger "console;verbosity=normal"

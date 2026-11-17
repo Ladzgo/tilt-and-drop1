@@ -1,0 +1,60 @@
+name: build android (AAB)
+# Secrets: UNITY_LICENSE, UNITY_EMAIL, UNITY_PASSWORD, ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASS,
+# ANDROID_KEYALIAS_NAME, ANDROID_KEYALIAS_PASS; optional GOOGLE_SERVICES_JSON_BASE64,
+# GOOGLE_PLAY_SERVICE_ACCOUNT_JSON (upload to the internal track). See docs/SETUP.md §6.
+on:
+  workflow_dispatch:
+    inputs:
+      upload_internal:
+        description: "Upload the AAB to the Google Play internal testing track"
+        type: boolean
+        default: false
+  push:
+    tags: ["v*"]
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jlumbroso/free-disk-space@v1.3.1
+        with: { android: false, large-packages: false }
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0, lfs: true }
+      - uses: actions/cache@v4
+        with:
+          path: game/Library
+          key: Library-Android-${{ hashFiles('game/Assets/**', 'game/Packages/**', 'game/ProjectSettings/**') }}
+          restore-keys: Library-Android-
+      - name: Firebase config (optional)
+        env: { GS: "${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}" }
+        if: env.GS != ''
+        run: echo "$GS" | base64 -d > game/Assets/google-services.json
+      - uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: game
+          targetPlatform: Android
+          buildMethod: TiltDrop.EditorTools.BuildScript.Build
+          androidExportType: androidAppBundle
+          androidVersionCode: ${{ github.run_number }}
+          androidKeystoreName: user.keystore
+          androidKeystoreBase64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          androidKeystorePass: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+          androidKeyaliasName: ${{ secrets.ANDROID_KEYALIAS_NAME }}
+          androidKeyaliasPass: ${{ secrets.ANDROID_KEYALIAS_PASS }}
+          versioning: Semantic
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tiltdrop-android
+          path: build/Android
+      - name: Upload to Play internal track
+        if: ${{ inputs.upload_internal }}
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.laszlo.tiltdrop
+          releaseFiles: build/Android/*.aab
+          track: internal
+          status: draft

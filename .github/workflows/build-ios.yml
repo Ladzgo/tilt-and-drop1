@@ -1,0 +1,62 @@
+name: build iOS (Xcode project -> optional TestFlight)
+# Job 1 (Linux) exports the Xcode project. Job 2 (macOS, optional) signs and uploads with fastlane.
+# Secrets: UNITY_*; optional GOOGLE_SERVICE_INFO_PLIST_BASE64; for TestFlight: APPLE_TEAM_ID, ASC_KEY_ID,
+# ASC_ISSUER_ID, ASC_KEY_P8_BASE64, MATCH_GIT_URL, MATCH_PASSWORD, MATCH_GIT_BASIC_AUTHORIZATION. docs/SETUP.md §6.
+on:
+  workflow_dispatch:
+    inputs:
+      testflight:
+        description: "Sign on macOS and upload to TestFlight"
+        type: boolean
+        default: false
+  push:
+    tags: ["v*"]
+jobs:
+  xcode-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0, lfs: true }
+      - uses: actions/cache@v4
+        with:
+          path: game/Library
+          key: Library-iOS-${{ hashFiles('game/Assets/**', 'game/Packages/**', 'game/ProjectSettings/**') }}
+          restore-keys: Library-iOS-
+      - name: Firebase config (optional)
+        env: { GS: "${{ secrets.GOOGLE_SERVICE_INFO_PLIST_BASE64 }}" }
+        if: env.GS != ''
+        run: echo "$GS" | base64 -d > game/Assets/GoogleService-Info.plist
+      - uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: game
+          targetPlatform: iOS
+          buildMethod: TiltDrop.EditorTools.BuildScript.Build
+          versioning: Semantic
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tiltdrop-ios-xcode
+          path: build/iOS
+  testflight:
+    if: ${{ inputs.testflight }}
+    needs: xcode-project
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: tiltdrop-ios-xcode, path: build/iOS }
+      - name: fastlane beta
+        working-directory: game
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8_BASE64: ${{ secrets.ASC_KEY_P8_BASE64 }}
+          MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
+          XCODE_PROJECT_DIR: ${{ github.workspace }}/build/iOS
+        run: fastlane beta

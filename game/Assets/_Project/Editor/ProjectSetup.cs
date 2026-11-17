@@ -57,6 +57,7 @@ namespace TiltDrop.EditorTools
             EditorUserBuildSettings.buildAppBundle = true;
             // iOS
             PlayerSettings.iOS.targetOSVersionString = "15.0";
+            PlayerSettings.iOS.targetDevice = iOSTargetDevice.iPhoneOnly; // no iPad screenshots needed at launch
             PlayerSettings.iOS.requiresFullScreen = true;
             PlayerSettings.iOS.hideHomeButton = false;
             // splash (Unity 6 allows disabling it on all plans)
