@@ -31,7 +31,7 @@ function startSlide(n, replay = []) {
   active = "slide";
   snum = n; slevel = SL.parseLevel(SLEVELS[n - 1]); sgame = new SL.Game(slevel);
   shist = []; sended = false; sassist = 0; staps = []; sbusy = false; squeue = null; fly = []; bumpFx = null; shintCell = -1;
-  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap"].forEach(id => { $(id).hidden = true; });
+  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap", "gapp", "gmap"].forEach(id => { $(id).hidden = true; });
   $("sapp").hidden = false; closeOverlay(); slayout();
   for (const c of replay) { shist.push(sgame.clone()); sgame.tapCell(c); staps.push(c); }
   sv = { removed: sgame.removed, tray: sgame.tray.slice() };

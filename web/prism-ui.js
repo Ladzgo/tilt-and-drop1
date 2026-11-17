@@ -56,7 +56,7 @@ function startPrism(n, replay = []) {
   phist = []; pended = false; pcont = 0; ptaps = []; hintIdx = -1; pflash = 0; ppulse = new Map();
   mirrorAngle = new Map(plevel.rotatables.map(i => [i, angleFor(plevel.cells[i][1])]));
   prevKeys = new Set();
-  ["hub", "pmap", "rapp", "rmap", "sapp", "smap"].forEach(id => { $(id).hidden = true; }); $("papp").hidden = false; closeOverlay();
+  ["hub", "pmap", "rapp", "rmap", "sapp", "smap", "gapp", "gmap"].forEach(id => { $(id).hidden = true; }); $("papp").hidden = false; closeOverlay();
   playout();
   for (const t of replay) { phist.push(pgame.clone()); pgame.tap(t); ptaps.push(t); mirrorAngle.set(t, angleFor(pgame.states.get(t))); }
   computeBeams(!replay.length);
@@ -281,13 +281,15 @@ function showPrismMap() {
 }
 function showHub() {
   closeOverlay();
-  ["map", "pmap", "papp", "rmap", "rapp", "smap", "sapp"].forEach(id => { $(id).hidden = true; }); $("hub").hidden = false;
+  ["map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "gapp"].forEach(id => { $(id).hidden = true; }); $("hub").hidden = false;
   const ts = Object.values(S.stars).reduce((a, b) => a + b, 0), ps = Object.values(PS.stars).reduce((a, b) => a + b, 0);
   $("hub-tilt").textContent = `${ts} / 900 stars · level ${Math.min(S.highest + 1, LEVELS.length)}`;
   const rsum = Object.values(RS.stars).reduce((a, b) => a + b, 0);
   $("hub-roll").textContent = `${rsum} / ${RLEVELS.length * 3} stars · level ${Math.min(RS.highest + 1, RLEVELS.length)}`;
   const ssum = Object.values(SS.stars).reduce((a, b) => a + b, 0);
   $("hub-slide").textContent = `${ssum} / ${SLEVELS.length * 3} stars · level ${Math.min(SS.highest + 1, SLEVELS.length)}`;
+  const gsum = Object.values(GS.stars).reduce((a, b) => a + b, 0);
+  $("hub-gears").textContent = `${gsum} / ${GLEVELS.length * 3} stars · level ${Math.min(GS.highest + 1, GLEVELS.length)}`;
   $("hub-prism").textContent = `${ps} / ${PLEVELS.length * 3} stars · level ${Math.min(PS.highest + 1, PLEVELS.length)}`;
 }
 

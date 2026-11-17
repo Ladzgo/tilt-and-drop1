@@ -95,5 +95,25 @@ for (const c of sg.solver) {
   if (r.solvable !== c.solvable || r.states !== c.states || JSON.stringify(r.order) !== JSON.stringify(c.order)) { fail++; console.error("slide solver", r.solvable, c.solvable, r.states, c.states); }
 }
 console.log(`slide: ${sc} cases, ${ss} steps, ${sg.solver.length} solver levels`);
+// ---- Gear Works
+const GR = require("./gears.js");
+const gg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "shared", "gears", "golden.json")));
+let gc = 0, gs = 0;
+for (const c of gg.cases) {
+  const lv = GR.parseLevel(c.level), g = new GR.Game(lv);
+  if (g.status !== c.initialStatus) { fail++; console.error("gears initial status"); }
+  for (const s of c.steps) {
+    const ok = g.tap(s.cell), { spin, jam } = GR.spins(lv, g.layout);
+    const got = JSON.stringify([ok, g.layout, spin, jam.map(Number), g.movesLeft, g.status]), exp = JSON.stringify([s.ok, s.layout, s.spin, s.jam, s.movesLeft, s.status]);
+    if (got !== exp) { fail++; if (fail < 10) console.error("gears step mismatch", got, exp); }
+    gs++;
+  }
+  gc++;
+}
+for (const c of gg.solver) {
+  const r = GR.solve(GR.parseLevel(c.level));
+  if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("gears solver", r.par, c.par, r.solutions, c.solutions); }
+}
+console.log(`gears: ${gc} cases, ${gs} steps, ${gg.solver.length} solver levels`);
 console.log(`${fail} mismatches`);
 process.exit(fail ? 1 : 0);
