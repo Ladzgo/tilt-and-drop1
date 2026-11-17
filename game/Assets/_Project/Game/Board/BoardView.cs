@@ -72,13 +72,21 @@ namespace TiltDrop.Game
             return x >= 0 && x < W && y >= 0 && y < H;
         }
 
-        /// <summary>Fits the board into the given world-space square and centers it.</summary>
-        public void Layout(Vector3 center, float squareSize)
+        float squareSize = 10f;
+
+        /// <summary>Sets the world-space square the board must fit in (applied on every Build, since it depends on W/H).</summary>
+        public void Layout(Vector3 center, float size)
         {
             basePos = center;
-            transform.position = center;
-            float s = squareSize / (Mathf.Max(W, H) + 1.1f);
-            transform.localScale = Vector3.one * s;
+            squareSize = size;
+            ApplyLayout();
+        }
+
+        void ApplyLayout()
+        {
+            transform.position = basePos;
+            // the rotated board must fit too, so fit the larger dimension (+ gate margin)
+            transform.localScale = Vector3.one * (squareSize / (Mathf.Max(Mathf.Max(W, H), 3) + 1.1f));
         }
 
         // ---- build ------------------------------------------------------------------------
@@ -126,7 +134,7 @@ namespace TiltDrop.Game
             Angle = -90f * (int)s.Gravity;
             Root.localRotation = Quaternion.Euler(0, 0, Angle);
             KeepSymbolsUpright();
-            transform.position = basePos;
+            ApplyLayout();
         }
 
         void BuildGates(Level lv)

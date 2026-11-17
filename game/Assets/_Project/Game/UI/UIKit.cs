@@ -143,6 +143,10 @@ namespace TiltDrop.Game
             {
                 var label = Label(img.transform, text, fontSize, Color.white, TextAnchor.MiddleCenter, true);
                 label.rectTransform.Stretch(16, 4, 16, 4);
+                label.verticalOverflow = VerticalWrapMode.Truncate;
+                label.resizeTextForBestFit = true; // long labels (store rows) shrink instead of overflowing
+                label.resizeTextMinSize = 22;
+                label.resizeTextMaxSize = fontSize;
             }
             return btn;
         }
@@ -266,7 +270,8 @@ namespace TiltDrop.Game
             UIKit.FadeIn(group);
         }
 
-        public Text Text(string text, int size = 44, Color? color = null) { var t = UIKit.Label(Body, text, size, color ?? Palette.TextDim); t.Size(size * 1.6f * Mathf.Max(1, text.Split('\n').Length)); return t; }
+        /// <summary>Wrapped paragraph; its height comes from the text's preferred height in the vertical layout.</summary>
+        public Text Text(string text, int size = 44, Color? color = null) => UIKit.Label(Body, text, size, color ?? Palette.TextDim);
 
         public Button Button(string text, Color color, Action onClick, bool closes = true) =>
             UIKit.Button(Body, text, color, () => { if (closes) Close(); onClick?.Invoke(); });

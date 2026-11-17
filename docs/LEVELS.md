@@ -60,6 +60,6 @@ Levels above 300 are **provisional**. When sticky pairs, one-way gates and bombs
 |---|---|
 | `rules.json` | 14 hand cases covering every rule clause: rotation mapping, nearest-first, cascade through the same gate, wrong gate acts as a wall, stone at a gate, zero-travel exit, win on the last move, lose → continue → win, anchor release, ice 2 hits + thaw, hammer |
 | `random.json` | 1,000 random boards (incl. anchors/ice/stones) × up to 12 inputs (rotations, hammer, continue), with the event trace for every step |
-| `solver.json` | 47 levels: min moves, solutions at par, dead-end ratio, random-win rate |
+| `solver.json` | 44 levels: min moves, solutions at par, dead-end ratio, random-win rate |
 
 Event strings (`M0:2:1,2>0,2`, `X0:1:L2`, `H1:5:0`, `R0:3`, `K:4:0,2`) are compared byte for byte by `GoldenTests.cs`. `python -m tiltdrop golden --check` fails CI if the Python simulator drifts from the committed vectors.

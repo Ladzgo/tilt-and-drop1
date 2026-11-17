@@ -201,6 +201,7 @@ namespace TiltDrop.Game
                 if (w < cw) rowsBefore += 11;
                 else if (w == cw) rowsBefore += 1 + ((next - 1) % Progression.WorldSize) / 5;
             }
+            LayoutRebuilder.ForceRebuildLayoutImmediate(content);
             Canvas.ForceUpdateCanvases();
             sr.verticalNormalizedPosition = Mathf.Clamp01(1f - (rowsBefore - 2f) / Mathf.Max(1, totalRows - 6));
         }
