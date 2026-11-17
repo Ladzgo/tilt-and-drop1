@@ -1,0 +1,14 @@
+{
+    "name": "TiltDrop.Adapters.AdMob",
+    "rootNamespace": "TiltDrop.Adapters",
+    "references": ["TiltDrop.Core"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": ["TD_ADMOB"],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

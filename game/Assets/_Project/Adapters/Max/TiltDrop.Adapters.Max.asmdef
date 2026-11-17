@@ -1,0 +1,14 @@
+{
+    "name": "TiltDrop.Adapters.Max",
+    "rootNamespace": "TiltDrop.Adapters",
+    "references": ["TiltDrop.Core", "MaxSdk.Scripts"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": ["TD_MAX"],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,14 @@
+{
+    "name": "TiltDrop.Adapters.Firebase",
+    "rootNamespace": "TiltDrop.Adapters",
+    "references": ["TiltDrop.Core"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": ["TD_FIREBASE"],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,14 @@
+{
+    "name": "TiltDrop.Adapters.Iap",
+    "rootNamespace": "TiltDrop.Adapters",
+    "references": ["TiltDrop.Core", "UnityEngine.Purchasing", "Unity.Services.Core"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": ["TD_IAP"],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

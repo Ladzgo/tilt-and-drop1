@@ -373,6 +373,7 @@ namespace TiltDrop.Game
 
         void Update()
         {
+            MainThread.Drain();
             if (dirty && Time.unscaledTime - lastSave > 2f) SaveNow();
         }
 

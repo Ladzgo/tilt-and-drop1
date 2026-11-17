@@ -1,0 +1,14 @@
+{
+    "name": "TiltDrop.Editor",
+    "rootNamespace": "TiltDrop.EditorTools",
+    "references": ["TiltDrop.Core", "TiltDrop.Game"],
+    "includePlatforms": ["Editor"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

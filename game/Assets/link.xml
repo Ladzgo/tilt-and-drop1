@@ -1,0 +1,8 @@
+<!-- Keep SDK adapter assemblies when IL2CPP strips code (they are only reached via ServiceRegistry). -->
+<linker>
+  <assembly fullname="TiltDrop.Core" preserve="all"/>
+  <assembly fullname="TiltDrop.Adapters.Max" preserve="all" ignoreIfMissing="1"/>
+  <assembly fullname="TiltDrop.Adapters.AdMob" preserve="all" ignoreIfMissing="1"/>
+  <assembly fullname="TiltDrop.Adapters.Firebase" preserve="all" ignoreIfMissing="1"/>
+  <assembly fullname="TiltDrop.Adapters.Iap" preserve="all" ignoreIfMissing="1"/>
+</linker>
