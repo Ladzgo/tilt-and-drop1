@@ -135,5 +135,24 @@ for (const c of dg.solver) {
   if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("domino solver", r.par, c.par, r.solutions, c.solutions); }
 }
 console.log(`domino: ${dc} cases, ${ds} steps, ${dg.solver.length} solver levels`);
+// ---- Fold
+const FD = require("./fold.js");
+const fg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "shared", "fold", "golden.json")));
+let fc = 0, fs_ = 0;
+for (const c of fg.cases) {
+  const lv = FD.parseLevel(c.level), g = new FD.Game(lv);
+  for (const s of c.steps) {
+    const ok = g.fold(...s.move);
+    const got = JSON.stringify([ok, FD.visible(lv, g.sheet), g.sheet, g.movesLeft, g.status]), exp = JSON.stringify([s.ok, s.visible, s.stacks, s.movesLeft, s.status]);
+    if (got !== exp) { fail++; if (fail < 10) console.error("fold step mismatch", got.slice(0, 200), exp.slice(0, 200)); }
+    fs_++;
+  }
+  fc++;
+}
+for (const c of fg.solver) {
+  const r = FD.solve(FD.parseLevel(c.level));
+  if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("fold solver", r.par, c.par, r.solutions, c.solutions); }
+}
+console.log(`fold: ${fc} cases, ${fs_} steps, ${fg.solver.length} solver levels`);
 console.log(`${fail} mismatches`);
 process.exit(fail ? 1 : 0);

@@ -42,7 +42,7 @@ function startGears(n, replay = []) {
   active = "gears";
   gnum = n; glevel = GR.parseLevel(GLEVELS[n - 1]); ggame = new GR.Game(glevel);
   ghist = []; gended = false; gcont = 0; gtaps = []; gdrop = new Map(); ghintCell = -1; gboost = 0;
-  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "dapp", "dmap"].forEach(id => { $(id).hidden = true; });
+  ["hub", "map", "pmap", "papp", "rmap", "rapp", "smap", "sapp", "gmap", "dapp", "dmap", "fapp", "fmap"].forEach(id => { $(id).hidden = true; });
   $("gapp").hidden = false; closeOverlay(); glayout();
   for (const c of replay) { ghist.push(ggame.clone()); if (ggame.tap(c)) gtaps.push(c); }
   const N = glevel.w * glevel.h;
