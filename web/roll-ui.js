@@ -33,7 +33,7 @@ function startRoll(n, replay = []) {
   active = "roll";
   rnum = n; rlevel = RO.parseLevel(RLEVELS[n - 1]); rgame = new RO.Game(rlevel);
   rhist = []; rended = false; rcont = 0; rdirs = []; rbusy = false; rqueue = null; tip = null; splash = new Map(); rhintDir = -1;
-  ["hub", "map", "pmap", "papp", "rmap"].forEach(id => { $(id).hidden = true; });
+  ["hub", "map", "pmap", "papp", "rmap", "sapp", "smap"].forEach(id => { $(id).hidden = true; });
   $("rapp").hidden = false; closeOverlay(); rlayout();
   for (const d of replay) { rhist.push(rgame.clone()); if (rgame.roll(d)) rdirs.push(d); }
   view = { pos: rgame.pos.slice(), faces: rgame.faces.slice(), prints: new Map(rgame.prints) };

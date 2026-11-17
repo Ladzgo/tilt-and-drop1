@@ -76,5 +76,24 @@ for (const c of rg.solver) {
   if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("roll solver", r.par, c.par, r.solutions, c.solutions); }
 }
 console.log(`roll: ${rc} cases, ${rs} steps, ${rg.solver.length} solver levels`);
+// ---- Slide Out
+const SL = require("./slide.js");
+const sg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "shared", "slide", "golden.json")));
+let sc = 0, ss = 0;
+for (const c of sg.cases) {
+  const lv = SL.parseLevel(c.level), g = new SL.Game(lv);
+  for (const s of c.steps) {
+    const res = g.tapCell(s.cell);
+    const got = JSON.stringify([res, g.removed >>> 0, g.tray, g.status]), exp = JSON.stringify([s.result, s.removed, s.tray, s.status]);
+    if (got !== exp) { fail++; if (fail < 10) console.error("slide step mismatch", got, exp); }
+    ss++;
+  }
+  sc++;
+}
+for (const c of sg.solver) {
+  const r = SL.solve(SL.parseLevel(c.level));
+  if (r.solvable !== c.solvable || r.states !== c.states || JSON.stringify(r.order) !== JSON.stringify(c.order)) { fail++; console.error("slide solver", r.solvable, c.solvable, r.states, c.states); }
+}
+console.log(`slide: ${sc} cases, ${ss} steps, ${sg.solver.length} solver levels`);
 console.log(`${fail} mismatches`);
 process.exit(fail ? 1 : 0);

@@ -29,9 +29,15 @@ roll_ui = open(os.path.join(HERE, "roll-ui.js")).read()
 with open(os.path.join(ROOT, "shared", "roll", "levels.json")) as f:
     rlevels = [{**{k: d[k] for k in ("w", "h", "grid", "cube", "moves", "par", "tier")}, "solution": d.get("meta", {}).get("solution", "")} for d in json.load(f)["levels"]]
 roll_ui = roll_ui.replace("/*ROLL_LEVELS*/[]", json.dumps(rlevels, separators=(",", ":")))
+slide_js = open(os.path.join(HERE, "slide.js")).read()
+slide_ui = open(os.path.join(HERE, "slide-ui.js")).read()
+with open(os.path.join(ROOT, "shared", "slide", "levels.json")) as f:
+    slevels = [{**{k: d[k] for k in ("w", "h", "grid", "capacity", "tier")}, "solution": d.get("meta", {}).get("solution", [])} for d in json.load(f)["levels"]]
+slide_ui = slide_ui.replace("/*SLIDE_LEVELS*/[]", json.dumps(slevels, separators=(",", ":")))
+html = html.replace("/*SLIDE*/", slide_js).replace("/*SLIDEUI*/", slide_ui)
 html = html.replace("/*PRISM*/", prism_js).replace("/*PRISMUI*/", prism_ui).replace("/*ROLL*/", roll_js).replace("/*ROLLUI*/", roll_ui)
 html = html.replace("/*SIM*/", sim).replace("/*LEVELS*/[]", json.dumps(levels, separators=(",", ":"))).replace("/*DAILY*/[]", json.dumps(daily, separators=(",", ":")))
 os.makedirs(os.path.join(HERE, "dist"), exist_ok=True)
 out = os.path.join(HERE, "dist", "index.html")
 open(out, "w").write(html)
-print(f"{out}: {len(html) // 1024} KB, {len(levels)} tilt levels, {len(daily)} daily, {len(plevels)} prism levels, {len(rlevels)} roll levels")
+print(f"{out}: {len(html) // 1024} KB, {len(levels)} tilt levels, {len(daily)} daily, {len(plevels)} prism levels, {len(rlevels)} roll levels, {len(slevels)} slide levels")

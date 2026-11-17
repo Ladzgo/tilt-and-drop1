@@ -15,7 +15,7 @@ The app is a **collection of 5–10 short-session logic puzzles** under one roof
 | 1 | **Tilt & Drop** | rotate the whole board; gravity cascades blocks into matching gates | chain-exit cascades | built (rules, 20k levels, C# core, Unity layer, web playtest) |
 | 2 | **Prism Paths** | tap mirrors to bend coloured light beams into matching targets; colours mix additively | glowing beams, red+blue = magenta | rules (Py/JS/C#), 200 levels, web playable; Unity view next (docs/games/02-prism.md) |
 | 3 | **Roll & Print** | roll a cube across tiles; each face prints its colour where it lands | spatial reasoning, satisfying stamps | rules (Py/JS/C#), 200 levels, web playable; Unity view next (docs/games/03-roll.md) |
-| 4 | Slide Out | tap blocks to slide them off the board along their lane; blockers and limited parking slots | "jam"-style clears | concept |
+| 4 | **Slide Out** | tap arrow blocks off the board; 3 of a colour pop in a small tray, a full tray loses | "jam"-style clears, order puzzles | rules (Py/JS/C#), 200 levels, web playable; Unity view next (docs/games/04-slide.md) |
 | 5 | Gear Works | rotate gear tiles so the motor drives every output in the right direction | parity puzzles, spinning machinery | concept |
 | 6 | Domino Run | place a few dominoes so one push topples every target | one big chain reaction | concept |
 | 7 | Fold | fold a paper strip so coloured squares stack into the target pattern | mental folding | concept |

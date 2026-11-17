@@ -127,6 +127,8 @@ details.test summary { cursor: pointer; font-weight: 700; }
 .dpad button { border-radius: 12px; background: var(--btn); font-weight: 700; font-size: 18px; }
 .dpad button:active { background: var(--btn-hi); }
 #r-up { grid-column: 2; grid-row: 1; } #r-left { grid-column: 1; grid-row: 2; } #r-down { grid-column: 2; grid-row: 2; } #r-right { grid-column: 3; grid-row: 2; }
+.lvl.slide { background: #2f8f6b; }
+.lvl.slide.done { background: var(--btn); } .lvl.slide.next { background: var(--go); } .lvl.slide.locked { background: var(--bg-2); }
 .lit-count { color: var(--dim); font-size: 13px; text-align: center; font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .card, .stars svg { animation: none; transition: none; } }
 </style>
@@ -195,8 +197,12 @@ details.test summary { cursor: pointer; font-weight: 700; }
       <svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#1a1830"/><rect x="10" y="56" width="24" height="24" rx="5" fill="#e5484d"/><rect x="62" y="56" width="24" height="24" rx="5" fill="none" stroke="#3e8ef7" stroke-width="4" stroke-dasharray="6 4"/><rect x="34" y="40" width="28" height="30" rx="7" fill="#9a4a2a"/><rect x="34" y="34" width="28" height="28" rx="7" fill="#ece9f7"/><rect x="38" y="38" width="20" height="6" rx="3" fill="#fff" opacity=".5"/></svg>
       <div><h2>Roll &amp; Print</h2><p>Tip a paint cube across the board. The face underneath prints on every tile it lands on.</p><div class="prog" id="hub-roll"></div></div>
     </button>
-    <div class="game-card soon"><svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#211f3a"/><text x="48" y="60" font-size="34" text-anchor="middle" fill="#45406f" font-family="sans-serif">+5</text></svg>
-      <div><h2>More games</h2><p>In development for the collection:</p><ul><li>Slide Out</li><li>Gear Works</li><li>Domino Run</li></ul></div></div>
+    <button class="game-card" id="card-slide">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#1a1830"/><rect x="12" y="14" width="22" height="22" rx="5" fill="#e5484d"/><path d="M18 25h10m-4-4 4 4-4 4" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="38" y="14" width="22" height="22" rx="5" fill="#3e8ef7"/><path d="M49 19v12m-4-4 4 4 4-4" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="10" y="66" width="76" height="20" rx="8" fill="#211f3a"/><rect x="14" y="69" width="14" height="14" rx="3" fill="#e5484d"/><rect x="30" y="69" width="14" height="14" rx="3" fill="#e5484d"/></svg>
+      <div><h2>Slide Out</h2><p>Tap arrow blocks off the board. Three of a colour in the tray pop; a full tray loses.</p><div class="prog" id="hub-slide"></div></div>
+    </button>
+    <div class="game-card soon"><svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#211f3a"/><text x="48" y="60" font-size="34" text-anchor="middle" fill="#45406f" font-family="sans-serif">+4</text></svg>
+      <div><h2>More games</h2><p>In development for the collection:</p><ul><li>Gear Works</li><li>Domino Run</li><li>Fold</li></ul></div></div>
   </div>
 </div>
 
@@ -260,11 +266,40 @@ details.test summary { cursor: pointer; font-weight: 700; }
   </div>
 </div>
 
+<div class="papp" id="sapp" hidden>
+  <div class="app">
+    <header class="hud">
+      <button class="icon-btn" id="s-menu" aria-label="Slide levels">&#9776;</button>
+      <div class="title"><h1 id="s-title">Level 1</h1><div class="sub" id="s-sub">Slide Out</div></div>
+      <div class="moves" id="s-left"><b id="s-left-n">0</b><span>blocks</span></div>
+    </header>
+    <div class="banner" id="s-banner"></div>
+    <div class="stage"><canvas id="slide-canvas" aria-label="Slide board. Tap a block to send it off along its arrow."></canvas></div>
+    <div class="lit-count" id="s-tray"></div>
+    <div class="pcontrols">
+      <button class="big" id="s-undo">Undo</button>
+      <button class="big gold" id="s-hint">Hint</button>
+      <button class="big" id="s-restart">Restart</button>
+    </div>
+  </div>
+</div>
+
+<div class="pmap" id="smap" hidden>
+  <div class="map-inner">
+    <div class="brand"><button class="icon-btn" id="s-back" aria-label="All games">&lsaquo;</button><h1>Slide <i>Out</i></h1><span class="total" id="s-total"></span></div>
+    <button class="big go" id="s-play">Play</button>
+    <div class="tabs" id="s-tabs" role="tablist"></div>
+    <div class="grid" id="s-grid"></div>
+    <p class="note">Stars here reward clean play: no undo, hint or extra slots for three stars.</p>
+  </div>
+</div>
+
 <div class="overlay" id="overlay" hidden><div class="card" id="card"></div></div>
 
 <script>/*SIM*/</script>
 <script>/*PRISM*/</script>
 <script>/*ROLL*/</script>
+<script>/*SLIDE*/</script>
 <script>
 "use strict";
 const LEVELS = /*LEVELS*/[];
@@ -497,7 +532,7 @@ function frame(ts) {
   stepTweens();
   for (const p of particles) { p.t += dt / p.life; p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 900 * dt * (p.puff ? 0 : 1); p.rot += p.spin * dt; }
   particles = particles.filter(p => p.t < 1);
-  if (active === "prism") prismDraw(); else if (active === "roll") rollDraw(); else draw();
+  if (active === "prism") prismDraw(); else if (active === "roll") rollDraw(); else if (active === "slide") slideDraw(); else draw();
   requestAnimationFrame(frame);
 }
 
@@ -587,7 +622,7 @@ const INTROS = { 31: ["Stone", "Stones fall like blocks but never leave the boar
   151: ["Four colors", "More colors, more gates. Plan your rotations!"], 211: ["Big boards", "Larger boards, longer cascades."], 241: ["Five colors", "Five colors at once. Good luck!"] };
 
 function startLevel(n, daily = false, replay = [], quiet = false) {
-  active = "tilt"; ["hub", "papp", "pmap", "rapp", "rmap"].forEach(id => { $(id).hidden = true; });
+  active = "tilt"; ["hub", "papp", "pmap", "rapp", "rmap", "sapp", "smap"].forEach(id => { $(id).hidden = true; });
   isDaily = daily; number = n;
   const src = daily ? DAILY[(n - 1) % DAILY.length] : LEVELS[n - 1];
   level = TD.parseLevel(src); level.solution = src.solution || "";
@@ -829,16 +864,18 @@ function boot(data) {
   startLevel(Math.min(S.highest + 1, LEVELS.length), false, [], true);   // board ready underneath
   if (data && data.game === "prism" && data.pnum) startPrism(data.pnum, data.ptaps || []);
   else if (data && data.game === "roll" && data.rnum) startRoll(data.rnum, data.rdirs || []);
+  else if (data && data.game === "slide" && data.snum) startSlide(data.snum, data.staps || []);
   else if (data && data.game === "tilt" && data.number) { startLevel(data.number, data.isDaily, data.inputs || []); if (data.map) showMap(); }
   else showHub();
   requestAnimationFrame(frame);
 }
 window.claude?.hot?.snapshot?.(() => (!$("hub").hidden ? {} : active === "prism"
-  ? { game: "prism", pnum, ptaps: ptaps.slice() } : active === "roll" ? { game: "roll", rnum, rdirs: rdirs.slice() }
+  ? { game: "prism", pnum, ptaps: ptaps.slice() } : active === "roll" ? { game: "roll", rnum, rdirs: rdirs.slice() } : active === "slide" ? { game: "slide", snum, staps: staps.slice() }
   : { game: "tilt", number, isDaily, inputs: inputs.slice(), map: !$("map").hidden }));
 </script>
 <script>/*PRISMUI*/</script>
 <script>/*ROLLUI*/</script>
+<script>/*SLIDEUI*/</script>
 <script>
 window.claude?.hot?.ready ? window.claude.hot.ready(boot) : boot(window.claude?.hot?.data ?? {});
 </script>
