@@ -1,0 +1,5585 @@
+{
+ "schema": 1,
+ "levels": [
+  {
+   "id": "D0001",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "t^d.d.B.",
+    "S^......",
+    "........",
+    "........"
+   ],
+   "attempts": 3,
+   "par": 1,
+   "tier": "E",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.0,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0002",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "..Sv....",
+    "..d.....",
+    "..t<d.B.",
+    "........"
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.04,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0003",
+   "w": 5,
+   "h": 4,
+   "grid": [
+    "..........",
+    "..........",
+    "..t<S<....",
+    "..B......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0004",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "Sv......",
+    "tvd.d.B.",
+    "........",
+    "........"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0005",
+   "w": 5,
+   "h": 4,
+   "grid": [
+    "B.........",
+    "d.........",
+    "t<d.S<....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 1,
+   "tier": "E",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0006",
+   "w": 5,
+   "h": 4,
+   "grid": [
+    "......B...",
+    "......t>S<",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0007",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "....Sv..",
+    "....d...",
+    "B.d.tv..",
+    "........"
+   ],
+   "attempts": 3,
+   "par": 1,
+   "tier": "N",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0008",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "..B.....",
+    "..d.....",
+    "..d.....",
+    "..t>S<.."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0009",
+   "w": 4,
+   "h": 4,
+   "grid": [
+    "tvd.d.B.",
+    "d.......",
+    "S^......",
+    "........"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0010",
+   "w": 5,
+   "h": 4,
+   "grid": [
+    "......Sv..",
+    "......d...",
+    "......t<B.",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "first_turn",
+    "bot_fail": 0.02,
+    "solutions": 1,
+    "share": 0.25,
+    "solution": [
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0011",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "..........",
+    "tvSv......",
+    "B.t>......",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.0,
+    "solutions": 4,
+    "share": 0.25,
+    "solution": [
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0012",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....t^B...",
+    "....t^d...",
+    "....tvt^..",
+    "....t^S<..",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.26,
+    "solutions": 20,
+    "share": 0.0195,
+    "solution": [
+     0,
+     3,
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0013",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..t^d.S<..",
+    "..d.t<....",
+    "..t<d.d.B.",
+    "........t<",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.26,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0014",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "....t<Sv..",
+    "B.t>..d...",
+    "..t^d.t<..",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.26,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0015",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..t>B.Sv..",
+    "....d.d...",
+    "....t^t>..",
+    "....tv....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.08,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     3,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0016",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "......t^..",
+    "......Svt>",
+    "..t^d.t^..",
+    "..B......."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.08,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0017",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "..........",
+    "..........",
+    "....tvt^B.",
+    "..S>d.t<.."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.26,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0018",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "....S>t>..",
+    "B.d.d.tv..",
+    "....t^....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.26,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0019",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "t^..Sv....",
+    "B.t<d.....",
+    "..t^t^....",
+    "....t>....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     3,
+     2,
+     3,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0020",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "....t<....",
+    "....t^d.t>",
+    "....S^B.t>",
+    "........tv"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "H",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.56,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     0,
+     1,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0021",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..Sv..t^..",
+    "..t>d.t<..",
+    "......d...",
+    "......d...",
+    "....t^B..."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.08,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     0,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0022",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "..........",
+    "t^S<..tv..",
+    "t>d.d.B...",
+    "......t>.."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.08,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0023",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "..........",
+    "..t<Sv....",
+    "t<d.t<....",
+    "B...t<...."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0024",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..t<t^....",
+    "..d.d.....",
+    "..S^d.....",
+    "..t>d.....",
+    "....B.t<.."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     1,
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0025",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "t<Sv......",
+    "t>t>......",
+    "d.........",
+    "B.t<......"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0026",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..Sv..B.t<",
+    "..t^d.tv..",
+    "..t>......",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     0,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0027",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "S>t<t>....",
+    "t<d.......",
+    "B.t>......",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0028",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "..t^S<....",
+    "..t<d.t>..",
+    "..t^..d...",
+    "......B..."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.56,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     0,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0029",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "..........",
+    "tv........",
+    "S>d.t^t>..",
+    "....tvd.B."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0030",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "t<........",
+    "B.t^......",
+    "..t^d.S<..",
+    "..tv......",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     2,
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0031",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "B.t<Sv....",
+    "t^d.t>t>..",
+    "..........",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     3,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0032",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "..t<......",
+    "..t^d.S<..",
+    "..d.......",
+    "B.t^......"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0033",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "B.........",
+    "d...t<....",
+    "d...Sv....",
+    "t<d.tv....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0034",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "t>d.t>....",
+    "d.B.t^tv..",
+    "S^tv......",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "H",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.58,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     1,
+     2,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0035",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..t<d.tv..",
+    "..d...d...",
+    "..S^t^d...",
+    "....t^d...",
+    "......B..."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     1,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0036",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "Sv........",
+    "d.t^......",
+    "t^d.t^t<..",
+    "....d.....",
+    "....B....."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0037",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..t<t<t^..",
+    "..S^d.....",
+    "....d.....",
+    "....d.....",
+    "....B....."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.28,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0038",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "B.d.d.t<..",
+    "t<tv..t^t^",
+    "........S^",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     2,
+     1,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0039",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "....tv....",
+    "..t^S>d.t>",
+    "........d.",
+    "B.d.d.d.t^"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     3,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0040",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "t^B.S>tvt<",
+    "..t^d.t>..",
+    "..........",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "SH",
+   "meta": {
+    "beat": "corners",
+    "bot_fail": 0.76,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     3,
+     1,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0041",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......t>B...",
+    "........tvY.",
+    "..........d.",
+    "..........S^",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.0,
+    "solutions": 4,
+    "share": 0.25,
+    "solution": [
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0042",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "....t^....",
+    "....t>d.B.",
+    "....tvY.B.",
+    "....t<S^.."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0043",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....S>t>t>..",
+    "......d.tv..",
+    "......t<d.B.",
+    "............",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0044",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "tv........",
+    "Y.t>......",
+    "S^d.......",
+    "B.t>tv....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.28,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0045",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..S>d.Y.....",
+    "..tv..t^d.t<",
+    "........t<d.",
+    "..........d.",
+    "..........B.",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.28,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0046",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "............",
+    "..t>d.tv....",
+    "B.Y.t>d.....",
+    "..t>d.S^t<..",
+    "....B......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "H",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.58,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     1,
+     2,
+     1,
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0047",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "tvY.d.d.B...",
+    "B.d...t>....",
+    "S>t>........",
+    "..t^........",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0048",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....S>d.Y...",
+    "........d...",
+    "....t<d.t<..",
+    "..t>d...tv..",
+    "....d.......",
+    "....B......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0049",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "B.t>......",
+    "t>d.t^....",
+    "t^..d.....",
+    "....Y.d.S<",
+    "....B....."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     3,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0050",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "tvY.t>....",
+    "S^d.......",
+    "..t^d.d.B.",
+    "....t>....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0051",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..tvt<....",
+    "S>d.t<....",
+    "....d.....",
+    "B.d.tv....",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0052",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "......t<B.",
+    "....t<t>Y.",
+    "......t<S^",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0053",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "B.d.d.t^Sv..",
+    "....tvd.d.t^",
+    "......t<Y.B.",
+    "............",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0054",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....t^d.S<..",
+    "....d.Y.d.B.",
+    "....t>t>..t<",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.58,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0055",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....SvB...",
+    "....d.d...",
+    "....tvt^t>",
+    "......tv..",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     3,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0056",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..B.........",
+    "..d.t^......",
+    "..t>t^......",
+    "....d.......",
+    "S>d.Y.......",
+    "..t^B......."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     3,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0057",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....S>t<t^B.",
+    "....t^Y.d.t^",
+    "....d.......",
+    "....d.......",
+    "....B.......",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     3,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0058",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....tv......",
+    "B.d.tv......",
+    "....t<Y.d.B.",
+    "......d.....",
+    "....t<S^...."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0059",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "tv........",
+    "S>d.t<....",
+    "....d.....",
+    "B.d.Y.t<..",
+    "......B..."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0060",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "t^B.......",
+    "..d.t^d.Y.",
+    "t<d.d...d.",
+    "..t^t>..S^",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "SH",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.78,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     3,
+     1,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0061",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "....t^d.Y.",
+    "..t<d...d.",
+    "....t^B.S^",
+    "....t>...."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0062",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......B.t>..",
+    "......d.t>..",
+    "......d.....",
+    "....tvt^....",
+    "....d.......",
+    "..S>Y......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     0,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0063",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..tvd.Y.B.",
+    "..d.tvd...",
+    "..tvB.S^..",
+    "..t^......",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.1,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0064",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "............",
+    "............",
+    "t>tvtv......",
+    "d.Y.d.S<....",
+    "B.B........."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0065",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "....t^Sv..",
+    "......d...",
+    "....t<Y.B.",
+    "B.d.t>...."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     3,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0066",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "t<t^......",
+    "S^Y.d.d.B.",
+    "........tv",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0067",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..Sv........",
+    "..d.........",
+    "B.Y.d.t>....",
+    "......d...t^",
+    "......tvd.B.",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.3,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0068",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....t<Sv..",
+    "....t^tv..",
+    "....d.B...",
+    "B.d.Y.t^t>",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "H",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.6,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     1,
+     2,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0069",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....B.......",
+    "..tvd.......",
+    "....d.......",
+    "tvd.t<......",
+    "d.t<........",
+    "Y.d.S<......"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0070",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....Sv......",
+    "....d.......",
+    "B.d.Y.t^....",
+    "t>..t>t>d.B.",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0071",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "B.SvB.t>....",
+    "d.d...d.t>..",
+    "t>Y.d.t<....",
+    "............",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.32,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     0,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0072",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "....tv....",
+    "..t>d.tv..",
+    "..d...S^..",
+    "..d.......",
+    "..B.tv...."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.32,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0073",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "......B...",
+    "Svtvd.t^tv",
+    "Y.t>......",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.32,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     0,
+     3,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0074",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "......t^S<",
+    "......d...",
+    "B.d.d.Y.t^",
+    "B.d.d.d.tv",
+    "t<t>......"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.6,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     1,
+     1,
+     2,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0075",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "Sv........",
+    "Y.t<..tv..",
+    "t<t^d.d.B.",
+    "..........",
+    ".........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0076",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "............",
+    "..tvt>......",
+    "..B.d.......",
+    "..S>Y.......",
+    "..t<B......."
+   ],
+   "attempts": 3,
+   "par": 2,
+   "tier": "E",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.12,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0077",
+   "w": 5,
+   "h": 5,
+   "grid": [
+    "..........",
+    "........t<",
+    "......t<tv",
+    "......d.d.",
+    "....t^B.S^"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.32,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0078",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "........t^..",
+    "........Sv..",
+    "..B.d.d.Y.t<",
+    "..tvB.d.d.t^",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.32,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     1,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0079",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "............",
+    "....t^d.d.B.",
+    "..tvY.....tv",
+    "..S^d.......",
+    "..t>B......."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.32,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     0,
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0080",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "B...........",
+    "d.S>d.t^....",
+    "Y.d.d.t^....",
+    "d...t^......",
+    "d...........",
+    "B.t>........"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "SH",
+   "meta": {
+    "beat": "splitters",
+    "bot_fail": 0.78,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0081",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......##....",
+    "............",
+    "..S>t<tv....",
+    "....B.......",
+    "..####....##",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.0,
+    "solutions": 4,
+    "share": 0.25,
+    "solution": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0082",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....S>Tv....",
+    "..t^d.t>....",
+    "..d.t>t^....",
+    "..d.....##..",
+    "..B.##......"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0083",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..##B.T<....",
+    "##B.t<d.....",
+    "..t>Y.t<t<##",
+    "....d.......",
+    "....S^......",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     3,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0084",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##......B.t<",
+    "....##..d...",
+    "##......Y.T<",
+    "....t<d.tvd.",
+    "....d.S>d.T^",
+    "....B.....t<"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.32,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0085",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##....B.....",
+    "....T>tv##..",
+    "....tvS<t^..",
+    "............",
+    "..##........",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.32,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0086",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "B.d.t>......",
+    "....d.##....",
+    "..tvtvd.T<..",
+    "......S>t<t>",
+    "..........##"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.6,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     1,
+     3,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0087",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##tv....Tvt>",
+    "B.d.d.d.t^S^",
+    "....t^......",
+    "##..........",
+    "............",
+    "..##........"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0088",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "S>d.Y.B.T<..",
+    "..##T>d.t>..",
+    "......t<t<..",
+    "............",
+    "............",
+    "......##...."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.25,
+    "solution": [
+     3,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0089",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##....B.....",
+    "..T>d.T^....",
+    "..t<Y.d.d.B.",
+    "....d.......",
+    "....t>S<t^..",
+    "..........##"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.32,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0090",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....t^tvY.B.",
+    "......B.d...",
+    "......tvT^..",
+    "..##S>t>....",
+    "....t>......",
+    "....##......"
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     3,
+     1,
+     0,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0091",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "B...##......",
+    "T^t<........",
+    "S>t>t<....##",
+    "............",
+    "##..........",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0092",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....##......",
+    "......##....",
+    "t<tvt<......",
+    "d.B.........",
+    "t<S<t>......"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     1,
+     2,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0093",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....##..B.Sv",
+    "..##B.t<d.d.",
+    "....d.t>Y.tv",
+    "....tvd.t<..",
+    "..........##",
+    "..........##"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "H",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.6,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     0,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0094",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "........##..",
+    "....##tv....",
+    "....Tvt^....",
+    "##TvY.S^t^..",
+    "..B........."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 16,
+    "share": 0.25,
+    "solution": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0095",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "####........",
+    "............",
+    "......tvd.B.",
+    "......d...t<",
+    "..t>d.T^....",
+    "..S^..##...."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0096",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....S>tv....",
+    "..tvB.d.....",
+    "##..t>t<....",
+    "............",
+    "........##.."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     1,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0097",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......B...##",
+    "......Y.S<..",
+    "......d.....",
+    "..##..t^Tv..",
+    "....tvd.t^..",
+    "##..B.tv...."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 20,
+    "share": 0.0781,
+    "solution": [
+     1,
+     1,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0098",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..##..##....",
+    "......tvt^..",
+    "..##B.Y.d.B.",
+    "......T^d.t>",
+    "........S>t>",
+    "..##........"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     3,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0099",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..####......",
+    "t^S<........",
+    "d.B.........",
+    "t>t<t^......",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     0,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0100",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....##......",
+    "............",
+    "............",
+    "Sv####B.t>..",
+    "d.tvt<d.t<..",
+    "Y.d.t^......"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "SH",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.8,
+    "solutions": 4,
+    "share": 0.0039,
+    "solution": [
+     2,
+     1,
+     0,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0101",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "........##..",
+    "....t^Tvd.t>",
+    "......t^B.d.",
+    "..##..t<..S^",
+    "....##....##",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.14,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     2,
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0102",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##T>B.##....",
+    "..t>S<......",
+    "....tv......",
+    "......##....",
+    "............",
+    "..##........"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.12,
+    "solutions": 4,
+    "share": 0.25,
+    "solution": [
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0103",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##..........",
+    "............",
+    "..t<d.S<....",
+    "B.t<t<..##..",
+    "##..........",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0104",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "##......##..",
+    "....t>t<t<..",
+    "......B.d...",
+    "....T>d.tv..",
+    "....S^......"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0105",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "............",
+    "........t^B.",
+    "..####T>Y...",
+    "..##..d.d...",
+    "..S>d.tvB.t>"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0106",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "........t^B.",
+    "......##..d.",
+    "S>t^....##d.",
+    "..d.B.Y.d.t>",
+    "..T>d.T^...."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.34,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     3,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0107",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "........##..",
+    "............",
+    "......t^d.t>",
+    "......d.B.t^",
+    "....S>Y.t<..",
+    "..##t>B...##"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.62,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     1,
+     2,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0108",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##..........",
+    "..B.tv##....",
+    "..d.S>Tv....",
+    "..d.##d.....",
+    "..t^d.t^....",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0109",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "B.t^t>##....",
+    "..d.........",
+    "..t^S<......",
+    "............",
+    "............",
+    "..##........"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0110",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "........##..",
+    "##..........",
+    "..t>..##....",
+    "B.d.d.t^..Sv",
+    "......t^d.tv",
+    "..##......t^"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.36,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     2,
+     3,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0111",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..####......",
+    "............",
+    "B.t<......##",
+    "..d.....Sv..",
+    "..Y.d.T<d.tv",
+    "..B.t^t>tv.."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.36,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     1,
+     3,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0112",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....B.......",
+    "..##d.......",
+    "....d.t<Svt>",
+    "....Y.t^d...",
+    "..##d.T^t<..",
+    "..##B......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.36,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     0,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0113",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......##....",
+    "....tv..##..",
+    "....t<Y.d.B.",
+    "B.t>d.S^....",
+    "..tvT<......",
+    "....t^......"
+   ],
+   "attempts": 3,
+   "par": 7,
+   "tier": "H",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.62,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     1,
+     1,
+     2,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0114",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....B.......",
+    "....Y.d.S<..",
+    "####d.tv....",
+    "....T>d.tv##",
+    "........d...",
+    "......##tvB."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0115",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..##....##..",
+    "t>B.........",
+    "T>t>........",
+    "t<S<..####..",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0116",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "............",
+    "B.d.d.tv....",
+    "....t>tvT<..",
+    "........d.##",
+    "..##....t^S<"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.36,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     0,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0117",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "##..........",
+    "............",
+    "........t<..",
+    "....##..S>t<",
+    "......tvd.t^",
+    "......B....."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.36,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     1,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0118",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......SvtvB.",
+    "......tvd.tv",
+    "......t<##..",
+    "............",
+    "............",
+    "......##...."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.36,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0119",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....t>..S>Tv",
+    "..##B.T<t^d.",
+    "......t>d.t<",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.36,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     3,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0120",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....tvt<..##",
+    "....d.d.tv..",
+    "....d.t>d.t^",
+    "....B.....S^",
+    "............",
+    "##.........."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "SH",
+   "meta": {
+    "beat": "fixed_walls",
+    "bot_fail": 0.82,
+    "solutions": 4,
+    "share": 0.0039,
+    "solution": [
+     1,
+     2,
+     1,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0121",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "....tvB.......",
+    "......t>d.S<..",
+    "..........t>..",
+    "..............",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.0,
+    "solutions": 16,
+    "share": 0.25,
+    "solution": [
+     1,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0122",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "....T>d.d.t>..",
+    "....Y.S<..d...",
+    "....d.tvt>d...",
+    "....t>t^..B...",
+    "......d.......",
+    "......B......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.14,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     1,
+     1,
+     0,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0123",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "..............",
+    "........t^..Sv",
+    "......t<d.B.d.",
+    "......tvd.d.Y.",
+    "..........tv.."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.14,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     3,
+     0,
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0124",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..B...........",
+    "..d...........",
+    "..tvd.d.Y.tv..",
+    "....t^S>T^d...",
+    "......t<..d...",
+    "..........t<B.",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.36,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     3,
+     1,
+     3,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0125",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....B.Sv....",
+    "t>t<t<d.....",
+    "..d...d.....",
+    "..t^d.Y.d.B.",
+    "..tv........",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.36,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     0,
+     3,
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0126",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "t<d.B.SvB...",
+    "t<d.d.Y.Y...",
+    "....t^B.d...",
+    "......T^t<..",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.36,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     0,
+     3,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0127",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..tv........",
+    "..Tvd.t>....",
+    "..d...d.....",
+    "..B...d.....",
+    "S>d.d.t>....",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.36,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0128",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "........B...",
+    "......t^Y.t>",
+    "..tv....d.d.",
+    "B.d.t<..d.S^",
+    "....t^d.t^..",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.62,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     3,
+     2,
+     1,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0129",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "..............",
+    "..t>d.d.t>....",
+    "..d.....d.....",
+    "..B.....d.t<..",
+    "tvS>d.d.Y....."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.14,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0130",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "tv..........",
+    "Svt<........",
+    "t>d.t<......",
+    "....d.......",
+    "....B......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.14,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0131",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "B.t<..S>d.Y.",
+    "..t>d.t<t^d.",
+    "....t^d...d.",
+    "......T^d.Y.",
+    "............",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.34,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     3,
+     2,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0132",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "B.....t>......",
+    "t>d.Y.Sv......",
+    "....d.d.......",
+    "..t>t^t^......",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     3,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0133",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..B.........",
+    "t>d.........",
+    "..Y.d.d.t>..",
+    "B.t>....d...",
+    "......t^d...",
+    "....S>d.t<.."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.62,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     2,
+     2,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0134",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "......tvd.S<",
+    "......d...B.",
+    "......d...d.",
+    "......T>d.t>",
+    "......tv....",
+    "............"
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0135",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..Sv........",
+    "..d.........",
+    "t>d.........",
+    "B.Y.d.d.t<..",
+    "........d...",
+    "........tvB."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0136",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "t<S>d.Tv....",
+    "......d.....",
+    "......d.B.t>",
+    "....tvY.d.tv",
+    "....d.......",
+    "....B.tv...."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     2,
+     1,
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0137",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..B.Sv....B.",
+    "..d.d.t<..d.",
+    "..t>Y.d.d.Y.",
+    "....t<t<d.t<",
+    "......d.....",
+    "......B....."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     3,
+     2,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0138",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "........t>d.T<",
+    "........t<B.d.",
+    "........S>d.Y.",
+    "....t>B.d.d.t^",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     0,
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0139",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "Y.d.d.t<......",
+    "S^....d.......",
+    "....t>d.......",
+    "....Tvtvtv....",
+    "....d.........",
+    "....B........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0140",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "........Y.d.S<",
+    "t^B.d.d.Y.t<..",
+    "..........d...",
+    "..........d.tv",
+    "..........t^tv",
+    "............d.",
+    "......B.d.d.tv"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "SH",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.82,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     3,
+     1,
+     1,
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0141",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "B.......t^B...",
+    "Y.d.d.Y.d.t<..",
+    "d.B.tvd.......",
+    "d.d...S^......",
+    "tvt^..........",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.16,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     3,
+     3,
+     1,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0142",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "......Tvd.d.t^",
+    "B.d.d.Y.d.t<d.",
+    "..........d.d.",
+    "..........d.S^",
+    "..........d...",
+    "..........B.tv"
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.14,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0143",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "......Y.S<....",
+    "B.d.d.Y.d.t<t^",
+    "..........t^t^",
+    "............d.",
+    "............d.",
+    "............B.",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.16,
+    "solutions": 8,
+    "share": 0.0312,
+    "solution": [
+     0,
+     1,
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0144",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "Sv..T>d.d.tv",
+    "d...d.....d.",
+    "Y.d.Y...t<t>",
+    "....d...d...",
+    "....B.t^B..."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0145",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "........tv....",
+    "........t<Tv..",
+    "........d.B...",
+    "........t<d.Y.",
+    "............S^",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0146",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..B.........",
+    "..d.......t^",
+    "..d.......Sv",
+    "..T^d.d.Y.d.",
+    "........d.d.",
+    "........tvt>"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     3,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0147",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "t>B...........",
+    "..Y.t>........",
+    "t^t>d.........",
+    "d.S>T^........",
+    "d.............",
+    "d.............",
+    "B............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "H",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.64,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     0,
+     2,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0148",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "....SvB.t<..",
+    "T>B.d...d...",
+    "t<d.Y.d.Y...",
+    "......t>d...",
+    "........tvB."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.16,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     3,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0149",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "....T>d.t>....",
+    "..tvd.tvB.....",
+    "....tvd.d.S<..",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.16,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0150",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "Sv............",
+    "d.............",
+    "Y.d.d.t<......",
+    "Tvd.d.t^t^....",
+    "d.............",
+    "d.............",
+    "B............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0151",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..B...........",
+    "Y.t>..........",
+    "d.t^..........",
+    "t>S<..........",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.16,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0152",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..S>d.d.t^....",
+    "..B.t>..d.....",
+    "..T^Y.B.d.....",
+    "....tvd.T<....",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.38,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0153",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "............",
+    "B.T<t>d.d.S<",
+    "..d.d...tvB.",
+    "t>t<Y.d.Y...",
+    "........d...",
+    "........B..."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "H",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.64,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     0,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0154",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "....Y.t>..B.",
+    "..S>d.Y...d.",
+    "......d...d.",
+    "......d...d.",
+    "......tvd.tv",
+    "......tv..t<"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.18,
+    "solutions": 64,
+    "share": 0.0625,
+    "solution": [
+     0,
+     0,
+     3,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0155",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..t^d.d.B.B...",
+    "..d.t<Sv..d...",
+    "..tvd.Y.d.t<..",
+    "....t<........",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.18,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     2,
+     3,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0156",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "t<......SvB.t>",
+    "B.Y.d.B.d...d.",
+    "t^t<d.d.Y.d.t^",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.4,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     2,
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0157",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "........B.....",
+    "..t>d.d.tvtv..",
+    "..d.....t>....",
+    "S>tv..........",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.4,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     3,
+     1,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0158",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "......t>......",
+    "......Svt>T<..",
+    "......d.B.d.t>",
+    "..t^d.Y.d.t>..",
+    "..d...........",
+    "..d...........",
+    "..B..........."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.4,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     1,
+     0,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0159",
+   "w": 6,
+   "h": 6,
+   "grid": [
+    "..t^d.Y.....",
+    "..d.B.d.....",
+    "..S^d.d.....",
+    "..t<Y.t>....",
+    "....d.......",
+    "....B......."
+   ],
+   "attempts": 3,
+   "par": 3,
+   "tier": "N",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.4,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0160",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..t^t>........",
+    "S>Y.tvt<......",
+    "..d.tvt>d.d.B.",
+    "..d...........",
+    "..d...........",
+    "..B..........."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "SH",
+   "meta": {
+    "beat": "long_chains",
+    "bot_fail": 0.84,
+    "solutions": 8,
+    "share": 0.002,
+    "solution": [
+     0,
+     1,
+     1,
+     2,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0161",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..Tvd.T<......",
+    "B.t>..d.......",
+    "..tvSvd.......",
+    "B.d.Y.Y.......",
+    "....tvd...##..",
+    "..t^d.T<......",
+    "..B..........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.0,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0162",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "##............",
+    "..............",
+    "tv..........##",
+    "Svtv..tvB.##..",
+    "t^d.d.Y.....##"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0163",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "Tvd.d.Y.t^....",
+    "d.B...d.d.....",
+    "d.d...d.B...t<",
+    "tvt^..T^d.d.S<",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     2,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0164",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "............B.",
+    "....t^......d.",
+    "..##t<d.d.Y.tv",
+    "....d.....d...",
+    "B.t<d...t<S^##",
+    "..Y.t<........",
+    "..##.........."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.38,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     3,
+     1,
+     3,
+     2,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0165",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "B.d.d.t^......",
+    "......d.##....",
+    "....t^d.......",
+    "......Y.d.d.Y.",
+    "..t>B.d.t>..d.",
+    "..d...d.##..d.",
+    "..tvd.tv....S^"
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     2,
+     3,
+     0,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0166",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "....##........",
+    "....##......##",
+    "..............",
+    "..Svt>..t>d.B.",
+    "..tvd.d.t>....",
+    "..t<..........",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     0,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0167",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "##............",
+    "........Svtv..",
+    "......##d.t<B.",
+    "..##t>d.Y.Y...",
+    "....d.t<t<t>..",
+    "....d...d.....",
+    "....B...B....."
+   ],
+   "attempts": 3,
+   "par": 8,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.64,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     1,
+     0,
+     1,
+     2,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0168",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "##....B.##tv..",
+    "......tvd.t^..",
+    "..........d...",
+    "..........S^..",
+    "..........t^..",
+    "##............",
+    "........##...."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     1,
+     3,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0169",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "......t^d.d.B.",
+    "......d.....t^",
+    "......Y.d.T<..",
+    "......d...S^..",
+    "......d...t<..",
+    "......tvd.Tv..",
+    "..........B..."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     3,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0170",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..tvB.Svt^....",
+    "..tvd.Y.d.tv..",
+    "......##..d...",
+    "....Tvd.d.Y.B.",
+    "....d.........",
+    "....B........."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     0,
+     3,
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0171",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "......SvB...t^",
+    "......t^Y.B.t>",
+    "..##B.d.Y.d.tv",
+    "..............",
+    "..............",
+    "..............",
+    "............##"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     3,
+     0,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0172",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..B...........",
+    "..d...t<......",
+    "..Y.d.t>##....",
+    "..d...d.......",
+    "..B...d.......",
+    "Y.d.d.tv##....",
+    "S^............"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0173",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "....B.........",
+    "Y.d.t>........",
+    "d.tv..........",
+    "d.............",
+    "Y.d.tv........",
+    "d...S^##......",
+    "B.##....##...."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.4,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     3,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0174",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "Y.d.d.t<....##",
+    "d.B.d.tv......",
+    "t<d.Y.d.t>..##",
+    "....d.t>d...##",
+    "....d.t<d.....",
+    "##..S^..B.....",
+    "..........##.."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.66,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     1,
+     2,
+     3,
+     1,
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0175",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "......##..B...",
+    "##..S>d.d.Y...",
+    "..........d...",
+    "......t^B.d.t<",
+    "......Y.d.T<..",
+    "......d...B...",
+    "......tvd.T^.."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0176",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "..............",
+    "....tv........",
+    "t>d.d.S<......",
+    "Y.d.t<........",
+    "....B.##......"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0177",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "..t<..........",
+    "..S>t<........",
+    "....d.....t^..",
+    "....d.t>d.t^..",
+    "....t>Y.##B..."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     2,
+     1,
+     3,
+     0,
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0178",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "Sv............",
+    "d.............",
+    "d...tv..##....",
+    "Y.d.d.t<......",
+    "tvB...d.......",
+    "..t^d.t>......",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     1,
+     1,
+     1,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0179",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "....t<d.d.Tv..",
+    "..Svd.....d...",
+    "..d.d.....d.t>",
+    "B.Y.Y.....tvtv",
+    "....d.....##d.",
+    "....B.......B."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     0,
+     0,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": "D0180",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "Y.d.d.t<......",
+    "d...t>d.......",
+    "S^....d.......",
+    "..t^d.tv......",
+    "..d.t<........",
+    "B.t>..........",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 8,
+   "tier": "SH",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.84,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     1,
+     0,
+     1,
+     2,
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0181",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..##..........",
+    "..............",
+    "..............",
+    "......##t<d.S<",
+    "......##d.B...",
+    "....t>d.Y.T^t<",
+    "....B........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     1,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0182",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "....##......##",
+    "........##....",
+    "..............",
+    "##B.t>........",
+    "....tvd.Y.d.B.",
+    "....t>..T^S<..",
+    "......##......"
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.16,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0183",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "..##..t>t<....",
+    "......t<d.Y.B.",
+    "..##..d.Svd...",
+    "t^d.d.T<d.d...",
+    "t<d.d.B.T>Y..."
+   ],
+   "attempts": 3,
+   "par": 7,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.18,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     2,
+     1,
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0184",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "tvY...........",
+    "d.B.t>........",
+    "t>d.d.T<......",
+    "....t<S^......",
+    "..............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     0,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0185",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..Tvd.t>......",
+    "..d.S>Y.......",
+    "..d...d.t<....",
+    "B.t^..t<d.d.B.",
+    "............##",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 7,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     2,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0186",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "....Y.d.Y.t>..",
+    "##..d...d.t^B.",
+    "B.tvd...S^t>..",
+    "tvd.t^........",
+    "........##....",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 7,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.66,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     1,
+     0,
+     1,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0187",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "B.tv##........",
+    "..d.##t>..t<..",
+    "..t>d.d.Y.d.B.",
+    "........d.....",
+    "....##..d.....",
+    "....S>d.Y.....",
+    "..##B.d.tv...."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.18,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     0,
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0188",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "B.tv..........",
+    "Y.tv..........",
+    "d.##........##",
+    "d.............",
+    "t<S<..........",
+    "..t>.........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.18,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     3,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0189",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "B.t^......B...",
+    "##d.......d...",
+    "..Y.d.d.Y.t^..",
+    "..d.....d.tv..",
+    "..d.....t<d.S<",
+    "B.T<..........",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     2,
+     3,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0190",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "........B.....",
+    "..##t^Tvd.....",
+    "Y.d.Y.d.d.....",
+    "d.t<d.d.d.....",
+    "d...d.tvT^....",
+    "S^..B........."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     0,
+     2,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0191",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "T>B.S>Y.......",
+    "d...t<d.......",
+    "t>d.d.t^......",
+    "......##....##",
+    "..............",
+    "..............",
+    "......##......"
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.42,
+    "solutions": 4,
+    "share": 0.0625,
+    "solution": [
+     2,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0192",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "........tvd.B.",
+    "..t^S>d.Y.##t<",
+    "B.t>....d.....",
+    "..t<d.d.Y.d.B.",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.44,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     0,
+     3,
+     2,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0193",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "........B.....",
+    "......tvt>t<..",
+    "......t<..d...",
+    "....S>d.d.t<..",
+    "..............",
+    "....##........",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.44,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     1,
+     3,
+     2,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0194",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..####........",
+    "##............",
+    "....t^........",
+    "....t>d.t>..Sv",
+    "B.d.t<..d.t<d.",
+    "##......t<d.Y.",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "H",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.66,
+    "solutions": 16,
+    "share": 0.0039,
+    "solution": [
+     3,
+     1,
+     2,
+     2,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0195",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "B.d.t>........",
+    "B.SvT^d.t^....",
+    "d.d...t^d.....",
+    "d.d...t>d.....",
+    "Y.Y.d.d.T^...."
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.18,
+    "solutions": 16,
+    "share": 0.0625,
+    "solution": [
+     2,
+     2,
+     3,
+     0
+    ]
+   }
+  },
+  {
+   "id": "D0196",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "....##B.......",
+    "t<Y.d.t^......",
+    "d.d...t^......",
+    "B.d...........",
+    "Y.t>..........",
+    "d.........##..",
+    "S^..##....##.."
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "E",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.18,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0197",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "....Sv........",
+    "....d...tvt<B.",
+    "....t<d.d.t^..",
+    "..##t^........",
+    "##............",
+    "..............",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.44,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     1,
+     0,
+     0,
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0198",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "Y.d.Y.B.t^....",
+    "d...d...d.....",
+    "d.t^tvd.t^....",
+    "S^............",
+    "t<..##........",
+    "..............",
+    "......##......"
+   ],
+   "attempts": 3,
+   "par": 6,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.44,
+    "solutions": 16,
+    "share": 0.0156,
+    "solution": [
+     2,
+     3,
+     0,
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "id": "D0199",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "..............",
+    "....tv........",
+    "tvd.d.S<......",
+    "d.##B.........",
+    "tvd.t<......##",
+    ".............."
+   ],
+   "attempts": 3,
+   "par": 4,
+   "tier": "N",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.44,
+    "solutions": 4,
+    "share": 0.0156,
+    "solution": [
+     1,
+     1,
+     0,
+     3
+    ]
+   }
+  },
+  {
+   "id": "D0200",
+   "w": 7,
+   "h": 7,
+   "grid": [
+    "..............",
+    "....##t>d.t>..",
+    "......B.t<d...",
+    "....t^d.d.Y...",
+    "....d.tvd.tv..",
+    "....S^d...tv..",
+    "......B.....##"
+   ],
+   "attempts": 3,
+   "par": 5,
+   "tier": "SH",
+   "meta": {
+    "beat": "review",
+    "bot_fail": 0.86,
+    "solutions": 16,
+    "share": 0.001,
+    "solution": [
+     1,
+     2,
+     2,
+     0,
+     1,
+     2,
+     1
+    ]
+   }
+  }
+ ]
+}

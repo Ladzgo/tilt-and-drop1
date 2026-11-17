@@ -131,6 +131,8 @@ details.test summary { cursor: pointer; font-weight: 700; }
 .lvl.slide.done { background: var(--btn); } .lvl.slide.next { background: var(--go); } .lvl.slide.locked { background: var(--bg-2); }
 .lvl.gears { background: #8a6d1f; }
 .lvl.gears.done { background: var(--btn); } .lvl.gears.next { background: var(--go); } .lvl.gears.locked { background: var(--bg-2); }
+.lvl.domino { background: #8f5a3c; }
+.lvl.domino.done { background: var(--btn); } .lvl.domino.next { background: var(--go); } .lvl.domino.locked { background: var(--bg-2); }
 .lit-count { color: var(--dim); font-size: 13px; text-align: center; font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .card, .stars svg { animation: none; transition: none; } }
 </style>
@@ -207,8 +209,12 @@ details.test summary { cursor: pointer; font-weight: 700; }
       <svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#1a1830"/><circle cx="32" cy="40" r="17" fill="#f5c400"/><circle cx="32" cy="40" r="7" fill="#b38f00"/><circle cx="62" cy="58" r="17" fill="#c9c4e6"/><circle cx="62" cy="58" r="7" fill="#8f8ab0"/><circle cx="62" cy="58" r="22" fill="none" stroke="#c9c4e6" stroke-width="5" stroke-dasharray="5 6"/><circle cx="32" cy="40" r="21" fill="none" stroke="#f5c400" stroke-width="5" stroke-dasharray="5 6"/></svg>
       <div><h2>Gear Works</h2><p>Drop gears on pegs to carry the motor's spin to every dial. Three touching gears jam.</p><div class="prog" id="hub-gears"></div></div>
     </button>
-    <div class="game-card soon"><svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#211f3a"/><text x="48" y="60" font-size="34" text-anchor="middle" fill="#45406f" font-family="sans-serif">+3</text></svg>
-      <div><h2>More games</h2><p>In development for the collection:</p><ul><li>Domino Run</li><li>Fold</li><li>Flow Fill</li></ul></div></div>
+    <button class="game-card" id="card-domino">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#3b2a22"/><rect x="10" y="40" width="14" height="14" rx="3" fill="#30a46c"/><rect x="28" y="40" width="22" height="12" rx="3" fill="#f2ede4" transform="rotate(8 39 46)"/><rect x="54" y="40" width="14" height="14" rx="3" fill="#3e8ef7"/><path d="M61 44v8m-3-3 3 3 3-3" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M52 82q2-18 9-18t9 18z" fill="#ffd75a"/></svg>
+      <div><h2>Domino Run</h2><p>Turn the arrow dominoes, then push once. Every bell must ring.</p><div class="prog" id="hub-domino"></div></div>
+    </button>
+    <div class="game-card soon"><svg viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" fill="#211f3a"/><text x="48" y="60" font-size="34" text-anchor="middle" fill="#45406f" font-family="sans-serif">+2</text></svg>
+      <div><h2>More games</h2><p>In development for the collection:</p><ul><li>Fold</li><li>Flow Fill</li></ul></div></div>
   </div>
 </div>
 
@@ -327,6 +333,34 @@ details.test summary { cursor: pointer; font-weight: 700; }
   </div>
 </div>
 
+<div class="papp" id="dapp" hidden>
+  <div class="app">
+    <header class="hud">
+      <button class="icon-btn" id="d-menu" aria-label="Domino levels">&#9776;</button>
+      <div class="title"><h1 id="d-title">Level 1</h1><div class="sub" id="d-sub">Domino Run</div></div>
+      <div class="moves"><b id="d-push-n">3</b><span>pushes</span></div>
+    </header>
+    <div class="banner" id="d-banner"></div>
+    <div class="stage"><canvas id="domino-canvas" aria-label="Domino board. Tap an arrow domino to turn it."></canvas></div>
+    <div class="lit-count" id="d-bells"></div>
+    <div class="pcontrols">
+      <button class="big gold" id="d-hint">Hint</button>
+      <button class="big go" id="d-push">Push</button>
+      <button class="big" id="d-restart">Restart</button>
+    </div>
+  </div>
+</div>
+
+<div class="pmap" id="dmap" hidden>
+  <div class="map-inner">
+    <div class="brand"><button class="icon-btn" id="d-back" aria-label="All games">&lsaquo;</button><h1>Domino <i>Run</i></h1><span class="total" id="d-total"></span></div>
+    <button class="big go" id="d-play">Play</button>
+    <div class="tabs" id="d-tabs" role="tablist"></div>
+    <div class="grid" id="d-grid"></div>
+    <p class="note">Stars count pushes: first push three stars.</p>
+  </div>
+</div>
+
 <div class="overlay" id="overlay" hidden><div class="card" id="card"></div></div>
 
 <script>/*SIM*/</script>
@@ -334,6 +368,7 @@ details.test summary { cursor: pointer; font-weight: 700; }
 <script>/*ROLL*/</script>
 <script>/*SLIDE*/</script>
 <script>/*GEARS*/</script>
+<script>/*DOMINO*/</script>
 <script>
 "use strict";
 const LEVELS = /*LEVELS*/[];
@@ -566,7 +601,7 @@ function frame(ts) {
   stepTweens();
   for (const p of particles) { p.t += dt / p.life; p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 900 * dt * (p.puff ? 0 : 1); p.rot += p.spin * dt; }
   particles = particles.filter(p => p.t < 1);
-  if (active === "prism") prismDraw(); else if (active === "roll") rollDraw(); else if (active === "slide") slideDraw(); else if (active === "gears") gearsDraw(); else draw();
+  if (active === "prism") prismDraw(); else if (active === "roll") rollDraw(); else if (active === "slide") slideDraw(); else if (active === "gears") gearsDraw(); else if (active === "domino") dominoDraw(); else draw();
   requestAnimationFrame(frame);
 }
 
@@ -656,7 +691,7 @@ const INTROS = { 31: ["Stone", "Stones fall like blocks but never leave the boar
   151: ["Four colors", "More colors, more gates. Plan your rotations!"], 211: ["Big boards", "Larger boards, longer cascades."], 241: ["Five colors", "Five colors at once. Good luck!"] };
 
 function startLevel(n, daily = false, replay = [], quiet = false) {
-  active = "tilt"; ["hub", "papp", "pmap", "rapp", "rmap", "sapp", "smap", "gapp", "gmap"].forEach(id => { $(id).hidden = true; });
+  active = "tilt"; ["hub", "papp", "pmap", "rapp", "rmap", "sapp", "smap", "gapp", "gmap", "dapp", "dmap"].forEach(id => { $(id).hidden = true; });
   isDaily = daily; number = n;
   const src = daily ? DAILY[(n - 1) % DAILY.length] : LEVELS[n - 1];
   level = TD.parseLevel(src); level.solution = src.solution || "";
@@ -900,18 +935,20 @@ function boot(data) {
   else if (data && data.game === "roll" && data.rnum) startRoll(data.rnum, data.rdirs || []);
   else if (data && data.game === "slide" && data.snum) startSlide(data.snum, data.staps || []);
   else if (data && data.game === "gears" && data.gnum) startGears(data.gnum, data.gtaps || []);
+  else if (data && data.game === "domino" && data.dnum) startDomino(data.dnum, data.dacts || []);
   else if (data && data.game === "tilt" && data.number) { startLevel(data.number, data.isDaily, data.inputs || []); if (data.map) showMap(); }
   else showHub();
   requestAnimationFrame(frame);
 }
 window.claude?.hot?.snapshot?.(() => (!$("hub").hidden ? {} : active === "prism"
-  ? { game: "prism", pnum, ptaps: ptaps.slice() } : active === "roll" ? { game: "roll", rnum, rdirs: rdirs.slice() } : active === "slide" ? { game: "slide", snum, staps: staps.slice() } : active === "gears" ? { game: "gears", gnum, gtaps: gtaps.slice() }
+  ? { game: "prism", pnum, ptaps: ptaps.slice() } : active === "roll" ? { game: "roll", rnum, rdirs: rdirs.slice() } : active === "slide" ? { game: "slide", snum, staps: staps.slice() } : active === "gears" ? { game: "gears", gnum, gtaps: gtaps.slice() } : active === "domino" ? { game: "domino", dnum, dacts: dacts.slice() }
   : { game: "tilt", number, isDaily, inputs: inputs.slice(), map: !$("map").hidden }));
 </script>
 <script>/*PRISMUI*/</script>
 <script>/*ROLLUI*/</script>
 <script>/*SLIDEUI*/</script>
 <script>/*GEARSUI*/</script>
+<script>/*DOMINOUI*/</script>
 <script>
 window.claude?.hot?.ready ? window.claude.hot.ready(boot) : boot(window.claude?.hot?.data ?? {});
 </script>

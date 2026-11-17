@@ -115,5 +115,25 @@ for (const c of gg.solver) {
   if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("gears solver", r.par, c.par, r.solutions, c.solutions); }
 }
 console.log(`gears: ${gc} cases, ${gs} steps, ${gg.solver.length} solver levels`);
+// ---- Domino Run
+const DM = require("./domino.js");
+const dg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "shared", "domino", "golden.json")));
+let dc = 0, ds = 0;
+for (const c of dg.cases) {
+  const lv = DM.parseLevel(c.level), g = new DM.Game(lv);
+  for (const s of c.steps) {
+    let got, exp;
+    if (s.act === "P") { const r = g.push(); got = JSON.stringify([r.falls, [...r.rung].sort((a, b) => a - b), g.attemptsLeft, g.status]); exp = JSON.stringify([s.falls, s.rung, s.attempts, s.status]); }
+    else { const ok = g.rotate(s.act); got = JSON.stringify([ok, g.config, g.status]); exp = JSON.stringify([s.ok, s.config, s.status]); }
+    if (got !== exp) { fail++; if (fail < 10) console.error("domino step mismatch", got, exp); }
+    ds++;
+  }
+  dc++;
+}
+for (const c of dg.solver) {
+  const r = DM.solve(DM.parseLevel(c.level));
+  if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("domino solver", r.par, c.par, r.solutions, c.solutions); }
+}
+console.log(`domino: ${dc} cases, ${ds} steps, ${dg.solver.length} solver levels`);
 console.log(`${fail} mismatches`);
 process.exit(fail ? 1 : 0);

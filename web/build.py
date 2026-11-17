@@ -41,9 +41,15 @@ with open(os.path.join(ROOT, "shared", "gears", "levels.json")) as f:
     glevels = [{**{k: d[k] for k in ("w", "h", "grid", "inventory", "moves", "par", "tier")}, "solution": d.get("meta", {}).get("solution", [])} for d in json.load(f)["levels"]]
 gears_ui = gears_ui.replace("/*GEAR_LEVELS*/[]", json.dumps(glevels, separators=(",", ":")))
 html = html.replace("/*GEARS*/", gears_js).replace("/*GEARSUI*/", gears_ui)
+domino_js = open(os.path.join(HERE, "domino.js")).read()
+domino_ui = open(os.path.join(HERE, "domino-ui.js")).read()
+with open(os.path.join(ROOT, "shared", "domino", "levels.json")) as f:
+    dlevels = [{**{k: d[k] for k in ("w", "h", "grid", "attempts", "par", "tier")}, "solution": d.get("meta", {}).get("solution", [])} for d in json.load(f)["levels"]]
+domino_ui = domino_ui.replace("/*DOMINO_LEVELS*/[]", json.dumps(dlevels, separators=(",", ":")))
+html = html.replace("/*DOMINO*/", domino_js).replace("/*DOMINOUI*/", domino_ui)
 html = html.replace("/*PRISM*/", prism_js).replace("/*PRISMUI*/", prism_ui).replace("/*ROLL*/", roll_js).replace("/*ROLLUI*/", roll_ui)
 html = html.replace("/*SIM*/", sim).replace("/*LEVELS*/[]", json.dumps(levels, separators=(",", ":"))).replace("/*DAILY*/[]", json.dumps(daily, separators=(",", ":")))
 os.makedirs(os.path.join(HERE, "dist"), exist_ok=True)
 out = os.path.join(HERE, "dist", "index.html")
 open(out, "w").write(html)
-print(f"{out}: {len(html) // 1024} KB, {len(levels)} tilt levels, {len(daily)} daily, {len(plevels)} prism levels, {len(rlevels)} roll levels, {len(slevels)} slide levels, {len(glevels)} gear levels")
+print(f"{out}: {len(html) // 1024} KB, {len(levels)} tilt levels, {len(daily)} daily, {len(plevels)} prism levels, {len(rlevels)} roll levels, {len(slevels)} slide levels, {len(glevels)} gear levels, {len(dlevels)} domino levels")
