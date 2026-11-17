@@ -61,8 +61,9 @@
 | `1`–`6` | `0x21`–`0x26` | colored block (low nibble = color) |
 | `@` | `0x30` | stone |
 | `a1`… | `0x4c` | anchor of color c (post-MVP) |
-| `i1`… | `0x5c` | ice of color c, 2 HP (HP lives in state, not the level) |
-| reserved | `0x6_`–`0xF_` | sticky, one-way, bomb, … |
+| `i1`… | `0x5c` | ice of color c, 2 HP |
+| `j1`… (state only) | `0x6c` | ice of color c, 1 HP (cracked) |
+| reserved | `0x7_`–`0xF_` | sticky, one-way, bomb, … |
 
 In JSON, two-character tokens (anchor, ice) are written inside a row with brackets: `"..[a2].."`. MVP rows use one character per cell.
 
@@ -154,10 +155,10 @@ The view never mutates rules. It only plays back `SettleEvent` traces (move path
 ## 5. Level pipeline (Python)
 
 1. **Simulator:** the GDD §2.4 algorithm, verbatim. `naive_sim` (one cell per step per pass, nearest-first) is the test oracle. Fuzz tests assert both give identical results on thousands of random boards.
-2. **Solver:** BFS over `(cells, gravity, hp-counters)` with a hash set. Outputs: `minMoves`; `solutionsAtMin` (number of move sequences of length `minMoves` that win, counted with BFS-layer path counts); `deadEndRatio` (share of states reachable within the limit from which no win is reachable in the remaining moves, via backward induction over the layered graph); `effectiveBranching` (unique successors / 2); `stateCount`. The search is bounded by the move limit plus a node cap.
+2. **Solver:** BFS over `(cells, gravity)` (ice HP is encoded in the cell byte) with a hash set. Outputs: `minMoves`; `solutionsAtMin` (number of move sequences of length `minMoves` that win, counted with BFS-layer path counts); `deadEndRatio` (share of states reachable within the limit from which no win is reachable in the remaining moves, via backward induction over the layered graph); `effectiveBranching` (unique successors / 2); `stateCount`. The search is bounded by the move limit plus a node cap.
 3. **Canonical hash (dedupe):** apply the 8 D4 transforms to `(grid, gates, gravity)`, re-express each so gravity points Down, normalize colors by first appearance in row-major scan, and take the lexicographic minimum, then hash it with SHA-1 (truncated to 64 bits). Near-duplicate filter: reject a candidate if its start state equals a state within 2 moves of an existing level.
 4. **Human-like bot:** each move scores both rotations with a heuristic (exited blocks, blocks in matching-gate lanes, lost access, stones in front of gates) plus optional 1-ply lookahead, then softmax with temperature τ and an ε random-move rate. It runs 200 seeded attempts at the real move limit to get `botFailRate`. τ/ε get calibrated against real analytics after soft launch.
-5. **Difficulty score (0–100):** a weighted sum of normalized `par`, `log(1/solutionsAtMin)`, `deadEndRatio`, `botFailRate`, colors, board area, and mechanic count. Weights live in `difficulty.toml`. The score drives tier assignment and move slack.
+5. **Difficulty score (0–100):** a weighted sum of normalized `par`, `log(1/solutionsAtMin)`, `deadEndRatio`, `botFailRate`, colors, board area, and mechanic count. Weights live in `difficulty.py` (`WEIGHTS`). The score drives tier assignment and move slack.
 6. **Generator:** per-world constraints (size range, colors, gate count, stone density, allowed mechanics). It places pieces, applies gravity Down until stable (so the start is valid by construction), places gates, then rejects levels that are unsolvable, trivial (par < 2 outside the tutorial), or duplicates. It is seeded and reproducible: `seed = hash(world, slot, attempt)`.
 7. **Clustering:** each level gets a feature vector (par, colors, area, stone ratio, gate topology signature, solution "shape" = sequence of exit counts). k-means bins, with a rule against the same cluster more than 2 times in a row.
 8. **Curation (levels 1–300):** for each slot, a pacing tier and mechanic beat. The top-K candidates by fit go into `curation_review.html` (rendered boards) for manual pick. Choices are saved in `curated.json` and are reproducible.

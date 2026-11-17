@@ -1,0 +1,18 @@
+[project]
+name = "tiltdrop"
+version = "0.1.0"
+description = "Tilt & Drop level pipeline: simulator, solver, generator, packer"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: long-running tests (deselect with -m 'not slow')"]
+
+[tool.coverage.run]
+source = ["tiltdrop"]
+omit = ["tiltdrop/cli.py", "tiltdrop/__main__.py", "tiltdrop/review.py"]

@@ -30,13 +30,13 @@ These rules are the **single source of truth**. The Python simulator (`/tools/le
 | Wall | no | no | yes | fixed |
 | Colored block (color 1..6) | yes | yes, through a gate of **same** color | yes | the goal: remove all |
 | Stone | yes | **never** | yes | not counted for win |
-| *Anchor* (post-MVP*) | no until released | after release | yes | colored block chained in place; the chain breaks the first time a block of the same color exits; from then on it is a normal colored block |
-| *Ice* (post-MVP*) | no until thawed | after thaw | yes | a colored block frozen in place with 2 HP; each time a moving block (any kind) **collides** with it at the end of a slide, HP −1; at 0 it becomes a normal colored block |
+| Anchor (MVP*) | no until released | after release | yes | colored block chained in place; the chain breaks the first time a block of the same color exits; from then on it is a normal colored block |
+| Ice (MVP*) | no until thawed | after thaw | yes | a colored block frozen in place with 2 HP; each time a moving block (any kind) **collides** with it at the end of a slide, HP −1; at 0 it becomes a normal colored block |
 | *Sticky pair* (post-MVP) | yes, as one rigid unit | each half, individually | yes | the unit stops when either half is blocked; when one half exits, the glue breaks and the other half continues as a single block in the same settle |
 | *One-way gate* (post-MVP) | no | — | conditional | interior cell with an arrow: a block may pass through it only in the arrow's direction; otherwise it acts as a wall |
 | *Bomb* (post-MVP) | yes | never | yes | when it comes to rest orthogonally adjacent to a stone or ice, it detonates: removes itself and all orthogonally adjacent stones and ice |
 
-\* *Proposal:* anchor and ice are cheap to simulate, so they could be pulled into the MVP to give levels 91–150 real new mechanics (see §7.3). Post-MVP rule texts are drafts and get finalized (with golden vectors) before they are implemented.
+\* *Decided:* anchor and ice are **in the MVP** (levels 91 and 121). Sticky pairs, one-way gates and bombs remain drafts and get finalized (with golden vectors) before they are implemented.
 
 ### 2.3 Gravity and rotation
 
@@ -74,6 +74,10 @@ Consequences:
 - A block that is already sitting on the edge next to a matching gate **exits** as soon as gravity points into that gate (zero travel before exiting is fine).
 - A gate whose color doesn't match acts as a wall. So does a gate in front of a stone.
 - MVP lanes are independent (walls and gates are fixed), so one pass is enough. The `repeat` loop is there for post-MVP mechanics (pairs, bombs, thaw).
+- **Pass order is fixed at the start of each pass** (a list of cell positions). Pieces only move toward smaller distances, i.e. into positions already visited, so no piece is processed twice in one pass.
+- **Anchor release:** when a colored block of color *c* exits, every anchor of color *c* becomes a colored block **immediately**. If its position comes later in the current pass it moves in this pass; otherwise it moves in the next pass.
+- **Ice hit:** when a piece's slide ends because the next cell is ice **and the piece moved ≥ 1 cell during this slide**, the ice loses 1 HP. At 0 HP it becomes a colored block immediately (it moves in the next pass). A piece that was already resting against the ice doesn't hit it.
+- **Hammer (booster):** removes the chosen non-wall piece (no exit event, so no anchor release), then the board settles under the current gravity. It costs no move. Win is checked afterwards.
 - No floating point anywhere. Pieces have stable integer IDs (used only for animation and replays; they are ignored for state hashing).
 
 ### 2.5 Win / lose
@@ -232,8 +236,8 @@ Tiers and move slack: **Easy** +4, **Normal** +2…3, **Hard** +1, **Super-hard*
 | 11 | 2 colors | MVP |
 | 31 | Stone | MVP |
 | 61 | Multiple gates per color, gate pockets | MVP |
-| 91 | Anchor | MVP* / else "3 colors + stones" |
-| 121 | Ice | MVP* / else "7×7 boards" |
+| 91 | Anchor | MVP |
+| 121 | Ice | MVP |
 | 151 | 4 colors + 7×7 | MVP |
 | 181 | Stone mazes (mixing) | MVP |
 | 211 | 8×8 boards | MVP |
@@ -248,7 +252,6 @@ Tiers and move slack: **Easy** +4, **Normal** +2…3, **Hard** +1, **Super-hard*
 | 481 | 6 colors + combos | Update 3 |
 | 500+ | Generated pool, mixing all mechanics, repeating sawtooth | ongoing |
 
-\* See §2.2. This needs your decision.
 
 ---
 
