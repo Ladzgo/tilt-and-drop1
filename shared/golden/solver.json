@@ -1,0 +1,1441 @@
+{
+ "schema": 1,
+ "solver": [
+  {
+   "name": "hand1",
+   "level": {
+    "id": "hand1",
+    "w": 4,
+    "h": 4,
+    "grid": [
+     "....",
+     "....",
+     "....",
+     ".1.."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...1",
+     "B": "....",
+     "L": "...."
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 1,
+   "solutionsAtMin": 1,
+   "limit": 3,
+   "deadEndRatio": 0.333333,
+   "randomWin": 0.625
+  },
+  {
+   "name": "hand2",
+   "level": {
+    "id": "hand2",
+    "w": 4,
+    "h": 4,
+    "grid": [
+     "#...",
+     "#...",
+     "#..1",
+     "#..1"
+    ],
+    "gates": {
+     "T": "...1",
+     "R": "....",
+     "B": "....",
+     "L": "...."
+    },
+    "moves": 4,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 2,
+   "solutionsAtMin": 1,
+   "limit": 4,
+   "deadEndRatio": 0.166667,
+   "randomWin": 0.4375
+  },
+  {
+   "name": "hand3",
+   "level": {
+    "id": "hand3",
+    "w": 4,
+    "h": 4,
+    "grid": [
+     "....",
+     "#...",
+     "....",
+     ".1.#"
+    ],
+    "gates": {
+     "T": "....",
+     "R": "....",
+     "B": "....",
+     "L": "1..."
+    },
+    "moves": 5,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 3,
+   "solutionsAtMin": 1,
+   "limit": 5,
+   "deadEndRatio": 0.181818,
+   "randomWin": 0.25
+  },
+  {
+   "name": "two_color",
+   "level": {
+    "id": "two_color",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "11.2"
+    ],
+    "gates": {
+     "T": "....",
+     "R": "..2",
+     "B": "....",
+     "L": "..1"
+    },
+    "moves": 5,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 3,
+   "solutionsAtMin": 2,
+   "limit": 5,
+   "deadEndRatio": 0.142857,
+   "randomWin": 0.4375
+  },
+  {
+   "name": "basics_0",
+   "level": {
+    "id": "basics_0",
+    "w": 4,
+    "h": 5,
+    "grid": [
+     "....",
+     "....",
+     "....",
+     "..3.",
+     ".33."
+    ],
+    "gates": {
+     "T": "3...",
+     "R": ".....",
+     "B": "....",
+     "L": "....."
+    },
+    "moves": 6,
+    "par": 4,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 4,
+   "solutionsAtMin": 1,
+   "limit": 6,
+   "deadEndRatio": 0.133333,
+   "randomWin": 0.15625
+  },
+  {
+   "name": "basics_1",
+   "level": {
+    "id": "basics_1",
+    "w": 4,
+    "h": 4,
+    "grid": [
+     "....",
+     "....",
+     "...#",
+     "333."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...3",
+     "B": "....",
+     "L": "...."
+    },
+    "moves": 3,
+    "par": 1,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 1,
+   "solutionsAtMin": 1,
+   "limit": 3,
+   "deadEndRatio": 0.5,
+   "randomWin": 0.625
+  },
+  {
+   "name": "basics_2",
+   "level": {
+    "id": "basics_2",
+    "w": 5,
+    "h": 5,
+    "grid": [
+     "#.#..",
+     ".....",
+     ".....",
+     ".....",
+     "5...."
+    ],
+    "gates": {
+     "T": ".....",
+     "R": "5....",
+     "B": ".....",
+     "L": "....."
+    },
+    "moves": 5,
+    "par": 3,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 3,
+   "solutionsAtMin": 1,
+   "limit": 5,
+   "deadEndRatio": 0.2,
+   "randomWin": 0.25
+  },
+  {
+   "name": "basics_3",
+   "level": {
+    "id": "basics_3",
+    "w": 5,
+    "h": 5,
+    "grid": [
+     ".....",
+     ".....",
+     "1....",
+     "#....",
+     "..#.."
+    ],
+    "gates": {
+     "T": ".....",
+     "R": ".....",
+     "B": ".....",
+     "L": "1...."
+    },
+    "moves": 5,
+    "par": 3,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 3,
+   "solutionsAtMin": 2,
+   "limit": 5,
+   "deadEndRatio": 0.1,
+   "randomWin": 0.4375
+  },
+  {
+   "name": "two_colors_0",
+   "level": {
+    "id": "two_colors_0",
+    "w": 5,
+    "h": 5,
+    "grid": [
+     ".....",
+     "..#.#",
+     ".....",
+     ".5...",
+     "22.2."
+    ],
+    "gates": {
+     "T": "5....",
+     "R": ".....",
+     "B": ".....",
+     "L": "....2"
+    },
+    "moves": 4,
+    "par": 2,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 2,
+   "solutionsAtMin": 1,
+   "limit": 4,
+   "deadEndRatio": 0.444444,
+   "randomWin": 0.375
+  },
+  {
+   "name": "two_colors_1",
+   "level": {
+    "id": "two_colors_1",
+    "w": 5,
+    "h": 5,
+    "grid": [
+     ".....",
+     ".....",
+     ".....",
+     ".2...",
+     "2#.3."
+    ],
+    "gates": {
+     "T": ".....",
+     "R": "....3",
+     "B": ".....",
+     "L": "....2"
+    },
+    "moves": 7,
+    "par": 5,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 5,
+   "solutionsAtMin": 2,
+   "limit": 7,
+   "deadEndRatio": 0.627451,
+   "randomWin": 0.109375
+  },
+  {
+   "name": "two_colors_2",
+   "level": {
+    "id": "two_colors_2",
+    "w": 5,
+    "h": 5,
+    "grid": [
+     ".#...",
+     ".....",
+     ".....",
+     "....3",
+     ".4..3"
+    ],
+    "gates": {
+     "T": "....3",
+     "R": "....4",
+     "B": ".....",
+     "L": "....."
+    },
+    "moves": 7,
+    "par": 5,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 5,
+   "solutionsAtMin": 2,
+   "limit": 7,
+   "deadEndRatio": 0.580645,
+   "randomWin": 0.140625
+  },
+  {
+   "name": "two_colors_3",
+   "level": {
+    "id": "two_colors_3",
+    "w": 5,
+    "h": 5,
+    "grid": [
+     "..#..",
+     ".....",
+     "1....",
+     "#.1..",
+     "..1.6"
+    ],
+    "gates": {
+     "T": "....6",
+     "R": "1....",
+     "B": ".....",
+     "L": "....."
+    },
+    "moves": 8,
+    "par": 6,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 6,
+   "solutionsAtMin": 1,
+   "limit": 8,
+   "deadEndRatio": 0.823529,
+   "randomWin": 0.03125
+  },
+  {
+   "name": "stone_0",
+   "level": {
+    "id": "stone_0",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "......",
+     "......",
+     ".....@",
+     ".....#",
+     "......",
+     "..11@."
+    ],
+    "gates": {
+     "T": "......",
+     "R": "......",
+     "B": "1.....",
+     "L": "......"
+    },
+    "moves": 10,
+    "par": 8,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 8,
+   "solutionsAtMin": 1,
+   "limit": 10,
+   "deadEndRatio": 0.660194,
+   "randomWin": 0.012695
+  },
+  {
+   "name": "stone_1",
+   "level": {
+    "id": "stone_1",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "......",
+     "..@...",
+     "..#...",
+     "#..@..",
+     "...#..",
+     ".3..@."
+    ],
+    "gates": {
+     "T": "......",
+     "R": "......",
+     "B": "......",
+     "L": "....3."
+    },
+    "moves": 5,
+    "par": 3,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 3,
+   "solutionsAtMin": 1,
+   "limit": 5,
+   "deadEndRatio": 0.73913,
+   "randomWin": 0.15625
+  },
+  {
+   "name": "stone_2",
+   "level": {
+    "id": "stone_2",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "......",
+     "..#.#.",
+     "......",
+     "......",
+     ".1...4",
+     "@4.4.@"
+    ],
+    "gates": {
+     "T": ".....4",
+     "R": "....1.",
+     "B": "......",
+     "L": "......"
+    },
+    "moves": 10,
+    "par": 8,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 8,
+   "solutionsAtMin": 1,
+   "limit": 10,
+   "deadEndRatio": 0.895455,
+   "randomWin": 0.010742
+  },
+  {
+   "name": "stone_3",
+   "level": {
+    "id": "stone_3",
+    "w": 5,
+    "h": 6,
+    "grid": [
+     "..#..",
+     ".....",
+     "@....",
+     "#....",
+     "...1.",
+     ".@.1."
+    ],
+    "gates": {
+     "T": ".....",
+     "R": "......",
+     "B": ".....",
+     "L": "....1."
+    },
+    "moves": 9,
+    "par": 7,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 7,
+   "solutionsAtMin": 2,
+   "limit": 9,
+   "deadEndRatio": 0.614679,
+   "randomWin": 0.041016
+  },
+  {
+   "name": "multi_gate_0",
+   "level": {
+    "id": "multi_gate_0",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "......",
+     "......",
+     "......",
+     "......",
+     "#..6..",
+     ".6#2@@"
+    ],
+    "gates": {
+     "T": "......",
+     "R": "......",
+     "B": "6....2",
+     "L": "...6.2"
+    },
+    "moves": 7,
+    "par": 5,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 5,
+   "solutionsAtMin": 1,
+   "limit": 7,
+   "deadEndRatio": 0.75,
+   "randomWin": 0.0625
+  },
+  {
+   "name": "multi_gate_1",
+   "level": {
+    "id": "multi_gate_1",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "...#..",
+     "......",
+     "...#..",
+     "......",
+     "....@.",
+     "6.1.@."
+    ],
+    "gates": {
+     "T": "..1...",
+     "R": ".....6",
+     "B": ".....6",
+     "L": ".....1"
+    },
+    "moves": 7,
+    "par": 5,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 5,
+   "solutionsAtMin": 1,
+   "limit": 7,
+   "deadEndRatio": 0.714286,
+   "randomWin": 0.0625
+  },
+  {
+   "name": "multi_gate_2",
+   "level": {
+    "id": "multi_gate_2",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "......",
+     "...5..",
+     "...#..",
+     "......",
+     ".....6",
+     "6....#"
+    ],
+    "gates": {
+     "T": "6.6...",
+     "R": ".5....",
+     "B": "...5..",
+     "L": "......"
+    },
+    "moves": 6,
+    "par": 4,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 4,
+   "solutionsAtMin": 1,
+   "limit": 6,
+   "deadEndRatio": 0.678571,
+   "randomWin": 0.125
+  },
+  {
+   "name": "multi_gate_3",
+   "level": {
+    "id": "multi_gate_3",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     ".....#",
+     "......",
+     ".....#",
+     "......",
+     ".@.3..",
+     "@#.4.."
+    ],
+    "gates": {
+     "T": "4.....",
+     "R": "......",
+     "B": "......",
+     "L": "...3.."
+    },
+    "moves": 8,
+    "par": 6,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 6,
+   "solutionsAtMin": 1,
+   "limit": 8,
+   "deadEndRatio": 0.672131,
+   "randomWin": 0.046875
+  },
+  {
+   "name": "anchor_0",
+   "level": {
+    "id": "anchor_0",
+    "w": 6,
+    "h": 7,
+    "grid": [
+     "......",
+     "......",
+     "......",
+     "......",
+     "......",
+     ".@....",
+     "21#.@[a2]"
+    ],
+    "gates": {
+     "T": "1.....",
+     "R": ".......",
+     "B": "......",
+     "L": "......2"
+    },
+    "moves": 10,
+    "par": 8,
+    "tier": "N",
+    "mechanics": [
+     "stone",
+     "anchor"
+    ]
+   },
+   "minMoves": 8,
+   "solutionsAtMin": 1,
+   "limit": 10,
+   "deadEndRatio": 0.869231,
+   "randomWin": 0.010742
+  },
+  {
+   "name": "anchor_1",
+   "level": {
+    "id": "anchor_1",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "..#.[a1].",
+     "......",
+     "..[a1]...",
+     "..#...",
+     "......",
+     "1...5."
+    ],
+    "gates": {
+     "T": "......",
+     "R": ".....1",
+     "B": ".....5",
+     "L": "......"
+    },
+    "moves": 9,
+    "par": 7,
+    "tier": "N",
+    "mechanics": [
+     "anchor"
+    ]
+   },
+   "minMoves": 7,
+   "solutionsAtMin": 2,
+   "limit": 9,
+   "deadEndRatio": 0.461538,
+   "randomWin": 0.048828
+  },
+  {
+   "name": "anchor_2",
+   "level": {
+    "id": "anchor_2",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "..#...",
+     "...#..",
+     "......",
+     "[a1].....",
+     "....1.",
+     "..216."
+    ],
+    "gates": {
+     "T": ".....1",
+     "R": ".....2",
+     "B": ".....6",
+     "L": "......"
+    },
+    "moves": 10,
+    "par": 8,
+    "tier": "N",
+    "mechanics": [
+     "anchor"
+    ]
+   },
+   "minMoves": 8,
+   "solutionsAtMin": 2,
+   "limit": 10,
+   "deadEndRatio": 0.836134,
+   "randomWin": 0.022461
+  },
+  {
+   "name": "anchor_3",
+   "level": {
+    "id": "anchor_3",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "....[a4]#",
+     ".@.#..",
+     ".#....",
+     ".....[a4]",
+     "2.....",
+     "4....."
+    ],
+    "gates": {
+     "T": "......",
+     "R": ".....4",
+     "B": "......",
+     "L": "....2."
+    },
+    "moves": 9,
+    "par": 7,
+    "tier": "N",
+    "mechanics": [
+     "stone",
+     "anchor"
+    ]
+   },
+   "minMoves": 7,
+   "solutionsAtMin": 1,
+   "limit": 9,
+   "deadEndRatio": 0.854054,
+   "randomWin": 0.023438
+  },
+  {
+   "name": "ice_0",
+   "level": {
+    "id": "ice_0",
+    "w": 6,
+    "h": 7,
+    "grid": [
+     "......",
+     "......",
+     "....#.",
+     "......",
+     "....[a5].",
+     "......",
+     ".1.[i6].5"
+    ],
+    "gates": {
+     "T": ".....5",
+     "R": "......6",
+     "B": "......",
+     "L": "......1"
+    },
+    "moves": 10,
+    "par": 8,
+    "tier": "N",
+    "mechanics": [
+     "anchor",
+     "ice"
+    ]
+   },
+   "minMoves": 8,
+   "solutionsAtMin": 3,
+   "limit": 10,
+   "deadEndRatio": 0.695312,
+   "randomWin": 0.03125
+  },
+  {
+   "name": "ice_1",
+   "level": {
+    "id": "ice_1",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     ".3...#",
+     ".#.5..",
+     "#..[a5]..",
+     "......",
+     ".....@",
+     "@.[i3]..3"
+    ],
+    "gates": {
+     "T": "......",
+     "R": ".5....",
+     "B": "..3...",
+     "L": "......"
+    },
+    "moves": 12,
+    "par": 10,
+    "tier": "N",
+    "mechanics": [
+     "stone",
+     "anchor",
+     "ice"
+    ]
+   },
+   "minMoves": 10,
+   "solutionsAtMin": 1,
+   "limit": 12,
+   "deadEndRatio": 0.979331,
+   "randomWin": 0.002686
+  },
+  {
+   "name": "ice_2",
+   "level": {
+    "id": "ice_2",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "..#...",
+     "...#..",
+     "......",
+     "[i1].....",
+     "....1.",
+     "..216."
+    ],
+    "gates": {
+     "T": ".....1",
+     "R": ".....2",
+     "B": ".....6",
+     "L": "......"
+    },
+    "moves": 10,
+    "par": 8,
+    "tier": "N",
+    "mechanics": [
+     "ice"
+    ]
+   },
+   "minMoves": 8,
+   "solutionsAtMin": 1,
+   "limit": 10,
+   "deadEndRatio": 0.941406,
+   "randomWin": 0.009766
+  },
+  {
+   "name": "ice_3",
+   "level": {
+    "id": "ice_3",
+    "w": 6,
+    "h": 6,
+    "grid": [
+     "...#..",
+     ".....[i3]",
+     "....3.",
+     "....#.",
+     "......",
+     ".3[i6]..."
+    ],
+    "gates": {
+     "T": "......",
+     "R": "..6...",
+     "B": ".....3",
+     "L": "......"
+    },
+    "moves": 12,
+    "par": 10,
+    "tier": "N",
+    "mechanics": [
+     "ice"
+    ]
+   },
+   "minMoves": 10,
+   "solutionsAtMin": 3,
+   "limit": 12,
+   "deadEndRatio": 0.777778,
+   "randomWin": 0.009521
+  },
+  {
+   "name": "four_colors_0",
+   "level": {
+    "id": "four_colors_0",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     ".......",
+     ".......",
+     "...4..#",
+     "...4...",
+     "..##...",
+     ".3.....",
+     ".1@#@.."
+    ],
+    "gates": {
+     "T": ".......",
+     "R": "4.....1",
+     "B": "....3..",
+     "L": "......1"
+    },
+    "moves": 13,
+    "par": 11,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 11,
+   "solutionsAtMin": 2,
+   "limit": 13,
+   "deadEndRatio": 0.946952,
+   "randomWin": 0.00293
+  },
+  {
+   "name": "four_colors_1",
+   "level": {
+    "id": "four_colors_1",
+    "w": 6,
+    "h": 7,
+    "grid": [
+     "..#...",
+     "......",
+     "..3...",
+     "..#...",
+     "...#3.",
+     "....46",
+     "....@2"
+    ],
+    "gates": {
+     "T": "......",
+     "R": "..23...",
+     "B": "32....",
+     "L": ".6...64"
+    },
+    "moves": 11,
+    "par": 9,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 9,
+   "solutionsAtMin": 1,
+   "limit": 11,
+   "deadEndRatio": 0.953822,
+   "randomWin": 0.005859
+  },
+  {
+   "name": "four_colors_2",
+   "level": {
+    "id": "four_colors_2",
+    "w": 6,
+    "h": 7,
+    "grid": [
+     "......",
+     "......",
+     ".....[a5]",
+     "....@.",
+     "....#.",
+     "#1...[i4]",
+     ".@.5.."
+    ],
+    "gates": {
+     "T": ".1...5",
+     "R": "...4.1.",
+     "B": ".5....",
+     "L": "....4.."
+    },
+    "moves": 10,
+    "par": 8,
+    "tier": "N",
+    "mechanics": [
+     "stone",
+     "anchor",
+     "ice"
+    ]
+   },
+   "minMoves": 8,
+   "solutionsAtMin": 1,
+   "limit": 10,
+   "deadEndRatio": 0.953704,
+   "randomWin": 0.008789
+  },
+  {
+   "name": "four_colors_3",
+   "level": {
+    "id": "four_colors_3",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     "[a1]....[i1].",
+     ".......",
+     ".......",
+     ".#.....",
+     ".......",
+     "...#...",
+     "5.2..62"
+    ],
+    "gates": {
+     "T": ".....15",
+     "R": "1.2...2",
+     "B": ".......",
+     "L": "6......"
+    },
+    "moves": 13,
+    "par": 11,
+    "tier": "N",
+    "mechanics": [
+     "anchor",
+     "ice"
+    ]
+   },
+   "minMoves": 11,
+   "solutionsAtMin": 2,
+   "limit": 13,
+   "deadEndRatio": 0.872857,
+   "randomWin": 0.004272
+  },
+  {
+   "name": "stone_maze_0",
+   "level": {
+    "id": "stone_maze_0",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     "..#....",
+     "......#",
+     ".......",
+     ".......",
+     "@...#..",
+     "@....@.",
+     "6..@.4."
+    ],
+    "gates": {
+     "T": "6......",
+     "R": ".......",
+     "B": ".......",
+     "L": "......4"
+    },
+    "moves": 13,
+    "par": 11,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 11,
+   "solutionsAtMin": 1,
+   "limit": 13,
+   "deadEndRatio": 0.971242,
+   "randomWin": 0.001343
+  },
+  {
+   "name": "stone_maze_1",
+   "level": {
+    "id": "stone_maze_1",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     "...#...",
+     ".......",
+     "....#.#",
+     "#..@..#",
+     "...#..#",
+     ".@.....",
+     "@2@5@@5"
+    ],
+    "gates": {
+     "T": ".......",
+     "R": "......2",
+     "B": ".......",
+     "L": "......5"
+    },
+    "moves": 13,
+    "par": 11,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 11,
+   "solutionsAtMin": 1,
+   "limit": 13,
+   "deadEndRatio": 0.981264,
+   "randomWin": 0.001587
+  },
+  {
+   "name": "stone_maze_2",
+   "level": {
+    "id": "stone_maze_2",
+    "w": 6,
+    "h": 7,
+    "grid": [
+     "#....#",
+     "......",
+     ".4....",
+     ".#....",
+     "....#@",
+     "...@.6",
+     ".#@@@@"
+    ],
+    "gates": {
+     "T": "......",
+     "R": "..4....",
+     "B": "......",
+     "L": "......6"
+    },
+    "moves": 11,
+    "par": 9,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 9,
+   "solutionsAtMin": 7,
+   "limit": 11,
+   "deadEndRatio": 0.879845,
+   "randomWin": 0.030273
+  },
+  {
+   "name": "stone_maze_3",
+   "level": {
+    "id": "stone_maze_3",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     "....#..",
+     ".......",
+     ".......",
+     ".......",
+     "3.@....",
+     "4.@..@.",
+     "#@@131@"
+    ],
+    "gates": {
+     "T": "...1...",
+     "R": ".......",
+     "B": ".3.....",
+     "L": ".....4."
+    },
+    "moves": 12,
+    "par": 10,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 10,
+   "solutionsAtMin": 1,
+   "limit": 12,
+   "deadEndRatio": 0.884013,
+   "randomWin": 0.003906
+  },
+  {
+   "name": "big_boards_0",
+   "level": {
+    "id": "big_boards_0",
+    "w": 8,
+    "h": 8,
+    "grid": [
+     "........",
+     "....#...",
+     "........",
+     "........",
+     "........",
+     "........",
+     ".....@[i4].",
+     "@..#.6.."
+    ],
+    "gates": {
+     "T": "......4.",
+     "R": "........",
+     "B": "........",
+     "L": ".......6"
+    },
+    "moves": 14,
+    "par": 12,
+    "tier": "N",
+    "mechanics": [
+     "stone",
+     "ice"
+    ]
+   },
+   "minMoves": 12,
+   "solutionsAtMin": 1,
+   "limit": 14,
+   "deadEndRatio": 0.936533,
+   "randomWin": 0.001038
+  },
+  {
+   "name": "big_boards_1",
+   "level": {
+    "id": "big_boards_1",
+    "w": 7,
+    "h": 8,
+    "grid": [
+     "....#..",
+     ".......",
+     ".......",
+     ".......",
+     "...@...",
+     "...#...",
+     ".1.....",
+     ".22..3."
+    ],
+    "gates": {
+     "T": ".1.....",
+     "R": ".......3",
+     "B": "......2",
+     "L": "........"
+    },
+    "moves": 8,
+    "par": 6,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 6,
+   "solutionsAtMin": 1,
+   "limit": 8,
+   "deadEndRatio": 0.849462,
+   "randomWin": 0.039062
+  },
+  {
+   "name": "big_boards_2",
+   "level": {
+    "id": "big_boards_2",
+    "w": 7,
+    "h": 8,
+    "grid": [
+     ".......",
+     ".......",
+     ".......",
+     ".[i5].....",
+     "......#",
+     "#....@.",
+     "#....@#",
+     "....44@"
+    ],
+    "gates": {
+     "T": ".......",
+     "R": ".......4",
+     "B": ".......",
+     "L": "...5...."
+    },
+    "moves": 9,
+    "par": 7,
+    "tier": "N",
+    "mechanics": [
+     "stone",
+     "ice"
+    ]
+   },
+   "minMoves": 7,
+   "solutionsAtMin": 2,
+   "limit": 9,
+   "deadEndRatio": 0.83871,
+   "randomWin": 0.033203
+  },
+  {
+   "name": "big_boards_3",
+   "level": {
+    "id": "big_boards_3",
+    "w": 7,
+    "h": 8,
+    "grid": [
+     ".....#.",
+     ".......",
+     "...#...",
+     ".......",
+     "...#...",
+     ".......",
+     "....5..",
+     "5..@2@."
+    ],
+    "gates": {
+     "T": "5......",
+     "R": "........",
+     "B": ".......",
+     "L": ".......2"
+    },
+    "moves": 7,
+    "par": 5,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 5,
+   "solutionsAtMin": 1,
+   "limit": 7,
+   "deadEndRatio": 0.714286,
+   "randomWin": 0.070312
+  },
+  {
+   "name": "five_colors_0",
+   "level": {
+    "id": "five_colors_0",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     "...#...",
+     "..#....",
+     "......#",
+     ".......",
+     ".......",
+     "....5..",
+     "..6432@"
+    ],
+    "gates": {
+     "T": "..6..2.",
+     "R": ".....53",
+     "B": ".......",
+     "L": "......4"
+    },
+    "moves": 14,
+    "par": 12,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 12,
+   "solutionsAtMin": 2,
+   "limit": 14,
+   "deadEndRatio": 0.947699,
+   "randomWin": 0.002136
+  },
+  {
+   "name": "five_colors_1",
+   "level": {
+    "id": "five_colors_1",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     "...#...",
+     "#......",
+     ".......",
+     ".......",
+     ".......",
+     ".....54",
+     "..3.#62"
+    ],
+    "gates": {
+     "T": "..3..6.",
+     "R": ".5...42",
+     "B": ".......",
+     "L": "......."
+    },
+    "moves": 13,
+    "par": 11,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 11,
+   "solutionsAtMin": 1,
+   "limit": 13,
+   "deadEndRatio": 0.975323,
+   "randomWin": 0.001221
+  },
+  {
+   "name": "five_colors_2",
+   "level": {
+    "id": "five_colors_2",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     ".......",
+     "..#....",
+     ".......",
+     ".......",
+     ".......",
+     ".5.....",
+     "6@.4.3."
+    ],
+    "gates": {
+     "T": "6....3.",
+     "R": ".......",
+     "B": ".......",
+     "L": ".....54"
+    },
+    "moves": 12,
+    "par": 10,
+    "tier": "N",
+    "mechanics": [
+     "stone"
+    ]
+   },
+   "minMoves": 10,
+   "solutionsAtMin": 2,
+   "limit": 12,
+   "deadEndRatio": 0.897541,
+   "randomWin": 0.006348
+  },
+  {
+   "name": "five_colors_3",
+   "level": {
+    "id": "five_colors_3",
+    "w": 7,
+    "h": 7,
+    "grid": [
+     ".....#.",
+     ".......",
+     "...#...",
+     ".......",
+     "...#...",
+     "4...1..",
+     "6...35."
+    ],
+    "gates": {
+     "T": "......3",
+     "R": ".....16",
+     "B": ".......",
+     "L": ".....45"
+    },
+    "moves": 14,
+    "par": 12,
+    "tier": "N",
+    "mechanics": []
+   },
+   "minMoves": 12,
+   "solutionsAtMin": 1,
+   "limit": 14,
+   "deadEndRatio": 0.866803,
+   "randomWin": 0.001465
+  }
+ ]
+}

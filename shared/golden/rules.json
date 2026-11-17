@@ -1,0 +1,1026 @@
+{
+ "schema": 1,
+ "cases": [
+  {
+   "name": "rotation_no_move_costs_move",
+   "level": {
+    "id": "rotation_no_move_costs_move",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "11.2"
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "..1"
+    },
+    "moves": 5,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 5,
+    "status": "playing",
+    "grid": [
+     "....",
+     "....",
+     "11.2"
+    ]
+   },
+   "steps": [
+    {
+     "input": "CW",
+     "events": [
+      "M0:2:1,2>2,2",
+      "M0:1:0,2>1,2"
+     ],
+     "gravity": "R",
+     "movesLeft": 4,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      ".112"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [],
+     "gravity": "D",
+     "movesLeft": 3,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      ".112"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [
+      "M0:1:1,2>0,2",
+      "X0:1:L2",
+      "M0:2:2,2>0,2",
+      "X0:2:L2",
+      "M0:3:3,2>0,2"
+     ],
+     "gravity": "L",
+     "movesLeft": 2,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "2..."
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [
+      "M0:3:0,2>0,0"
+     ],
+     "gravity": "U",
+     "movesLeft": 1,
+     "status": "playing",
+     "grid": [
+      "2...",
+      "....",
+      "...."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "cascade_same_gate_wrong_gate_wall",
+   "level": {
+    "id": "cascade_same_gate_wrong_gate_wall",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "11.2"
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "..1"
+    },
+    "moves": 5,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 5,
+    "status": "playing",
+    "grid": [
+     "....",
+     "....",
+     "11.2"
+    ]
+   },
+   "steps": [
+    {
+     "input": "CCW",
+     "events": [
+      "X0:1:L2",
+      "M0:2:1,2>0,2",
+      "X0:2:L2",
+      "M0:3:3,2>0,2"
+     ],
+     "gravity": "L",
+     "movesLeft": 4,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "2..."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "win_on_last_move",
+   "level": {
+    "id": "win_on_last_move",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "11.."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "..1"
+    },
+    "moves": 1,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 1,
+    "status": "playing",
+    "grid": [
+     "....",
+     "....",
+     "11.."
+    ]
+   },
+   "steps": [
+    {
+     "input": "CCW",
+     "events": [
+      "X0:1:L2",
+      "M0:2:1,2>0,2",
+      "X0:2:L2"
+     ],
+     "gravity": "L",
+     "movesLeft": 0,
+     "status": "won",
+     "grid": [
+      "....",
+      "....",
+      "...."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "lose_then_continue_then_win",
+   "level": {
+    "id": "lose_then_continue_then_win",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "11.."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "..1"
+    },
+    "moves": 1,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 1,
+    "status": "playing",
+    "grid": [
+     "....",
+     "....",
+     "11.."
+    ]
+   },
+   "steps": [
+    {
+     "input": "CW",
+     "events": [
+      "M0:2:1,2>3,2",
+      "M0:1:0,2>2,2"
+     ],
+     "gravity": "R",
+     "movesLeft": 0,
+     "status": "lost",
+     "grid": [
+      "....",
+      "....",
+      "..11"
+     ]
+    },
+    {
+     "input": "+3",
+     "events": [],
+     "gravity": "R",
+     "movesLeft": 3,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "..11"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [],
+     "gravity": "D",
+     "movesLeft": 2,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "..11"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [
+      "M0:1:2,2>0,2",
+      "X0:1:L2",
+      "M0:2:3,2>0,2",
+      "X0:2:L2"
+     ],
+     "gravity": "L",
+     "movesLeft": 1,
+     "status": "won",
+     "grid": [
+      "....",
+      "....",
+      "...."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "stone_never_exits",
+   "level": {
+    "id": "stone_never_exits",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "@1.."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "..1"
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 3,
+    "status": "playing",
+    "grid": [
+     "....",
+     "....",
+     "@1.."
+    ]
+   },
+   "steps": [
+    {
+     "input": "CCW",
+     "events": [],
+     "gravity": "L",
+     "movesLeft": 2,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "@1.."
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [],
+     "gravity": "D",
+     "movesLeft": 1,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "@1.."
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [
+      "M0:2:1,2>3,2",
+      "M0:1:0,2>2,2"
+     ],
+     "gravity": "R",
+     "movesLeft": 0,
+     "status": "lost",
+     "grid": [
+      "....",
+      "....",
+      "..@1"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "nearest_first_column_up",
+   "level": {
+    "id": "nearest_first_column_up",
+    "w": 4,
+    "h": 4,
+    "grid": [
+     "....",
+     "1...",
+     "....",
+     "1..."
+    ],
+    "gates": {
+     "T": "1...",
+     "R": "....",
+     "B": "....",
+     "L": "...."
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 3,
+    "status": "playing",
+    "grid": [
+     "....",
+     "1...",
+     "....",
+     "1..."
+    ]
+   },
+   "steps": [
+    {
+     "input": "CCW",
+     "events": [],
+     "gravity": "L",
+     "movesLeft": 2,
+     "status": "playing",
+     "grid": [
+      "....",
+      "1...",
+      "....",
+      "1..."
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [
+      "M0:1:0,1>0,0",
+      "X0:1:T0",
+      "M0:2:0,3>0,0",
+      "X0:2:T0"
+     ],
+     "gravity": "U",
+     "movesLeft": 1,
+     "status": "won",
+     "grid": [
+      "....",
+      "....",
+      "....",
+      "...."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "anchor_release_same_settle",
+   "level": {
+    "id": "anchor_release_same_settle",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "[a1]...",
+     "....",
+     "1..."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "1.1"
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 3,
+    "status": "playing",
+    "grid": [
+     "[a1]...",
+     "....",
+     "1..."
+    ]
+   },
+   "steps": [
+    {
+     "input": "CCW",
+     "events": [
+      "X0:2:L2",
+      "R0:1",
+      "X1:1:L0"
+     ],
+     "gravity": "L",
+     "movesLeft": 2,
+     "status": "won",
+     "grid": [
+      "....",
+      "....",
+      "...."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "anchor_other_color_stays",
+   "level": {
+    "id": "anchor_other_color_stays",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "[a1]...",
+     "....",
+     "2..."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "1.2"
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 3,
+    "status": "playing",
+    "grid": [
+     "[a1]...",
+     "....",
+     "2..."
+    ]
+   },
+   "steps": [
+    {
+     "input": "CCW",
+     "events": [
+      "X0:2:L2"
+     ],
+     "gravity": "L",
+     "movesLeft": 2,
+     "status": "playing",
+     "grid": [
+      "[a1]...",
+      "....",
+      "...."
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [],
+     "gravity": "D",
+     "movesLeft": 1,
+     "status": "playing",
+     "grid": [
+      "[a1]...",
+      "....",
+      "...."
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [],
+     "gravity": "R",
+     "movesLeft": 0,
+     "status": "lost",
+     "grid": [
+      "[a1]...",
+      "....",
+      "...."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ice_two_hits_thaw_cascade",
+   "level": {
+    "id": "ice_two_hits_thaw_cascade",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "1.[i2]."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "..2",
+     "B": "....",
+     "L": "..."
+    },
+    "moves": 10,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 10,
+    "status": "playing",
+    "grid": [
+     "....",
+     "....",
+     "1.[i2]."
+    ]
+   },
+   "steps": [
+    {
+     "input": "CW",
+     "events": [
+      "M0:1:0,2>1,2",
+      "H0:2:1"
+     ],
+     "gravity": "R",
+     "movesLeft": 9,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      ".1[j2]."
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [],
+     "gravity": "D",
+     "movesLeft": 8,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      ".1[j2]."
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [
+      "M0:1:1,2>0,2"
+     ],
+     "gravity": "L",
+     "movesLeft": 7,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "1.[j2]."
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [],
+     "gravity": "D",
+     "movesLeft": 6,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "1.[j2]."
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [
+      "M0:1:0,2>1,2",
+      "H0:2:0",
+      "M1:2:2,2>3,2",
+      "X1:2:R2",
+      "M1:1:1,2>3,2"
+     ],
+     "gravity": "R",
+     "movesLeft": 5,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "...1"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hammer_resettle_win",
+   "level": {
+    "id": "hammer_resettle_win",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "@...",
+     "1..."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "..."
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 3,
+    "status": "playing",
+    "grid": [
+     "....",
+     "@...",
+     "1..."
+    ]
+   },
+   "steps": [
+    {
+     "input": "H:0,2",
+     "events": [
+      "K:2:0,2",
+      "M0:1:0,1>0,2"
+     ],
+     "gravity": "D",
+     "movesLeft": 3,
+     "status": "won",
+     "grid": [
+      "....",
+      "....",
+      "@..."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hammer_then_rotate",
+   "level": {
+    "id": "hammer_then_rotate",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "2...",
+     "@...",
+     "1..."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "..2",
+     "B": "....",
+     "L": "..."
+    },
+    "moves": 4,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 4,
+    "status": "playing",
+    "grid": [
+     "2...",
+     "@...",
+     "1..."
+    ]
+   },
+   "steps": [
+    {
+     "input": "H:0,2",
+     "events": [
+      "K:3:0,2",
+      "M0:2:0,1>0,2",
+      "M0:1:0,0>0,1"
+     ],
+     "gravity": "D",
+     "movesLeft": 4,
+     "status": "playing",
+     "grid": [
+      "....",
+      "2...",
+      "@..."
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [
+      "M0:1:0,1>3,1",
+      "M0:2:0,2>3,2"
+     ],
+     "gravity": "R",
+     "movesLeft": 3,
+     "status": "playing",
+     "grid": [
+      "....",
+      "...2",
+      "...@"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "zero_travel_exit_corner",
+   "level": {
+    "id": "zero_travel_exit_corner",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "1..2"
+    ],
+    "gates": {
+     "T": "....",
+     "R": "..2",
+     "B": "....",
+     "L": "..1"
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 3,
+    "status": "playing",
+    "grid": [
+     "....",
+     "....",
+     "1..2"
+    ]
+   },
+   "steps": [
+    {
+     "input": "CW",
+     "events": [
+      "X0:2:R2",
+      "M0:1:0,2>3,2"
+     ],
+     "gravity": "R",
+     "movesLeft": 2,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "...1"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [],
+     "gravity": "D",
+     "movesLeft": 1,
+     "status": "playing",
+     "grid": [
+      "....",
+      "....",
+      "...1"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [
+      "M0:1:3,2>0,2",
+      "X0:1:L2"
+     ],
+     "gravity": "L",
+     "movesLeft": 0,
+     "status": "won",
+     "grid": [
+      "....",
+      "....",
+      "...."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "gate_on_every_edge",
+   "level": {
+    "id": "gate_on_every_edge",
+    "w": 4,
+    "h": 4,
+    "grid": [
+     "#..#",
+     ".12.",
+     ".34.",
+     "#..#"
+    ],
+    "gates": {
+     "T": ".1..",
+     "R": ".2..",
+     "B": "..3.",
+     "L": "..4."
+    },
+    "moves": 8,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 8,
+    "status": "playing",
+    "grid": [
+     "#..#",
+     ".12.",
+     ".34.",
+     "#..#"
+    ]
+   },
+   "steps": [
+    {
+     "input": "CW",
+     "events": [
+      "M0:2:2,1>3,1",
+      "X0:2:R1",
+      "M0:4:2,2>3,2",
+      "M0:1:1,1>3,1",
+      "M0:3:1,2>2,2"
+     ],
+     "gravity": "R",
+     "movesLeft": 7,
+     "status": "playing",
+     "grid": [
+      "#..#",
+      "...1",
+      "..34",
+      "#..#"
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [
+      "M0:3:2,2>2,0"
+     ],
+     "gravity": "U",
+     "movesLeft": 6,
+     "status": "playing",
+     "grid": [
+      "#.3#",
+      "...1",
+      "...4",
+      "#..#"
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [
+      "M0:3:2,0>1,0",
+      "M0:1:3,1>0,1",
+      "M0:4:3,2>0,2",
+      "X0:4:L2"
+     ],
+     "gravity": "L",
+     "movesLeft": 5,
+     "status": "playing",
+     "grid": [
+      "#3.#",
+      "1...",
+      "....",
+      "#..#"
+     ]
+    },
+    {
+     "input": "CW",
+     "events": [
+      "M0:1:0,1>0,2",
+      "M0:3:1,0>1,3"
+     ],
+     "gravity": "D",
+     "movesLeft": 4,
+     "status": "playing",
+     "grid": [
+      "#..#",
+      "....",
+      "1...",
+      "#3.#"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [],
+     "gravity": "L",
+     "movesLeft": 3,
+     "status": "playing",
+     "grid": [
+      "#..#",
+      "....",
+      "1...",
+      "#3.#"
+     ]
+    },
+    {
+     "input": "CCW",
+     "events": [
+      "M0:1:0,2>0,1",
+      "M0:3:1,3>1,0"
+     ],
+     "gravity": "U",
+     "movesLeft": 2,
+     "status": "playing",
+     "grid": [
+      "#3.#",
+      "1...",
+      "....",
+      "#..#"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "already_won_on_load",
+   "level": {
+    "id": "already_won_on_load",
+    "w": 4,
+    "h": 3,
+    "grid": [
+     "....",
+     "....",
+     "@..."
+    ],
+    "gates": {
+     "T": "....",
+     "R": "...",
+     "B": "....",
+     "L": "..."
+    },
+    "moves": 3,
+    "par": 0,
+    "tier": "N",
+    "mechanics": []
+   },
+   "initial": {
+    "gravity": "D",
+    "movesLeft": 3,
+    "status": "won",
+    "grid": [
+     "....",
+     "....",
+     "@..."
+    ]
+   },
+   "steps": []
+  }
+ ]
+}
