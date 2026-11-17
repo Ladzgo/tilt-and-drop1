@@ -22,9 +22,9 @@ WEIGHTS = {
     "colors": 0.05,
 }
 
-TIER_SLACK = {"E": 4, "N": 2, "H": 1, "SH": 0}
+TIER_SLACK = {"E": 3, "N": 2, "H": 1, "SH": 0}
 NOMINAL_SLACK = 2
-SLACKS = (0, 1, 2, 4)  # bot fail rate is estimated at each of these move limits
+SLACKS = (0, 1, 2, 3)  # bot fail rate is estimated at each of these move limits
 
 
 @dataclass

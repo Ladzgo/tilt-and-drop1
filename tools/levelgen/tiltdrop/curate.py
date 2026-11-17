@@ -21,13 +21,12 @@ from .difficulty import analyze
 from .generator import Candidate, GenSpec, generate_one
 from .handmade import HANDMADE
 from .model import Level
-from .pacing import MIX_SPECS, TIER_SLACK, beat_for_level, is_intro, spec_for_level, tier_for_level, world_of
+from .pacing import MIX_SPECS, TIER_SLACK, beat_for_level, is_intro, min_par, spec_for_level, target_fail, tier_for_level, world_of
 from .sim import is_stable
 
 # target first-attempt fail rate per tier (GDD §7.2), estimated by the bot at the
 # tier's real move limit (par + slack)
-TARGET_FAIL = {"E": 0.05, "N": 0.22, "H": 0.50, "SH": 0.70}
-RAMP = 0.06  # target drift across a beat (later levels of a beat are a bit harder)
+# Target first-try fail rate per tier ramps with the level number (pacing.target_fail).
 
 
 def seed_for(n: int, k: int, salt: str = "lvl") -> int:
@@ -131,7 +130,8 @@ def curate_range(
                 continue
             slack = TIER_SLACK[tier]
             intro = is_intro(n)
-            target = TARGET_FAIL[tier] + (0.0 if tier in ("E", "SH") else RAMP * pos / max(1, len(seg) - 1))
+            target = target_fail(n, tier)
+            floor_par = min_par(n)
             best, best_cost = None, 9e9
             for c in cands:
                 if id(c) in used:
@@ -140,7 +140,8 @@ def curate_range(
                 if intro:  # tutorial: easiest and shortest
                     cost = fail + 0.05 * c.analysis.par
                 else:
-                    cost = abs(fail - target) + (0.1 if label[id(c)] in recent else 0.0) + 0.005 * c.analysis.par
+                    cost = (abs(fail - target) + (0.1 if label[id(c)] in recent else 0.0)
+                            + 0.12 * max(0, floor_par - c.analysis.par))  # too short for this point of the game
                 if cost < best_cost:
                     if deduper.is_duplicate(c.level):
                         used.add(id(c))
@@ -169,7 +170,7 @@ def curate_daily(count: int, workers: int = 4, deduper: Deduper | None = None, b
     deduper = deduper or Deduper()
     tasks = [(DAILY_SPECS[seed_for(d, 0, "dspec") % len(DAILY_SPECS)], seed_for(d, k, "daily"), bot_runs) for d in range(1, count + 1) for k in range(6)]
     cands = generate_candidates(tasks, workers)
-    band = [c for c in cands if 0.12 <= c.analysis.fail_by_slack[2] <= 0.5] or cands
+    band = [c for c in cands if 0.25 <= c.analysis.fail_by_slack[2] <= 0.6] or cands
     band.sort(key=lambda c: c.seed)  # shuffle difficulty order deterministically
     out: list[Level] = []
     for c in band:

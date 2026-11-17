@@ -14,5 +14,5 @@ addopts = "-q"
 markers = ["slow: long-running tests (deselect with -m 'not slow')"]
 
 [tool.coverage.run]
-source = ["tiltdrop"]
-omit = ["tiltdrop/cli.py", "tiltdrop/__main__.py", "tiltdrop/review.py"]
+source = ["tiltdrop", "prism"]
+omit = ["tiltdrop/cli.py", "tiltdrop/__main__.py", "tiltdrop/review.py", "prism/__main__.py"]

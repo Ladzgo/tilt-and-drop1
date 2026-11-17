@@ -46,3 +46,13 @@ def test_beats_and_worlds():
 
 def test_slack_ordering():
     assert TIER_SLACK["E"] > TIER_SLACK["N"] > TIER_SLACK["H"] >= TIER_SLACK["SH"]
+
+
+def test_difficulty_ramps_gradually():
+    from tiltdrop.pacing import min_par, target_fail
+    for t in ("E", "N", "H", "SH"):
+        vals = [target_fail(n, t) for n in range(1, 2001)]
+        assert vals == sorted(vals) and vals[-1] <= 0.95
+    assert target_fail(1, "N") < target_fail(150, "N") < target_fail(300, "N")
+    assert target_fail(300, "N") < target_fail(300, "SH")
+    assert min_par(5) == 1 and min_par(120) == 5 and min_par(280) == 9

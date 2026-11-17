@@ -74,5 +74,5 @@ def test_curate_small_range_with_handmade_tutorials():
     assert [lv.id for lv in levels] == [f"L{n:05d}" for n in range(1, 11)]
     assert levels[0].meta.get("manual") and levels[0].par == 1 and levels[2].par == 3
     for lv in levels:
-        assert lv.moves == lv.par + {"E": 4, "N": 2, "H": 1, "SH": 0}[lv.tier]
+        assert lv.moves == lv.par + {"E": 3, "N": 2, "H": 1, "SH": 0}[lv.tier]
         assert is_stable(lv)

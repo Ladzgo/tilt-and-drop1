@@ -30,5 +30,30 @@ for (const c of JSON.parse(fs.readFileSync(path.join(dir, "solver.json"))).solve
   if (!h || h.moves !== c.minMoves) { fail++; console.error(`${c.name}: min moves ${h && h.moves} vs ${c.minMoves}`); }
   solver++;
 }
-console.log(`${cases} cases, ${steps} steps, ${solver} solver levels, ${fail} mismatches`);
+console.log(`tilt & drop: ${cases} cases, ${steps} steps, ${solver} solver levels`);
+
+// ---- Prism Paths
+const PR = require("./prism.js");
+const pg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "shared", "prism", "golden.json")));
+let pc = 0, ps = 0;
+const r2 = v => Math.round(v * 100) / 100;
+for (const c of pg.cases) {
+  const lv = PR.parseLevel(c.level), g = new PR.Game(lv);
+  if (g.status !== c.initialStatus) { fail++; console.error("prism initial status"); }
+  for (const s of c.steps) {
+    const spent = g.tap(s.tap);
+    const segs = g.segments().map(x => [x[0], r2(x[1]), r2(x[2]), r2(x[3]), r2(x[4])]);
+    const got = JSON.stringify([spent, g.movesLeft, g.status, lv.targets.map(i => g.received[i]), segs]);
+    const exp = JSON.stringify([s.spent, s.movesLeft, s.status, s.received, s.segments]);
+    if (got !== exp) { fail++; if (fail < 10) console.error("prism step mismatch", got, exp); }
+    ps++;
+  }
+  pc++;
+}
+for (const c of pg.solver) {
+  const r = PR.solve(PR.parseLevel(c.level));
+  if (r.par !== c.par || r.solutions !== c.solutions) { fail++; console.error("prism solver", r.par, c.par, r.solutions, c.solutions); }
+}
+console.log(`prism: ${pc} cases, ${ps} steps, ${pg.solver.length} solver levels`);
+console.log(`${fail} mismatches`);
 process.exit(fail ? 1 : 0);
