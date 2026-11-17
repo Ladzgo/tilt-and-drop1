@@ -18,16 +18,25 @@ generator (seeded)  ->  solver (BFS) + bot  ->  curation per slot (pacing)  ->  
 4. **Dedupe** (`canon.py`): canonical key = minimum over D4 images (re-oriented so gravity points down), after color normalization. A candidate is also rejected if its start position is within 2 moves of an existing level (or vice versa).
 5. **Pack** (`pack.py`): 1,000 levels per gzipped `.tdp` pack (CRC32, reproducible bytes), plus `curated.json` (levels 1–300 with full metadata) and `manifest.json`.
 
-## Tiers and targets
+## Tiers and targets (v2 ramp)
 
-| Tier | Move slack | Target first-try fail | Measured (bot, levels 1–300) | Count (1–300) |
+| Tier | Move slack | Target first-try fail, level 1 → 300 | Measured (bot, levels 1–300) | Count (1–300) |
 |---|---|---|---|---|
-| E | +4 | 5% | 5% | 112 |
-| N | +2 | 22% (+6% ramp within a beat) | 27% | 145 |
-| H | +1 | 50% | 52% | 29 |
-| SH | +0 | 70% | 69% | 14 |
+| E | +3 | 8% → 22% | 18% | 112 |
+| N | +2 | 25% → 50% | 42% | 145 |
+| H | +1 | 55% → 72% | 65% | 29 |
+| SH | +0 | 75% → 90% | 81% | 14 |
 
-Mean par grows from 2.4 (world 1, basics) to 5–6 (worlds 4–6). The bot is a proxy: after soft launch, fit `difficulty.WEIGHTS` and bot τ/ε to the real first-attempt fail rates from `level_fail` / `level_win` analytics, then fix outliers live with the `difficulty_overrides` Remote Config key (no app update needed).
+| World | Mean par | Mean bot fail (E+N levels) | Hardest level (bot fail) |
+|---|---|---|---|
+| 1 | 4.0 | 17% | 70% |
+| 2 | 5.7 | 23% | 83% |
+| 3 | 6.8 | 32% | 81% |
+| 4 | 7.0 | 33% | 85% |
+| 5 | 7.4 | 41% | 92% |
+| 6 | 9.2 | 44% | 91% |
+
+The first version (flat targets, Easy +4) played too easy: mean par went from 2.4 to 5. Targets now come from `pacing.target_fail(level, tier)`, plus a rising floor `pacing.min_par(level)`. The bot is still a proxy. After soft launch, fit `difficulty.WEIGHTS` and the bot's τ/ε to the real first-attempt fail rates, then fix outliers live with the `difficulty_overrides` Remote Config key.
 
 ## Mechanic beats (levels 1–300 at launch)
 

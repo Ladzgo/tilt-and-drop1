@@ -10,6 +10,10 @@ A hybrid-casual puzzle game for Android and iOS. Rotate the board, let gravity c
 | [docs/COMPLIANCE.md](docs/COMPLIANCE.md) | GDPR/TCF, ATT, age screen, CPC principles, DFA commitments |
 | [docs/SETUP.md](docs/SETUP.md) | **Install, open, build (Android/iOS), SDKs, CI secrets, store accounts** |
 | [docs/LEVELS.md](docs/LEVELS.md) | Level pipeline, difficulty targets, curation workflow |
+| [docs/COLLECTION.md](docs/COLLECTION.md) | The app as a 5–10 game puzzle collection; shared systems |
+| [docs/games/02-prism.md](docs/games/02-prism.md) | Game 2: Prism Paths rules and design |
+| `web/` | Browser playtest build of both games (`python web/build.py`, parity: `node web/test-golden.cjs`) |
+| `tools/levelgen/prism/` | Prism Paths simulator, solver, generator (`python -m prism levels golden`) |
 | `tools/levelgen/` | Python simulator, solver, generator, packer (`python -m tiltdrop --help`) |
 | `shared/levels/` | 20,000 levels + 400 daily puzzles (packs) |
 | `shared/golden/` | Python↔C# parity vectors |

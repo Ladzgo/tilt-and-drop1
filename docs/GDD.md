@@ -221,12 +221,12 @@ Every pack shows its exact contents and € price. When something costs coins, t
 
 ### 7.2 Sawtooth pacing
 
-Tiers and move slack: **Easy** +4, **Normal** +2…3, **Hard** +1, **Super-hard** +0…1.
+Tiers and move slack: **Easy** +3, **Normal** +2, **Hard** +1, **Super-hard** +0.
 
-- A hard level every 5–8 levels. A super-hard level every 20 (levels 20, 40, 60, …).
+- A hard level every 5–8 levels. A super-hard ("extra hard") level every 20 (levels 20, 40, 60, …).
 - 2–3 easy levels after each spike.
-- The first level of a new mechanic is a tutorial (easy, scripted hand hint). The next ~5 levels ramp up.
-- Target fail rates (bot estimate first, then analytics): Easy < 10%, Normal 15–30%, Hard 40–60%, Super-hard 60–80% on the first attempt.
+- The first level of a new mechanic is a tutorial (easy, scripted hand hint).
+- **Gradual ramp (v2, after playtest feedback):** each tier's target first-try fail rate rises steadily from level 1 to 300 (Easy 8% → 22%, Normal 25% → 50%, Hard 55% → 72%, Super-hard 75% → 90%), then keeps creeping up slowly in the pool. A minimum par also rises with the level (`2 + level/40`). Measured mean par: 4.0 in world 1 up to 9.2 in world 6.
 
 ### 7.3 Mechanic schedule (a new beat roughly every 30 levels up to 500)
 
